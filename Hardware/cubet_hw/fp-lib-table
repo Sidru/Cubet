@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name myLibrary)(type KiCad)(uri /home/aleix/MultiWorkspace/cubet/Hardware/myLibrary.pretty)(options "")(descr ""))
+)
