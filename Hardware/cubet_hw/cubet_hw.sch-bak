@@ -293,7 +293,7 @@ Wire Wire Line
 Wire Wire Line
 	4150 3600 4250 3600
 Text GLabel 3350 6400 0    50   Input ~ 0
-D+_USB
+D+_UC
 Wire Wire Line
 	4450 7400 4450 7600
 Wire Wire Line
@@ -561,7 +561,7 @@ U 1 1 5D6AD81A
 P 2650 3950
 F 0 "Y1" V 2604 4038 50  0000 L CNN
 F 1 "32,768KHz" V 2695 4038 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_SeikoEpson_MC306-4Pin_8.0x3.2mm_HandSoldering" H 2650 3950 50  0001 C CNN
+F 2 "Crystal:Crystal_SMD_2012-2Pin_2.0x1.2mm_HandSoldering" H 2650 3950 50  0001 C CNN
 F 3 "~" H 2650 3950 50  0001 C CNN
 	1    2650 3950
 	0    1    1    0   
@@ -1620,93 +1620,31 @@ U 1 1 5D77FFC0
 P 3700 9200
 F 0 "Q1" H 3906 9246 50  0000 L CNN
 F 1 "A03400A" H 3906 9155 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 3900 9300 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3900 9300 50  0001 C CNN
 F 3 "~" H 3700 9200 50  0001 C CNN
 	1    3700 9200
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7500 8350 7500 8400
-$Comp
-L Device:R_Small R26
-U 1 1 5D78D446
-P 6500 7450
-F 0 "R26" H 6559 7496 50  0000 L CNN
-F 1 "0R/NP" H 6559 7405 50  0000 L CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6500 7450 50  0001 C CNN
-F 3 "~" H 6500 7450 50  0001 C CNN
-	1    6500 7450
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R_Small R25
-U 1 1 5D78FA35
-P 6200 7850
-F 0 "R25" V 6004 7850 50  0000 C CNN
-F 1 "0R/NP" V 6095 7850 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6200 7850 50  0001 C CNN
-F 3 "~" H 6200 7850 50  0001 C CNN
-	1    6200 7850
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:R_Small R27
-U 1 1 5D78FE13
-P 6850 8000
-F 0 "R27" H 6791 7954 50  0000 R CNN
-F 1 "0R/NP" H 6791 8045 50  0000 R CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6850 8000 50  0001 C CNN
-F 3 "~" H 6850 8000 50  0001 C CNN
-	1    6850 8000
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	6850 8100 6850 8400
 Wire Wire Line
 	6850 8400 7500 8400
 Connection ~ 7500 8400
 Wire Wire Line
 	7500 8400 7500 8450
 Wire Wire Line
-	6850 7900 6850 7850
-Wire Wire Line
 	6850 7850 7100 7850
 $Comp
 L power:+5V #PWR0160
 U 1 1 5D7A56F9
-P 6500 7300
-F 0 "#PWR0160" H 6500 7150 50  0001 C CNN
-F 1 "+5V" V 6515 7428 50  0000 L CNN
-F 2 "" H 6500 7300 50  0001 C CNN
-F 3 "" H 6500 7300 50  0001 C CNN
-	1    6500 7300
-	1    0    0    -1  
+P 6600 7550
+F 0 "#PWR0160" H 6600 7400 50  0001 C CNN
+F 1 "+5V" V 6615 7678 50  0000 L CNN
+F 2 "" H 6600 7550 50  0001 C CNN
+F 3 "" H 6600 7550 50  0001 C CNN
+	1    6600 7550
+	0    -1   -1   0   
 $EndComp
-Wire Wire Line
-	6500 7300 6500 7350
-Wire Wire Line
-	6500 7550 7100 7550
-Connection ~ 6500 7550
-Connection ~ 6850 7850
-Wire Wire Line
-	6300 7550 6500 7550
-$Comp
-L Device:R_Small R24
-U 1 1 5D78F42E
-P 6200 7550
-F 0 "R24" V 6004 7550 50  0000 C CNN
-F 1 "0R/NP" V 6095 7550 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 6200 7550 50  0001 C CNN
-F 3 "~" H 6200 7550 50  0001 C CNN
-	1    6200 7550
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	6300 7850 6850 7850
-Text GLabel 6100 7550 0    50   Input ~ 0
-ROWS_~SRCLR~
-Text GLabel 6100 7850 0    50   Input ~ 0
-ROWS_~OE~
 $Comp
 L Device:R_Small R1
 U 1 1 5D7E6EC7
@@ -1772,10 +1710,8 @@ Text GLabel 8200 7850 2    50   Input ~ 0
 CTRL_ROW_6_SHIFT
 Text GLabel 8200 7950 2    50   Input ~ 0
 CTRL_ROW_7_SHIFT
-Text GLabel 2700 8900 0    50   Input ~ 0
+Text GLabel 2700 9200 0    50   Input ~ 0
 CTRL_ROW_0_SHIFT
-Wire Wire Line
-	2950 9200 3050 9200
 Text GLabel 3800 8850 1    50   Input ~ 0
 ROW_0
 $Comp
@@ -1784,7 +1720,7 @@ U 1 1 5D8CA3B2
 P 3700 10550
 F 0 "Q2" H 3906 10596 50  0000 L CNN
 F 1 "A03400A" H 3906 10505 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 3900 10650 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 3900 10650 50  0001 C CNN
 F 3 "~" H 3700 10550 50  0001 C CNN
 	1    3700 10550
 	1    0    0    -1  
@@ -1838,8 +1774,6 @@ Wire Wire Line
 Wire Wire Line
 	3800 10900 3800 10850
 Connection ~ 3800 10850
-Wire Wire Line
-	2950 10550 3050 10550
 Text GLabel 3800 10200 1    50   Input ~ 0
 ROW_1
 $Comp
@@ -1848,7 +1782,7 @@ U 1 1 5D8D8043
 P 5750 10550
 F 0 "Q4" H 5956 10596 50  0000 L CNN
 F 1 "A03400A" H 5956 10505 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 5950 10650 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5950 10650 50  0001 C CNN
 F 3 "~" H 5750 10550 50  0001 C CNN
 	1    5750 10550
 	1    0    0    -1  
@@ -1902,8 +1836,6 @@ Wire Wire Line
 Wire Wire Line
 	5850 10900 5850 10850
 Connection ~ 5850 10850
-Wire Wire Line
-	5000 10550 5100 10550
 Text GLabel 5850 10200 1    50   Input ~ 0
 ROW_3
 $Comp
@@ -1912,7 +1844,7 @@ U 1 1 5D8E70EE
 P 5750 9200
 F 0 "Q3" H 5956 9246 50  0000 L CNN
 F 1 "A03400A" H 5956 9155 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 5950 9300 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5950 9300 50  0001 C CNN
 F 3 "~" H 5750 9200 50  0001 C CNN
 	1    5750 9200
 	1    0    0    -1  
@@ -1966,8 +1898,6 @@ Wire Wire Line
 Wire Wire Line
 	5850 9550 5850 9500
 Connection ~ 5850 9500
-Wire Wire Line
-	5000 9200 5100 9200
 Text GLabel 5850 8850 1    50   Input ~ 0
 ROW_2
 $Comp
@@ -1976,7 +1906,7 @@ U 1 1 5D8F7C31
 P 7750 9200
 F 0 "Q5" H 7956 9246 50  0000 L CNN
 F 1 "A03400A" H 7956 9155 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 7950 9300 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7950 9300 50  0001 C CNN
 F 3 "~" H 7750 9200 50  0001 C CNN
 	1    7750 9200
 	1    0    0    -1  
@@ -2030,8 +1960,6 @@ Wire Wire Line
 Wire Wire Line
 	7850 9550 7850 9500
 Connection ~ 7850 9500
-Wire Wire Line
-	7000 9200 7100 9200
 Text GLabel 7850 8850 1    50   Input ~ 0
 ROW_4
 $Comp
@@ -2040,7 +1968,7 @@ U 1 1 5D90A389
 P 7750 10550
 F 0 "Q6" H 7956 10596 50  0000 L CNN
 F 1 "A03400A" H 7956 10505 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 7950 10650 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 7950 10650 50  0001 C CNN
 F 3 "~" H 7750 10550 50  0001 C CNN
 	1    7750 10550
 	1    0    0    -1  
@@ -2094,8 +2022,6 @@ Wire Wire Line
 Wire Wire Line
 	7850 10900 7850 10850
 Connection ~ 7850 10850
-Wire Wire Line
-	7000 10550 7100 10550
 Text GLabel 7850 10200 1    50   Input ~ 0
 ROW_5
 $Comp
@@ -2104,7 +2030,7 @@ U 1 1 5DA40385
 P 9800 9250
 F 0 "Q8" H 10006 9296 50  0000 L CNN
 F 1 "A03400A" H 10006 9205 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 10000 9350 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10000 9350 50  0001 C CNN
 F 3 "~" H 9800 9250 50  0001 C CNN
 	1    9800 9250
 	1    0    0    -1  
@@ -2158,8 +2084,6 @@ Wire Wire Line
 Wire Wire Line
 	9900 9600 9900 9550
 Connection ~ 9900 9550
-Wire Wire Line
-	9050 9250 9150 9250
 Text GLabel 9900 8900 1    50   Input ~ 0
 ROW_6
 $Comp
@@ -2168,7 +2092,7 @@ U 1 1 5DA94B47
 P 9800 10550
 F 0 "Q9" H 10006 10596 50  0000 L CNN
 F 1 "A03400A" H 10006 10505 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23_Handsoldering" H 10000 10650 50  0001 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 10000 10650 50  0001 C CNN
 F 3 "~" H 9800 10550 50  0001 C CNN
 	1    9800 10550
 	1    0    0    -1  
@@ -2222,8 +2146,6 @@ Wire Wire Line
 Wire Wire Line
 	9900 10900 9900 10850
 Connection ~ 9900 10850
-Wire Wire Line
-	9050 10550 9150 10550
 Text GLabel 9900 10200 1    50   Input ~ 0
 ROW_7
 $Comp
@@ -2413,11 +2335,11 @@ SHIFT_DATA_2
 Text GLabel 12850 1500 0    50   Input ~ 0
 SHIFT_DATA_3
 Text GLabel 12850 3650 0    50   Input ~ 0
-SHIFT_DATA_5
+SHIFT_DATA_4
 Text GLabel 12850 5800 0    50   Input ~ 0
-SHIFT_DATA_6
+SHIFT_DATA_5
 Text GLabel 12850 7950 0    50   Input ~ 0
-SHIFT_DATA_7
+SHIFT_DATA_6
 Wire Wire Line
 	11400 1500 11550 1500
 Wire Wire Line
@@ -3174,17 +3096,6 @@ F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 3200 1800 50  00
 	1    3000 1450
 	1    0    0    -1  
 $EndComp
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP1
-U 1 1 5E48ADC2
-P 2800 9200
-F 0 "JP1" V 2800 9268 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 2845 9268 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 2800 9200 50  0001 C CNN
-F 3 "~" H 2800 9200 50  0001 C CNN
-	1    2800 9200
-	0    -1   1    0   
-$EndComp
 Wire Wire Line
 	3150 4300 3350 4300
 Wire Wire Line
@@ -3201,39 +3112,8 @@ Wire Wire Line
 	3150 4900 3350 4900
 Wire Wire Line
 	3150 5000 3350 5000
-Wire Wire Line
-	2700 8900 2800 8900
-Wire Wire Line
-	2800 8900 2800 9000
-Text GLabel 2700 9500 0    50   Input ~ 0
-CTRL_ROW_0_UC
-Wire Wire Line
-	2700 9500 2800 9500
-Wire Wire Line
-	2800 9500 2800 9400
-Text GLabel 2700 10250 0    50   Input ~ 0
+Text GLabel 2700 10550 0    50   Input ~ 0
 CTRL_ROW_1_SHIFT
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP2
-U 1 1 5E8225DB
-P 2800 10550
-F 0 "JP2" V 2800 10618 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 2845 10618 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 2800 10550 50  0001 C CNN
-F 3 "~" H 2800 10550 50  0001 C CNN
-	1    2800 10550
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	2700 10250 2800 10250
-Wire Wire Line
-	2800 10250 2800 10350
-Text GLabel 2700 10850 0    50   Input ~ 0
-CTRL_ROW_1_UC
-Wire Wire Line
-	2700 10850 2800 10850
-Wire Wire Line
-	2800 10850 2800 10750
 Wire Wire Line
 	3800 8850 3800 9000
 Wire Wire Line
@@ -3250,199 +3130,73 @@ Wire Wire Line
 	9900 10200 9900 10350
 Wire Wire Line
 	9900 8900 9900 9050
-Text GLabel 4750 8900 0    50   Input ~ 0
+Text GLabel 4900 9200 0    50   Input ~ 0
 CTRL_ROW_2_SHIFT
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP3
-U 1 1 5EB2D7CF
-P 4850 9200
-F 0 "JP3" V 4850 9268 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 4895 9268 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 4850 9200 50  0001 C CNN
-F 3 "~" H 4850 9200 50  0001 C CNN
-	1    4850 9200
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	4750 8900 4850 8900
-Wire Wire Line
-	4850 8900 4850 9000
-Text GLabel 4750 9500 0    50   Input ~ 0
-CTRL_ROW_2_UC
-Wire Wire Line
-	4750 9500 4850 9500
-Wire Wire Line
-	4850 9500 4850 9400
-Text GLabel 4750 10250 0    50   Input ~ 0
+Text GLabel 4900 10550 0    50   Input ~ 0
 CTRL_ROW_3_SHIFT
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP4
-U 1 1 5EB64A02
-P 4850 10550
-F 0 "JP4" V 4850 10618 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 4895 10618 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 4850 10550 50  0001 C CNN
-F 3 "~" H 4850 10550 50  0001 C CNN
-	1    4850 10550
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	4750 10250 4850 10250
-Wire Wire Line
-	4850 10250 4850 10350
-Text GLabel 4750 10850 0    50   Input ~ 0
-CTRL_ROW_3_UC
-Wire Wire Line
-	4750 10850 4850 10850
-Wire Wire Line
-	4850 10850 4850 10750
-Text GLabel 6750 8900 0    50   Input ~ 0
+Text GLabel 6900 9200 0    50   Input ~ 0
 CTRL_ROW_4_SHIFT
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP5
-U 1 1 5EB9D731
-P 6850 9200
-F 0 "JP5" V 6850 9268 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 6895 9268 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 6850 9200 50  0001 C CNN
-F 3 "~" H 6850 9200 50  0001 C CNN
-	1    6850 9200
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	6750 8900 6850 8900
-Wire Wire Line
-	6850 8900 6850 9000
-Text GLabel 6750 9500 0    50   Input ~ 0
-CTRL_ROW_4_UC
-Wire Wire Line
-	6750 9500 6850 9500
-Wire Wire Line
-	6850 9500 6850 9400
-Text GLabel 6750 10250 0    50   Input ~ 0
+Text GLabel 6900 10550 0    50   Input ~ 0
 CTRL_ROW_5_SHIFT
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP6
-U 1 1 5EBD6D11
-P 6850 10550
-F 0 "JP6" V 6850 10618 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 6895 10618 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 6850 10550 50  0001 C CNN
-F 3 "~" H 6850 10550 50  0001 C CNN
-	1    6850 10550
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	6750 10250 6850 10250
-Wire Wire Line
-	6850 10250 6850 10350
-Text GLabel 6750 10850 0    50   Input ~ 0
-CTRL_ROW_5_UC
-Wire Wire Line
-	6750 10850 6850 10850
-Wire Wire Line
-	6850 10850 6850 10750
-Text GLabel 8800 8950 0    50   Input ~ 0
+Text GLabel 8950 9250 0    50   Input ~ 0
 CTRL_ROW_6_SHIFT
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP7
-U 1 1 5EC17EEF
-P 8900 9250
-F 0 "JP7" V 8900 9318 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 8945 9318 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 8900 9250 50  0001 C CNN
-F 3 "~" H 8900 9250 50  0001 C CNN
-	1    8900 9250
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	8800 8950 8900 8950
-Wire Wire Line
-	8900 8950 8900 9050
-Text GLabel 8800 9550 0    50   Input ~ 0
-CTRL_ROW_6_UC
-Wire Wire Line
-	8800 9550 8900 9550
-Wire Wire Line
-	8900 9550 8900 9450
-Text GLabel 8800 10250 0    50   Input ~ 0
+Text GLabel 8950 10550 0    50   Input ~ 0
 CTRL_ROW_7_SHIFT
-$Comp
-L Jumper:SolderJumper_3_Bridged12 JP8
-U 1 1 5EC535E0
-P 8900 10550
-F 0 "JP8" V 8900 10618 50  0000 L CNN
-F 1 "SolderJumper_3_Bridged12" V 8945 10618 50  0001 L CNN
-F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 8900 10550 50  0001 C CNN
-F 3 "~" H 8900 10550 50  0001 C CNN
-	1    8900 10550
-	0    -1   1    0   
-$EndComp
-Wire Wire Line
-	8800 10250 8900 10250
-Wire Wire Line
-	8900 10250 8900 10350
-Text GLabel 8800 10850 0    50   Input ~ 0
-CTRL_ROW_7_UC
-Wire Wire Line
-	8800 10850 8900 10850
-Wire Wire Line
-	8900 10850 8900 10750
 Text GLabel 3350 6100 0    50   Input ~ 0
 SDA
 Text GLabel 3350 6200 0    50   Input ~ 0
 SCL
 $Comp
-L power:+3V3 #PWR?
+L power:+3V3 #PWR0176
 U 1 1 5D9ED2C3
-P 1650 5900
-F 0 "#PWR?" H 1650 5750 50  0001 C CNN
-F 1 "+3V3" V 1665 6028 50  0000 L CNN
-F 2 "" H 1650 5900 50  0001 C CNN
-F 3 "" H 1650 5900 50  0001 C CNN
-	1    1650 5900
+P 2950 7650
+F 0 "#PWR0176" H 2950 7500 50  0001 C CNN
+F 1 "+3V3" V 2965 7778 50  0000 L CNN
+F 2 "" H 2950 7650 50  0001 C CNN
+F 3 "" H 2950 7650 50  0001 C CNN
+	1    2950 7650
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R31
 U 1 1 5DA3C259
-P 1500 6100
-F 0 "R?" V 1550 6100 50  0000 C CNN
-F 1 "10k" V 1650 6100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1500 6100 50  0001 C CNN
-F 3 "~" H 1500 6100 50  0001 C CNN
-	1    1500 6100
+P 2800 7850
+F 0 "R31" V 2850 7850 50  0000 C CNN
+F 1 "10k" V 2950 7850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2800 7850 50  0001 C CNN
+F 3 "~" H 2800 7850 50  0001 C CNN
+	1    2800 7850
 	-1   0    0    1   
 $EndComp
 $Comp
-L Device:R_Small R?
+L Device:R_Small R32
 U 1 1 5DA3F21E
-P 1850 6100
-F 0 "R?" V 1750 6100 50  0000 C CNN
-F 1 "10k" V 1950 6100 50  0000 C CNN
-F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 1850 6100 50  0001 C CNN
-F 3 "~" H 1850 6100 50  0001 C CNN
-	1    1850 6100
+P 3150 7850
+F 0 "R32" V 3050 7850 50  0000 C CNN
+F 1 "10k" V 3250 7850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 3150 7850 50  0001 C CNN
+F 3 "~" H 3150 7850 50  0001 C CNN
+	1    3150 7850
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
-	1500 6000 1500 5950
+	2800 7750 2800 7700
 Wire Wire Line
-	1500 5950 1650 5950
+	2800 7700 2950 7700
 Wire Wire Line
-	1650 5950 1650 5900
+	2950 7700 2950 7650
 Wire Wire Line
-	1650 5950 1850 5950
+	2950 7700 3150 7700
 Wire Wire Line
-	1850 5950 1850 6000
-Connection ~ 1650 5950
+	3150 7700 3150 7750
+Connection ~ 2950 7700
 Wire Wire Line
-	1850 6200 1850 6300
+	3150 7950 3150 8050
 Wire Wire Line
-	1500 6200 1500 6300
-Text GLabel 1500 6300 3    50   Input ~ 0
+	2800 7950 2800 8050
+Text GLabel 2800 8050 3    50   Input ~ 0
 SDA
-Text GLabel 1850 6300 3    50   Input ~ 0
+Text GLabel 3150 8050 3    50   Input ~ 0
 SCL
 Text GLabel 5350 4500 2    50   Input ~ 0
 TXD
@@ -3461,4 +3215,75 @@ Wire Wire Line
 Connection ~ 8650 3800
 Text GLabel 3350 5300 0    50   Input ~ 0
 BUTTON_0
+Text GLabel 3350 5900 0    50   Input ~ 0
+LATCH_TCC
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP9
+U 1 1 5DA23DE3
+P 1000 4650
+F 0 "JP9" V 1000 4718 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 1045 4718 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 1000 4650 50  0001 C CNN
+F 3 "~" H 1000 4650 50  0001 C CNN
+	1    1000 4650
+	0    -1   1    0   
+$EndComp
+Text GLabel 1150 4650 2    50   Input ~ 0
+SHIFT_DATA
+Text GLabel 1150 5450 2    50   Input ~ 0
+SHIFT_CLK
+Text GLabel 1150 6250 2    50   Input ~ 0
+SHIFT_LATCH
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP10
+U 1 1 5DABC8D7
+P 1000 5450
+F 0 "JP10" V 1000 5518 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 1045 5518 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 1000 5450 50  0001 C CNN
+F 3 "~" H 1000 5450 50  0001 C CNN
+	1    1000 5450
+	0    -1   1    0   
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged12 JP11
+U 1 1 5DABCF04
+P 1000 6250
+F 0 "JP11" V 1000 6318 50  0000 L CNN
+F 1 "SolderJumper_3_Bridged12" V 1045 6318 50  0001 L CNN
+F 2 "Jumper:SolderJumper-3_P1.3mm_Bridged12_RoundedPad1.0x1.5mm" H 1000 6250 50  0001 C CNN
+F 3 "~" H 1000 6250 50  0001 C CNN
+	1    1000 6250
+	0    -1   1    0   
+$EndComp
+Text GLabel 1000 4450 2    50   Input ~ 0
+MOSI
+Text GLabel 1000 5250 2    50   Input ~ 0
+SCK
+Text GLabel 1000 6050 2    50   Input ~ 0
+SS
+Text GLabel 1000 6450 2    50   Input ~ 0
+LATCH_TCC
+Text Notes 700  6750 0    50   ~ 0
+Maybe the TCC can be used to latch the\nshift registers (DMA triggered), 100% Hardware\n
+Wire Wire Line
+	6850 7850 6850 8400
+Wire Wire Line
+	7100 7550 6600 7550
+Wire Wire Line
+	2700 9200 3050 9200
+Wire Wire Line
+	2700 10550 3050 10550
+Wire Wire Line
+	4900 9200 5100 9200
+Wire Wire Line
+	4900 10550 5100 10550
+Wire Wire Line
+	6900 9200 7100 9200
+Wire Wire Line
+	6900 10550 7100 10550
+Wire Wire Line
+	8950 9250 9150 9250
+Wire Wire Line
+	8950 10550 9150 10550
 $EndSCHEMATC

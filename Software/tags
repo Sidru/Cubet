@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
+DEBUG_PIN	src/main.cpp	/^#define DEBUG_PIN /;"	d	file:
+board	platformio.ini	/^board = adafruit_feather_m0 $/;"	k	section:env:mzeroUSB
+build_type	platformio.ini	/^build_type = debug$/;"	k	section:env:mzeroUSB
+debug_tool	platformio.ini	/^debug_tool = jlink$/;"	k	section:env:mzeroUSB
+env:mzeroUSB	platformio.ini	/^[env:mzeroUSB]$/;"	s
+framework	platformio.ini	/^framework = arduino$/;"	k	section:env:mzeroUSB
+loop	src/main.cpp	/^void loop()$/;"	f	typeref:typename:void
+monitor_speed	platformio.ini	/^monitor_speed = 115200$/;"	k	section:env:mzeroUSB
+platform	platformio.ini	/^platform = atmelsam$/;"	k	section:env:mzeroUSB
+setup	src/main.cpp	/^void setup()$/;"	f	typeref:typename:void
+upload_protocol	platformio.ini	/^upload_protocol = sam-ba$/;"	k	section:env:mzeroUSB
+upload_speed	platformio.ini	/^upload_speed = 115200$/;"	k	section:env:mzeroUSB
+wait_for_upload_port	platformio.ini	/^board_upload.wait_for_upload_port = $/;"	k	section:env:mzeroUSB
