@@ -1,0 +1,2249 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	2100 9150 2250 9150
+Wire Wire Line
+	2100 9050 2250 9050
+Wire Wire Line
+	2100 8950 2250 8950
+Wire Wire Line
+	2100 8850 2250 8850
+Wire Wire Line
+	2100 8750 2250 8750
+Wire Wire Line
+	2100 8650 2250 8650
+Wire Wire Line
+	2100 8550 2250 8550
+Wire Wire Line
+	2100 8450 2250 8450
+Wire Wire Line
+	2100 8350 2250 8350
+Wire Wire Line
+	2100 8250 2250 8250
+Wire Wire Line
+	2100 8150 2250 8150
+Wire Wire Line
+	2100 8050 2250 8050
+Wire Wire Line
+	2100 7950 2250 7950
+Wire Wire Line
+	2100 7850 2250 7850
+Wire Wire Line
+	2100 7750 2250 7750
+Wire Wire Line
+	2100 7650 2250 7650
+$Comp
+L Connector_Generic:Conn_01x32 J4
+U 1 1 5DE5E6AE
+P 1900 9150
+F 0 "J4" H 1980 9142 50  0000 L CNN
+F 1 "Conn_01x32" H 1980 9051 50  0000 L CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_1x32_P1.27mm_Vertical" H 1900 9150 50  0001 C CNN
+F 3 "~" H 1900 9150 50  0001 C CNN
+	1    1900 9150
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2250 9950 2100 9950
+Wire Wire Line
+	2250 9850 2100 9850
+Wire Wire Line
+	2250 9750 2100 9750
+Wire Wire Line
+	2250 9650 2100 9650
+Wire Wire Line
+	2250 9550 2100 9550
+Wire Wire Line
+	2250 9450 2100 9450
+Wire Wire Line
+	2250 9350 2100 9350
+Wire Wire Line
+	2250 9250 2100 9250
+Text GLabel 2250 9950 2    50   Input ~ 0
+ROW_7
+Text GLabel 2250 9850 2    50   Input ~ 0
+ROW_6
+Text GLabel 2250 9750 2    50   Input ~ 0
+ROW_5
+Text GLabel 2250 9650 2    50   Input ~ 0
+ROW_4
+Text GLabel 2250 9550 2    50   Input ~ 0
+ROW_3
+Text GLabel 2250 9450 2    50   Input ~ 0
+ROW_2
+Text GLabel 2250 9350 2    50   Input ~ 0
+ROW_1
+Text GLabel 2250 9250 2    50   Input ~ 0
+ROW_0
+Text GLabel 2250 9150 2    50   Input ~ 0
+COLUMN_63
+Text GLabel 2250 9050 2    50   Input ~ 0
+COLUMN_62
+Text GLabel 2250 8950 2    50   Input ~ 0
+COLUMN_61
+Text GLabel 2250 8850 2    50   Input ~ 0
+COLUMN_60
+Text GLabel 2250 8750 2    50   Input ~ 0
+COLUMN_59
+Text GLabel 2250 8650 2    50   Input ~ 0
+COLUMN_58
+Text GLabel 2250 8550 2    50   Input ~ 0
+COLUMN_57
+Text GLabel 2250 8450 2    50   Input ~ 0
+COLUMN_56
+Text GLabel 2250 8350 2    50   Input ~ 0
+COLUMN_55
+Text GLabel 2250 8250 2    50   Input ~ 0
+COLUMN_54
+Text GLabel 2250 8150 2    50   Input ~ 0
+COLUMN_53
+Text GLabel 2250 8050 2    50   Input ~ 0
+COLUMN_52
+Text GLabel 2250 7950 2    50   Input ~ 0
+COLUMN_51
+Text GLabel 2250 7850 2    50   Input ~ 0
+COLUMN_50
+Text GLabel 2250 7750 2    50   Input ~ 0
+COLUMN_49
+Text GLabel 2250 7650 2    50   Input ~ 0
+COLUMN_48
+Text GLabel 2250 6650 2    50   Input ~ 0
+COLUMN_47
+Text GLabel 2250 6550 2    50   Input ~ 0
+COLUMN_46
+Text GLabel 2250 6450 2    50   Input ~ 0
+COLUMN_45
+Text GLabel 2250 6350 2    50   Input ~ 0
+COLUMN_44
+Text GLabel 2250 6250 2    50   Input ~ 0
+COLUMN_43
+Text GLabel 2250 6150 2    50   Input ~ 0
+COLUMN_42
+Text GLabel 2250 6050 2    50   Input ~ 0
+COLUMN_41
+Text GLabel 2250 5950 2    50   Input ~ 0
+COLUMN_40
+Wire Wire Line
+	2100 6650 2250 6650
+Wire Wire Line
+	2100 6550 2250 6550
+Wire Wire Line
+	2100 6450 2250 6450
+Wire Wire Line
+	2100 6350 2250 6350
+Wire Wire Line
+	2100 6250 2250 6250
+Wire Wire Line
+	2100 6150 2250 6150
+Wire Wire Line
+	2100 6050 2250 6050
+Wire Wire Line
+	2100 5950 2250 5950
+Text GLabel 2250 5850 2    50   Input ~ 0
+COLUMN_39
+Text GLabel 2250 5750 2    50   Input ~ 0
+COLUMN_38
+Text GLabel 2250 5650 2    50   Input ~ 0
+COLUMN_37
+Text GLabel 2250 5550 2    50   Input ~ 0
+COLUMN_36
+Text GLabel 2250 5450 2    50   Input ~ 0
+COLUMN_35
+Text GLabel 2250 5350 2    50   Input ~ 0
+COLUMN_34
+Text GLabel 2250 5250 2    50   Input ~ 0
+COLUMN_33
+Text GLabel 2250 5150 2    50   Input ~ 0
+COLUMN_32
+Wire Wire Line
+	2100 5850 2250 5850
+Wire Wire Line
+	2100 5750 2250 5750
+Wire Wire Line
+	2100 5650 2250 5650
+Wire Wire Line
+	2100 5550 2250 5550
+Wire Wire Line
+	2100 5450 2250 5450
+Wire Wire Line
+	2100 5350 2250 5350
+Wire Wire Line
+	2100 5250 2250 5250
+Wire Wire Line
+	2100 5150 2250 5150
+Text GLabel 2250 5050 2    50   Input ~ 0
+COLUMN_31
+Text GLabel 2250 4950 2    50   Input ~ 0
+COLUMN_30
+Text GLabel 2250 4850 2    50   Input ~ 0
+COLUMN_29
+Text GLabel 2250 4750 2    50   Input ~ 0
+COLUMN_28
+Text GLabel 2250 4650 2    50   Input ~ 0
+COLUMN_27
+Text GLabel 2250 4550 2    50   Input ~ 0
+COLUMN_26
+Text GLabel 2250 4450 2    50   Input ~ 0
+COLUMN_25
+Text GLabel 2250 4350 2    50   Input ~ 0
+COLUMN_24
+Wire Wire Line
+	2100 5050 2250 5050
+Wire Wire Line
+	2100 4950 2250 4950
+Wire Wire Line
+	2100 4850 2250 4850
+Wire Wire Line
+	2100 4750 2250 4750
+Wire Wire Line
+	2100 4650 2250 4650
+Wire Wire Line
+	2100 4550 2250 4550
+Wire Wire Line
+	2100 4450 2250 4450
+Wire Wire Line
+	2100 4350 2250 4350
+Text GLabel 2250 3350 2    50   Input ~ 0
+COLUMN_23
+Text GLabel 2250 3250 2    50   Input ~ 0
+COLUMN_22
+Text GLabel 2250 3150 2    50   Input ~ 0
+COLUMN_21
+Text GLabel 2250 3050 2    50   Input ~ 0
+COLUMN_20
+Text GLabel 2250 2950 2    50   Input ~ 0
+COLUMN_19
+Text GLabel 2250 2850 2    50   Input ~ 0
+COLUMN_18
+Text GLabel 2250 2750 2    50   Input ~ 0
+COLUMN_17
+Text GLabel 2250 2650 2    50   Input ~ 0
+COLUMN_16
+Wire Wire Line
+	2100 3350 2250 3350
+Wire Wire Line
+	2100 3250 2250 3250
+Wire Wire Line
+	2100 3150 2250 3150
+Wire Wire Line
+	2100 3050 2250 3050
+Wire Wire Line
+	2100 2950 2250 2950
+Wire Wire Line
+	2100 2850 2250 2850
+Wire Wire Line
+	2100 2750 2250 2750
+Wire Wire Line
+	2100 2650 2250 2650
+Text GLabel 2250 2550 2    50   Input ~ 0
+COLUMN_15
+Text GLabel 2250 2450 2    50   Input ~ 0
+COLUMN_14
+Text GLabel 2250 2350 2    50   Input ~ 0
+COLUMN_13
+Text GLabel 2250 2250 2    50   Input ~ 0
+COLUMN_12
+Text GLabel 2250 2150 2    50   Input ~ 0
+COLUMN_11
+Text GLabel 2250 2050 2    50   Input ~ 0
+COLUMN_10
+Text GLabel 2250 1950 2    50   Input ~ 0
+COLUMN_9
+Text GLabel 2250 1850 2    50   Input ~ 0
+COLUMN_8
+Wire Wire Line
+	2100 2550 2250 2550
+Wire Wire Line
+	2100 2450 2250 2450
+Wire Wire Line
+	2100 2350 2250 2350
+Wire Wire Line
+	2100 2250 2250 2250
+Wire Wire Line
+	2100 2150 2250 2150
+Wire Wire Line
+	2100 2050 2250 2050
+Wire Wire Line
+	2100 1950 2250 1950
+Wire Wire Line
+	2100 1850 2250 1850
+Text GLabel 2250 1750 2    50   Input ~ 0
+COLUMN_7
+Text GLabel 2250 1650 2    50   Input ~ 0
+COLUMN_6
+Text GLabel 2250 1550 2    50   Input ~ 0
+COLUMN_5
+Text GLabel 2250 1450 2    50   Input ~ 0
+COLUMN_4
+Text GLabel 2250 1350 2    50   Input ~ 0
+COLUMN_3
+Text GLabel 2250 1250 2    50   Input ~ 0
+COLUMN_2
+Text GLabel 2250 1150 2    50   Input ~ 0
+COLUMN_1
+Text GLabel 2250 1050 2    50   Input ~ 0
+COLUMN_0
+Wire Wire Line
+	2100 1750 2250 1750
+Wire Wire Line
+	2100 1650 2250 1650
+Wire Wire Line
+	2100 1550 2250 1550
+Wire Wire Line
+	2100 1450 2250 1450
+Wire Wire Line
+	2100 1350 2250 1350
+Wire Wire Line
+	2100 1250 2250 1250
+Wire Wire Line
+	2250 1150 2100 1150
+Wire Wire Line
+	2100 1050 2250 1050
+$Comp
+L Connector_Generic:Conn_01x32 J3
+U 1 1 5DE5D6A6
+P 1900 5850
+F 0 "J3" H 1980 5842 50  0000 L CNN
+F 1 "Conn_01x32" H 1980 5751 50  0000 L CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_1x32_P1.27mm_Vertical" H 1900 5850 50  0001 C CNN
+F 3 "~" H 1900 5850 50  0001 C CNN
+	1    1900 5850
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x32 J2
+U 1 1 5DE3FFA9
+P 1900 2550
+F 0 "J2" H 1980 2542 50  0000 L CNN
+F 1 "Conn_01x32" H 1980 2451 50  0000 L CNN
+F 2 "Connector_PinSocket_1.27mm:PinSocket_1x32_P1.27mm_Vertical" H 1900 2550 50  0001 C CNN
+F 3 "~" H 1900 2550 50  0001 C CNN
+	1    1900 2550
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5E5F6F11
+P 7150 2350
+F 0 "D1" H 7300 2300 50  0000 C CNN
+F 1 "LED" H 7143 2186 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 2475 50  0001 C CNN
+F 3 "~" H 7150 2350 50  0001 C CNN
+	1    7150 2350
+	-1   0    0    1   
+$EndComp
+Text GLabel 6300 4650 0    50   Input ~ 0
+COLUMN_23
+Text GLabel 6300 4550 0    50   Input ~ 0
+COLUMN_22
+Text GLabel 6300 4450 0    50   Input ~ 0
+COLUMN_21
+Text GLabel 6300 4350 0    50   Input ~ 0
+COLUMN_20
+Text GLabel 6300 4250 0    50   Input ~ 0
+COLUMN_19
+Text GLabel 6300 4150 0    50   Input ~ 0
+COLUMN_18
+Text GLabel 6300 4050 0    50   Input ~ 0
+COLUMN_17
+Text GLabel 6300 3950 0    50   Input ~ 0
+COLUMN_16
+Text GLabel 6300 3850 0    50   Input ~ 0
+COLUMN_15
+Text GLabel 6300 3750 0    50   Input ~ 0
+COLUMN_14
+Text GLabel 6300 3650 0    50   Input ~ 0
+COLUMN_13
+Text GLabel 6300 3550 0    50   Input ~ 0
+COLUMN_12
+Text GLabel 6300 3450 0    50   Input ~ 0
+COLUMN_11
+Text GLabel 6300 3350 0    50   Input ~ 0
+COLUMN_10
+Text GLabel 6300 3250 0    50   Input ~ 0
+COLUMN_9
+Text GLabel 6300 3150 0    50   Input ~ 0
+COLUMN_8
+Text GLabel 6300 3050 0    50   Input ~ 0
+COLUMN_7
+Text GLabel 6300 2950 0    50   Input ~ 0
+COLUMN_6
+Text GLabel 6300 2850 0    50   Input ~ 0
+COLUMN_5
+Text GLabel 6300 2750 0    50   Input ~ 0
+COLUMN_4
+Text GLabel 6300 2650 0    50   Input ~ 0
+COLUMN_3
+Text GLabel 6300 2550 0    50   Input ~ 0
+COLUMN_2
+Text GLabel 6300 2450 0    50   Input ~ 0
+COLUMN_1
+Text GLabel 6300 2350 0    50   Input ~ 0
+COLUMN_0
+Text GLabel 6300 7050 0    50   Input ~ 0
+COLUMN_47
+Text GLabel 6300 6950 0    50   Input ~ 0
+COLUMN_46
+Text GLabel 6300 6850 0    50   Input ~ 0
+COLUMN_45
+Text GLabel 6300 6750 0    50   Input ~ 0
+COLUMN_44
+Text GLabel 6300 6650 0    50   Input ~ 0
+COLUMN_43
+Text GLabel 6300 6550 0    50   Input ~ 0
+COLUMN_42
+Text GLabel 6300 6450 0    50   Input ~ 0
+COLUMN_41
+Text GLabel 6300 6350 0    50   Input ~ 0
+COLUMN_40
+Text GLabel 6300 6250 0    50   Input ~ 0
+COLUMN_39
+Text GLabel 6300 6150 0    50   Input ~ 0
+COLUMN_38
+Text GLabel 6300 6050 0    50   Input ~ 0
+COLUMN_37
+Text GLabel 6300 5950 0    50   Input ~ 0
+COLUMN_36
+Text GLabel 6300 5850 0    50   Input ~ 0
+COLUMN_35
+Text GLabel 6300 5750 0    50   Input ~ 0
+COLUMN_34
+Text GLabel 6300 5650 0    50   Input ~ 0
+COLUMN_33
+Text GLabel 6300 5550 0    50   Input ~ 0
+COLUMN_32
+Text GLabel 6300 5450 0    50   Input ~ 0
+COLUMN_31
+Text GLabel 6300 5350 0    50   Input ~ 0
+COLUMN_30
+Text GLabel 6300 5250 0    50   Input ~ 0
+COLUMN_29
+Text GLabel 6300 5150 0    50   Input ~ 0
+COLUMN_28
+Text GLabel 6300 5050 0    50   Input ~ 0
+COLUMN_27
+Text GLabel 6300 4950 0    50   Input ~ 0
+COLUMN_26
+Text GLabel 6300 4850 0    50   Input ~ 0
+COLUMN_25
+Text GLabel 6300 4750 0    50   Input ~ 0
+COLUMN_24
+$Comp
+L Connector_Generic:Conn_01x01 J1
+U 1 1 5E628E93
+P 9200 5250
+F 0 "J1" H 9280 5292 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5201 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5250 50  0001 C CNN
+F 3 "~" H 9200 5250 50  0001 C CNN
+	1    9200 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 5950 9000 5950
+Wire Wire Line
+	8850 5850 9000 5850
+Wire Wire Line
+	8850 5750 9000 5750
+Wire Wire Line
+	8850 5650 9000 5650
+Wire Wire Line
+	8850 5550 9000 5550
+Wire Wire Line
+	8850 5450 9000 5450
+Wire Wire Line
+	8850 5350 9000 5350
+Wire Wire Line
+	8850 5250 9000 5250
+Text GLabel 8850 5950 0    50   Input ~ 0
+ROW_7
+Text GLabel 8850 5850 0    50   Input ~ 0
+ROW_6
+Text GLabel 8850 5750 0    50   Input ~ 0
+ROW_5
+Text GLabel 8850 5650 0    50   Input ~ 0
+ROW_4
+Text GLabel 8850 5550 0    50   Input ~ 0
+ROW_3
+Text GLabel 8850 5450 0    50   Input ~ 0
+ROW_2
+Text GLabel 8850 5350 0    50   Input ~ 0
+ROW_1
+Text GLabel 8850 5250 0    50   Input ~ 0
+ROW_0
+Text GLabel 6300 8650 0    50   Input ~ 0
+COLUMN_63
+Text GLabel 6300 8550 0    50   Input ~ 0
+COLUMN_62
+Text GLabel 6300 8450 0    50   Input ~ 0
+COLUMN_61
+Text GLabel 6300 8350 0    50   Input ~ 0
+COLUMN_60
+Text GLabel 6300 8250 0    50   Input ~ 0
+COLUMN_59
+Text GLabel 6300 8150 0    50   Input ~ 0
+COLUMN_58
+Text GLabel 6300 8050 0    50   Input ~ 0
+COLUMN_57
+Text GLabel 6300 7950 0    50   Input ~ 0
+COLUMN_56
+Text GLabel 6300 7850 0    50   Input ~ 0
+COLUMN_55
+Text GLabel 6300 7750 0    50   Input ~ 0
+COLUMN_54
+Text GLabel 6300 7650 0    50   Input ~ 0
+COLUMN_53
+Text GLabel 6300 7550 0    50   Input ~ 0
+COLUMN_52
+Text GLabel 6300 7450 0    50   Input ~ 0
+COLUMN_51
+Text GLabel 6300 7350 0    50   Input ~ 0
+COLUMN_50
+Text GLabel 6300 7250 0    50   Input ~ 0
+COLUMN_49
+Text GLabel 6300 7150 0    50   Input ~ 0
+COLUMN_48
+$Comp
+L Device:LED D2
+U 1 1 5E70CE13
+P 7150 2450
+F 0 "D2" H 7300 2400 50  0000 C CNN
+F 1 "LED" H 7143 2286 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 2575 50  0001 C CNN
+F 3 "~" H 7150 2450 50  0001 C CNN
+	1    7150 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5E70D2ED
+P 7150 2550
+F 0 "D3" H 7300 2500 50  0000 C CNN
+F 1 "LED" H 7143 2386 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 2675 50  0001 C CNN
+F 3 "~" H 7150 2550 50  0001 C CNN
+	1    7150 2550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 5E70D5F8
+P 7150 2650
+F 0 "D4" H 7300 2600 50  0000 C CNN
+F 1 "LED" H 7143 2486 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 2775 50  0001 C CNN
+F 3 "~" H 7150 2650 50  0001 C CNN
+	1    7150 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 5E70D77A
+P 7150 2750
+F 0 "D5" H 7300 2700 50  0000 C CNN
+F 1 "LED" H 7143 2586 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 2875 50  0001 C CNN
+F 3 "~" H 7150 2750 50  0001 C CNN
+	1    7150 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 5E70D981
+P 7150 2850
+F 0 "D6" H 7300 2800 50  0000 C CNN
+F 1 "LED" H 7143 2686 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 2975 50  0001 C CNN
+F 3 "~" H 7150 2850 50  0001 C CNN
+	1    7150 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D7
+U 1 1 5E70DB3F
+P 7150 2950
+F 0 "D7" H 7300 2900 50  0000 C CNN
+F 1 "LED" H 7143 2786 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3075 50  0001 C CNN
+F 3 "~" H 7150 2950 50  0001 C CNN
+	1    7150 2950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D8
+U 1 1 5E70DDA7
+P 7150 3050
+F 0 "D8" H 7300 3000 50  0000 C CNN
+F 1 "LED" H 7143 2886 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3175 50  0001 C CNN
+F 3 "~" H 7150 3050 50  0001 C CNN
+	1    7150 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D9
+U 1 1 5E711F8B
+P 7150 3150
+F 0 "D9" H 7300 3100 50  0000 C CNN
+F 1 "LED" H 7143 2986 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3275 50  0001 C CNN
+F 3 "~" H 7150 3150 50  0001 C CNN
+	1    7150 3150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D10
+U 1 1 5E711F91
+P 7150 3250
+F 0 "D10" H 7300 3200 50  0000 C CNN
+F 1 "LED" H 7143 3086 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3375 50  0001 C CNN
+F 3 "~" H 7150 3250 50  0001 C CNN
+	1    7150 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D11
+U 1 1 5E711F97
+P 7150 3350
+F 0 "D11" H 7300 3300 50  0000 C CNN
+F 1 "LED" H 7143 3186 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3475 50  0001 C CNN
+F 3 "~" H 7150 3350 50  0001 C CNN
+	1    7150 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D12
+U 1 1 5E711F9D
+P 7150 3450
+F 0 "D12" H 7300 3400 50  0000 C CNN
+F 1 "LED" H 7143 3286 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3575 50  0001 C CNN
+F 3 "~" H 7150 3450 50  0001 C CNN
+	1    7150 3450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D13
+U 1 1 5E711FA3
+P 7150 3550
+F 0 "D13" H 7300 3500 50  0000 C CNN
+F 1 "LED" H 7143 3386 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3675 50  0001 C CNN
+F 3 "~" H 7150 3550 50  0001 C CNN
+	1    7150 3550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D14
+U 1 1 5E711FA9
+P 7150 3650
+F 0 "D14" H 7300 3600 50  0000 C CNN
+F 1 "LED" H 7143 3486 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3775 50  0001 C CNN
+F 3 "~" H 7150 3650 50  0001 C CNN
+	1    7150 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D15
+U 1 1 5E711FAF
+P 7150 3750
+F 0 "D15" H 7300 3700 50  0000 C CNN
+F 1 "LED" H 7143 3586 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3875 50  0001 C CNN
+F 3 "~" H 7150 3750 50  0001 C CNN
+	1    7150 3750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D16
+U 1 1 5E711FB5
+P 7150 3850
+F 0 "D16" H 7300 3800 50  0000 C CNN
+F 1 "LED" H 7143 3686 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 3975 50  0001 C CNN
+F 3 "~" H 7150 3850 50  0001 C CNN
+	1    7150 3850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D17
+U 1 1 5E71CF3D
+P 7150 3950
+F 0 "D17" H 7300 3900 50  0000 C CNN
+F 1 "LED" H 7143 3786 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4075 50  0001 C CNN
+F 3 "~" H 7150 3950 50  0001 C CNN
+	1    7150 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D18
+U 1 1 5E71CF43
+P 7150 4050
+F 0 "D18" H 7300 4000 50  0000 C CNN
+F 1 "LED" H 7143 3886 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4175 50  0001 C CNN
+F 3 "~" H 7150 4050 50  0001 C CNN
+	1    7150 4050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D19
+U 1 1 5E71CF49
+P 7150 4150
+F 0 "D19" H 7300 4100 50  0000 C CNN
+F 1 "LED" H 7143 3986 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4275 50  0001 C CNN
+F 3 "~" H 7150 4150 50  0001 C CNN
+	1    7150 4150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D20
+U 1 1 5E71CF4F
+P 7150 4250
+F 0 "D20" H 7300 4200 50  0000 C CNN
+F 1 "LED" H 7143 4086 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4375 50  0001 C CNN
+F 3 "~" H 7150 4250 50  0001 C CNN
+	1    7150 4250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D21
+U 1 1 5E71CF55
+P 7150 4350
+F 0 "D21" H 7300 4300 50  0000 C CNN
+F 1 "LED" H 7143 4186 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4475 50  0001 C CNN
+F 3 "~" H 7150 4350 50  0001 C CNN
+	1    7150 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D22
+U 1 1 5E71CF5B
+P 7150 4450
+F 0 "D22" H 7300 4400 50  0000 C CNN
+F 1 "LED" H 7143 4286 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4575 50  0001 C CNN
+F 3 "~" H 7150 4450 50  0001 C CNN
+	1    7150 4450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D23
+U 1 1 5E71CF61
+P 7150 4550
+F 0 "D23" H 7300 4500 50  0000 C CNN
+F 1 "LED" H 7143 4386 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4675 50  0001 C CNN
+F 3 "~" H 7150 4550 50  0001 C CNN
+	1    7150 4550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D24
+U 1 1 5E71CF67
+P 7150 4650
+F 0 "D24" H 7300 4600 50  0000 C CNN
+F 1 "LED" H 7143 4486 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4775 50  0001 C CNN
+F 3 "~" H 7150 4650 50  0001 C CNN
+	1    7150 4650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D25
+U 1 1 5E7296B9
+P 7150 4750
+F 0 "D25" H 7300 4700 50  0000 C CNN
+F 1 "LED" H 7143 4586 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4875 50  0001 C CNN
+F 3 "~" H 7150 4750 50  0001 C CNN
+	1    7150 4750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D26
+U 1 1 5E7296BF
+P 7150 4850
+F 0 "D26" H 7300 4800 50  0000 C CNN
+F 1 "LED" H 7143 4686 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 4975 50  0001 C CNN
+F 3 "~" H 7150 4850 50  0001 C CNN
+	1    7150 4850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D27
+U 1 1 5E7296C5
+P 7150 4950
+F 0 "D27" H 7300 4900 50  0000 C CNN
+F 1 "LED" H 7143 4786 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5075 50  0001 C CNN
+F 3 "~" H 7150 4950 50  0001 C CNN
+	1    7150 4950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D28
+U 1 1 5E7296CB
+P 7150 5050
+F 0 "D28" H 7300 5000 50  0000 C CNN
+F 1 "LED" H 7143 4886 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5175 50  0001 C CNN
+F 3 "~" H 7150 5050 50  0001 C CNN
+	1    7150 5050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D29
+U 1 1 5E7296D1
+P 7150 5150
+F 0 "D29" H 7300 5100 50  0000 C CNN
+F 1 "LED" H 7143 4986 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5275 50  0001 C CNN
+F 3 "~" H 7150 5150 50  0001 C CNN
+	1    7150 5150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D30
+U 1 1 5E7296D7
+P 7150 5250
+F 0 "D30" H 7300 5200 50  0000 C CNN
+F 1 "LED" H 7143 5086 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5375 50  0001 C CNN
+F 3 "~" H 7150 5250 50  0001 C CNN
+	1    7150 5250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D31
+U 1 1 5E7296DD
+P 7150 5350
+F 0 "D31" H 7300 5300 50  0000 C CNN
+F 1 "LED" H 7143 5186 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5475 50  0001 C CNN
+F 3 "~" H 7150 5350 50  0001 C CNN
+	1    7150 5350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D32
+U 1 1 5E7296E3
+P 7150 5450
+F 0 "D32" H 7300 5400 50  0000 C CNN
+F 1 "LED" H 7143 5286 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5575 50  0001 C CNN
+F 3 "~" H 7150 5450 50  0001 C CNN
+	1    7150 5450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D33
+U 1 1 5E7410D1
+P 7150 5550
+F 0 "D33" H 7300 5500 50  0000 C CNN
+F 1 "LED" H 7143 5386 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5675 50  0001 C CNN
+F 3 "~" H 7150 5550 50  0001 C CNN
+	1    7150 5550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D34
+U 1 1 5E7410D7
+P 7150 5650
+F 0 "D34" H 7300 5600 50  0000 C CNN
+F 1 "LED" H 7143 5486 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5775 50  0001 C CNN
+F 3 "~" H 7150 5650 50  0001 C CNN
+	1    7150 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D35
+U 1 1 5E7410DD
+P 7150 5750
+F 0 "D35" H 7300 5700 50  0000 C CNN
+F 1 "LED" H 7143 5586 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5875 50  0001 C CNN
+F 3 "~" H 7150 5750 50  0001 C CNN
+	1    7150 5750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D36
+U 1 1 5E7410E3
+P 7150 5850
+F 0 "D36" H 7300 5800 50  0000 C CNN
+F 1 "LED" H 7143 5686 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 5975 50  0001 C CNN
+F 3 "~" H 7150 5850 50  0001 C CNN
+	1    7150 5850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D37
+U 1 1 5E7410E9
+P 7150 5950
+F 0 "D37" H 7300 5900 50  0000 C CNN
+F 1 "LED" H 7143 5786 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6075 50  0001 C CNN
+F 3 "~" H 7150 5950 50  0001 C CNN
+	1    7150 5950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D38
+U 1 1 5E7410EF
+P 7150 6050
+F 0 "D38" H 7300 6000 50  0000 C CNN
+F 1 "LED" H 7143 5886 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6175 50  0001 C CNN
+F 3 "~" H 7150 6050 50  0001 C CNN
+	1    7150 6050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D39
+U 1 1 5E7410F5
+P 7150 6150
+F 0 "D39" H 7300 6100 50  0000 C CNN
+F 1 "LED" H 7143 5986 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6275 50  0001 C CNN
+F 3 "~" H 7150 6150 50  0001 C CNN
+	1    7150 6150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D40
+U 1 1 5E7410FB
+P 7150 6250
+F 0 "D40" H 7300 6200 50  0000 C CNN
+F 1 "LED" H 7143 6086 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6375 50  0001 C CNN
+F 3 "~" H 7150 6250 50  0001 C CNN
+	1    7150 6250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D41
+U 1 1 5E74C857
+P 7150 6350
+F 0 "D41" H 7300 6300 50  0000 C CNN
+F 1 "LED" H 7143 6186 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6475 50  0001 C CNN
+F 3 "~" H 7150 6350 50  0001 C CNN
+	1    7150 6350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D42
+U 1 1 5E74C85D
+P 7150 6450
+F 0 "D42" H 7300 6400 50  0000 C CNN
+F 1 "LED" H 7143 6286 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6575 50  0001 C CNN
+F 3 "~" H 7150 6450 50  0001 C CNN
+	1    7150 6450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D43
+U 1 1 5E74C863
+P 7150 6550
+F 0 "D43" H 7300 6500 50  0000 C CNN
+F 1 "LED" H 7143 6386 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6675 50  0001 C CNN
+F 3 "~" H 7150 6550 50  0001 C CNN
+	1    7150 6550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D44
+U 1 1 5E74C869
+P 7150 6650
+F 0 "D44" H 7300 6600 50  0000 C CNN
+F 1 "LED" H 7143 6486 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6775 50  0001 C CNN
+F 3 "~" H 7150 6650 50  0001 C CNN
+	1    7150 6650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D45
+U 1 1 5E74C86F
+P 7150 6750
+F 0 "D45" H 7300 6700 50  0000 C CNN
+F 1 "LED" H 7143 6586 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6875 50  0001 C CNN
+F 3 "~" H 7150 6750 50  0001 C CNN
+	1    7150 6750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D46
+U 1 1 5E74C875
+P 7150 6850
+F 0 "D46" H 7300 6800 50  0000 C CNN
+F 1 "LED" H 7143 6686 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 6975 50  0001 C CNN
+F 3 "~" H 7150 6850 50  0001 C CNN
+	1    7150 6850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D47
+U 1 1 5E74C87B
+P 7150 6950
+F 0 "D47" H 7300 6900 50  0000 C CNN
+F 1 "LED" H 7143 6786 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7075 50  0001 C CNN
+F 3 "~" H 7150 6950 50  0001 C CNN
+	1    7150 6950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D48
+U 1 1 5E74C881
+P 7150 7050
+F 0 "D48" H 7300 7000 50  0000 C CNN
+F 1 "LED" H 7143 6886 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7175 50  0001 C CNN
+F 3 "~" H 7150 7050 50  0001 C CNN
+	1    7150 7050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D49
+U 1 1 5E758775
+P 7150 7150
+F 0 "D49" H 7300 7100 50  0000 C CNN
+F 1 "LED" H 7143 6986 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7275 50  0001 C CNN
+F 3 "~" H 7150 7150 50  0001 C CNN
+	1    7150 7150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D50
+U 1 1 5E75877B
+P 7150 7250
+F 0 "D50" H 7300 7200 50  0000 C CNN
+F 1 "LED" H 7143 7086 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7375 50  0001 C CNN
+F 3 "~" H 7150 7250 50  0001 C CNN
+	1    7150 7250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D51
+U 1 1 5E758781
+P 7150 7350
+F 0 "D51" H 7300 7300 50  0000 C CNN
+F 1 "LED" H 7143 7186 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7475 50  0001 C CNN
+F 3 "~" H 7150 7350 50  0001 C CNN
+	1    7150 7350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D52
+U 1 1 5E758787
+P 7150 7450
+F 0 "D52" H 7300 7400 50  0000 C CNN
+F 1 "LED" H 7143 7286 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7575 50  0001 C CNN
+F 3 "~" H 7150 7450 50  0001 C CNN
+	1    7150 7450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D53
+U 1 1 5E75878D
+P 7150 7550
+F 0 "D53" H 7300 7500 50  0000 C CNN
+F 1 "LED" H 7143 7386 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7675 50  0001 C CNN
+F 3 "~" H 7150 7550 50  0001 C CNN
+	1    7150 7550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D54
+U 1 1 5E758793
+P 7150 7650
+F 0 "D54" H 7300 7600 50  0000 C CNN
+F 1 "LED" H 7143 7486 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7775 50  0001 C CNN
+F 3 "~" H 7150 7650 50  0001 C CNN
+	1    7150 7650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D55
+U 1 1 5E758799
+P 7150 7750
+F 0 "D55" H 7300 7700 50  0000 C CNN
+F 1 "LED" H 7143 7586 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7875 50  0001 C CNN
+F 3 "~" H 7150 7750 50  0001 C CNN
+	1    7150 7750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D56
+U 1 1 5E75879F
+P 7150 7850
+F 0 "D56" H 7300 7800 50  0000 C CNN
+F 1 "LED" H 7143 7686 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 7975 50  0001 C CNN
+F 3 "~" H 7150 7850 50  0001 C CNN
+	1    7150 7850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D57
+U 1 1 5E765FD3
+P 7150 7950
+F 0 "D57" H 7300 7900 50  0000 C CNN
+F 1 "LED" H 7143 7786 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8075 50  0001 C CNN
+F 3 "~" H 7150 7950 50  0001 C CNN
+	1    7150 7950
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D58
+U 1 1 5E765FD9
+P 7150 8050
+F 0 "D58" H 7300 8000 50  0000 C CNN
+F 1 "LED" H 7143 7886 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8175 50  0001 C CNN
+F 3 "~" H 7150 8050 50  0001 C CNN
+	1    7150 8050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D59
+U 1 1 5E765FDF
+P 7150 8150
+F 0 "D59" H 7300 8100 50  0000 C CNN
+F 1 "LED" H 7143 7986 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8275 50  0001 C CNN
+F 3 "~" H 7150 8150 50  0001 C CNN
+	1    7150 8150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D60
+U 1 1 5E765FE5
+P 7150 8250
+F 0 "D60" H 7300 8200 50  0000 C CNN
+F 1 "LED" H 7143 8086 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8375 50  0001 C CNN
+F 3 "~" H 7150 8250 50  0001 C CNN
+	1    7150 8250
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D61
+U 1 1 5E765FEB
+P 7150 8350
+F 0 "D61" H 7300 8300 50  0000 C CNN
+F 1 "LED" H 7143 8186 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8475 50  0001 C CNN
+F 3 "~" H 7150 8350 50  0001 C CNN
+	1    7150 8350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D62
+U 1 1 5E765FF1
+P 7150 8450
+F 0 "D62" H 7300 8400 50  0000 C CNN
+F 1 "LED" H 7143 8286 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8575 50  0001 C CNN
+F 3 "~" H 7150 8450 50  0001 C CNN
+	1    7150 8450
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D63
+U 1 1 5E765FF7
+P 7150 8550
+F 0 "D63" H 7300 8500 50  0000 C CNN
+F 1 "LED" H 7143 8386 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8675 50  0001 C CNN
+F 3 "~" H 7150 8550 50  0001 C CNN
+	1    7150 8550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:LED D64
+U 1 1 5E765FFD
+P 7150 8650
+F 0 "D64" H 7300 8600 50  0000 C CNN
+F 1 "LED" H 7143 8486 50  0001 C CNN
+F 2 "myLibrary:LED_0603_03Drill" H 7143 8775 50  0001 C CNN
+F 3 "~" H 7150 8650 50  0001 C CNN
+	1    7150 8650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J5
+U 1 1 5E770ADB
+P 9200 5350
+F 0 "J5" H 9280 5392 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5301 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5350 50  0001 C CNN
+F 3 "~" H 9200 5350 50  0001 C CNN
+	1    9200 5350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J6
+U 1 1 5E771A2A
+P 9200 5450
+F 0 "J6" H 9280 5492 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5401 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5450 50  0001 C CNN
+F 3 "~" H 9200 5450 50  0001 C CNN
+	1    9200 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J7
+U 1 1 5E771EB7
+P 9200 5550
+F 0 "J7" H 9280 5592 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5501 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5550 50  0001 C CNN
+F 3 "~" H 9200 5550 50  0001 C CNN
+	1    9200 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J8
+U 1 1 5E77230C
+P 9200 5650
+F 0 "J8" H 9280 5692 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5601 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5650 50  0001 C CNN
+F 3 "~" H 9200 5650 50  0001 C CNN
+	1    9200 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J9
+U 1 1 5E772714
+P 9200 5750
+F 0 "J9" H 9280 5792 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5701 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5750 50  0001 C CNN
+F 3 "~" H 9200 5750 50  0001 C CNN
+	1    9200 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J10
+U 1 1 5E772B47
+P 9200 5850
+F 0 "J10" H 9280 5892 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5801 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5850 50  0001 C CNN
+F 3 "~" H 9200 5850 50  0001 C CNN
+	1    9200 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J11
+U 1 1 5E773002
+P 9200 5950
+F 0 "J11" H 9280 5992 50  0000 L CNN
+F 1 "Conn_01x01" H 9280 5901 50  0000 L CNN
+F 2 "myLibrary:TestPoint_THTPad_D1.0mm_Drill0.3mm" H 9200 5950 50  0001 C CNN
+F 3 "~" H 9200 5950 50  0001 C CNN
+	1    9200 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5E404C54
+P 6700 2350
+F 0 "R1" V 6700 2350 50  0000 C CNN
+F 1 "R" V 6700 2300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 2350 50  0001 C CNN
+F 3 "~" H 6700 2350 50  0001 C CNN
+	1    6700 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2350 7000 2350
+Wire Wire Line
+	6300 2350 6550 2350
+$Comp
+L Device:R R2
+U 1 1 5E5F2A6C
+P 6700 2450
+F 0 "R2" V 6700 2450 50  0000 C CNN
+F 1 "R" V 6700 2400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 2450 50  0001 C CNN
+F 3 "~" H 6700 2450 50  0001 C CNN
+	1    6700 2450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2450 7000 2450
+Wire Wire Line
+	6300 2450 6550 2450
+$Comp
+L Device:R R3
+U 1 1 5E5F8079
+P 6700 2550
+F 0 "R3" V 6700 2550 50  0000 C CNN
+F 1 "R" V 6700 2500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 2550 50  0001 C CNN
+F 3 "~" H 6700 2550 50  0001 C CNN
+	1    6700 2550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2550 7000 2550
+Wire Wire Line
+	6300 2550 6550 2550
+$Comp
+L Device:R R4
+U 1 1 5E600396
+P 6700 2650
+F 0 "R4" V 6700 2650 50  0000 C CNN
+F 1 "R" V 6700 2600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 2650 50  0001 C CNN
+F 3 "~" H 6700 2650 50  0001 C CNN
+	1    6700 2650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2650 7000 2650
+Wire Wire Line
+	6300 2650 6550 2650
+$Comp
+L Device:R R5
+U 1 1 5E60039E
+P 6700 2750
+F 0 "R5" V 6700 2750 50  0000 C CNN
+F 1 "R" V 6700 2700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 2750 50  0001 C CNN
+F 3 "~" H 6700 2750 50  0001 C CNN
+	1    6700 2750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2750 7000 2750
+Wire Wire Line
+	6300 2750 6550 2750
+$Comp
+L Device:R R6
+U 1 1 5E6003A6
+P 6700 2850
+F 0 "R6" V 6700 2850 50  0000 C CNN
+F 1 "R" V 6700 2800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 2850 50  0001 C CNN
+F 3 "~" H 6700 2850 50  0001 C CNN
+	1    6700 2850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2850 7000 2850
+Wire Wire Line
+	6300 2850 6550 2850
+$Comp
+L Device:R R7
+U 1 1 5E607B4A
+P 6700 2950
+F 0 "R7" V 6700 2950 50  0000 C CNN
+F 1 "R" V 6700 2900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 2950 50  0001 C CNN
+F 3 "~" H 6700 2950 50  0001 C CNN
+	1    6700 2950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 2950 7000 2950
+Wire Wire Line
+	6300 2950 6550 2950
+$Comp
+L Device:R R8
+U 1 1 5E607B52
+P 6700 3050
+F 0 "R8" V 6700 3050 50  0000 C CNN
+F 1 "R" V 6700 3000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3050 50  0001 C CNN
+F 3 "~" H 6700 3050 50  0001 C CNN
+	1    6700 3050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3050 7000 3050
+Wire Wire Line
+	6300 3050 6550 3050
+$Comp
+L Device:R R9
+U 1 1 5E612A45
+P 6700 3150
+F 0 "R9" V 6700 3150 50  0000 C CNN
+F 1 "R" V 6700 3100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3150 50  0001 C CNN
+F 3 "~" H 6700 3150 50  0001 C CNN
+	1    6700 3150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3150 7000 3150
+Wire Wire Line
+	6300 3150 6550 3150
+$Comp
+L Device:R R10
+U 1 1 5E612A4D
+P 6700 3250
+F 0 "R10" V 6700 3250 50  0000 C CNN
+F 1 "R" V 6700 3200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3250 50  0001 C CNN
+F 3 "~" H 6700 3250 50  0001 C CNN
+	1    6700 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3250 7000 3250
+Wire Wire Line
+	6300 3250 6550 3250
+$Comp
+L Device:R R11
+U 1 1 5E612A55
+P 6700 3350
+F 0 "R11" V 6700 3350 50  0000 C CNN
+F 1 "R" V 6700 3300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3350 50  0001 C CNN
+F 3 "~" H 6700 3350 50  0001 C CNN
+	1    6700 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3350 7000 3350
+Wire Wire Line
+	6300 3350 6550 3350
+$Comp
+L Device:R R12
+U 1 1 5E612A5D
+P 6700 3450
+F 0 "R12" V 6700 3450 50  0000 C CNN
+F 1 "R" V 6700 3400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3450 50  0001 C CNN
+F 3 "~" H 6700 3450 50  0001 C CNN
+	1    6700 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3450 7000 3450
+Wire Wire Line
+	6300 3450 6550 3450
+$Comp
+L Device:R R13
+U 1 1 5E612A65
+P 6700 3550
+F 0 "R13" V 6700 3550 50  0000 C CNN
+F 1 "R" V 6700 3500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3550 50  0001 C CNN
+F 3 "~" H 6700 3550 50  0001 C CNN
+	1    6700 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3550 7000 3550
+Wire Wire Line
+	6300 3550 6550 3550
+$Comp
+L Device:R R14
+U 1 1 5E612A6D
+P 6700 3650
+F 0 "R14" V 6700 3650 50  0000 C CNN
+F 1 "R" V 6700 3600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3650 50  0001 C CNN
+F 3 "~" H 6700 3650 50  0001 C CNN
+	1    6700 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3650 7000 3650
+Wire Wire Line
+	6300 3650 6550 3650
+$Comp
+L Device:R R15
+U 1 1 5E612A75
+P 6700 3750
+F 0 "R15" V 6700 3750 50  0000 C CNN
+F 1 "R" V 6700 3700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3750 50  0001 C CNN
+F 3 "~" H 6700 3750 50  0001 C CNN
+	1    6700 3750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3750 7000 3750
+Wire Wire Line
+	6300 3750 6550 3750
+$Comp
+L Device:R R16
+U 1 1 5E612A7D
+P 6700 3850
+F 0 "R16" V 6700 3850 50  0000 C CNN
+F 1 "R" V 6700 3800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3850 50  0001 C CNN
+F 3 "~" H 6700 3850 50  0001 C CNN
+	1    6700 3850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3850 7000 3850
+Wire Wire Line
+	6300 3850 6550 3850
+$Comp
+L Device:R R17
+U 1 1 5E626273
+P 6700 3950
+F 0 "R17" V 6700 3950 50  0000 C CNN
+F 1 "R" V 6700 3900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 3950 50  0001 C CNN
+F 3 "~" H 6700 3950 50  0001 C CNN
+	1    6700 3950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 3950 7000 3950
+Wire Wire Line
+	6300 3950 6550 3950
+$Comp
+L Device:R R18
+U 1 1 5E62627B
+P 6700 4050
+F 0 "R18" V 6700 4050 50  0000 C CNN
+F 1 "R" V 6700 4000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4050 50  0001 C CNN
+F 3 "~" H 6700 4050 50  0001 C CNN
+	1    6700 4050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4050 7000 4050
+Wire Wire Line
+	6300 4050 6550 4050
+$Comp
+L Device:R R19
+U 1 1 5E626283
+P 6700 4150
+F 0 "R19" V 6700 4150 50  0000 C CNN
+F 1 "R" V 6700 4100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4150 50  0001 C CNN
+F 3 "~" H 6700 4150 50  0001 C CNN
+	1    6700 4150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4150 7000 4150
+Wire Wire Line
+	6300 4150 6550 4150
+$Comp
+L Device:R R20
+U 1 1 5E62628B
+P 6700 4250
+F 0 "R20" V 6700 4250 50  0000 C CNN
+F 1 "R" V 6700 4200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4250 50  0001 C CNN
+F 3 "~" H 6700 4250 50  0001 C CNN
+	1    6700 4250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4250 7000 4250
+Wire Wire Line
+	6300 4250 6550 4250
+$Comp
+L Device:R R21
+U 1 1 5E626293
+P 6700 4350
+F 0 "R21" V 6700 4350 50  0000 C CNN
+F 1 "R" V 6700 4300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4350 50  0001 C CNN
+F 3 "~" H 6700 4350 50  0001 C CNN
+	1    6700 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4350 7000 4350
+Wire Wire Line
+	6300 4350 6550 4350
+$Comp
+L Device:R R22
+U 1 1 5E62629B
+P 6700 4450
+F 0 "R22" V 6700 4450 50  0000 C CNN
+F 1 "R" V 6700 4400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4450 50  0001 C CNN
+F 3 "~" H 6700 4450 50  0001 C CNN
+	1    6700 4450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4450 7000 4450
+Wire Wire Line
+	6300 4450 6550 4450
+$Comp
+L Device:R R23
+U 1 1 5E6262A3
+P 6700 4550
+F 0 "R23" V 6700 4550 50  0000 C CNN
+F 1 "R" V 6700 4500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4550 50  0001 C CNN
+F 3 "~" H 6700 4550 50  0001 C CNN
+	1    6700 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4550 7000 4550
+Wire Wire Line
+	6300 4550 6550 4550
+$Comp
+L Device:R R24
+U 1 1 5E6262AB
+P 6700 4650
+F 0 "R24" V 6700 4650 50  0000 C CNN
+F 1 "R" V 6700 4600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4650 50  0001 C CNN
+F 3 "~" H 6700 4650 50  0001 C CNN
+	1    6700 4650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4650 7000 4650
+Wire Wire Line
+	6300 4650 6550 4650
+$Comp
+L Device:R R25
+U 1 1 5E6334EA
+P 6700 4750
+F 0 "R25" V 6700 4750 50  0000 C CNN
+F 1 "R" V 6700 4700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4750 50  0001 C CNN
+F 3 "~" H 6700 4750 50  0001 C CNN
+	1    6700 4750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4750 7000 4750
+Wire Wire Line
+	6300 4750 6550 4750
+$Comp
+L Device:R R26
+U 1 1 5E6334F2
+P 6700 4850
+F 0 "R26" V 6700 4850 50  0000 C CNN
+F 1 "R" V 6700 4800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4850 50  0001 C CNN
+F 3 "~" H 6700 4850 50  0001 C CNN
+	1    6700 4850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4850 7000 4850
+Wire Wire Line
+	6300 4850 6550 4850
+$Comp
+L Device:R R27
+U 1 1 5E6334FA
+P 6700 4950
+F 0 "R27" V 6700 4950 50  0000 C CNN
+F 1 "R" V 6700 4900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 4950 50  0001 C CNN
+F 3 "~" H 6700 4950 50  0001 C CNN
+	1    6700 4950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 4950 7000 4950
+Wire Wire Line
+	6300 4950 6550 4950
+$Comp
+L Device:R R28
+U 1 1 5E633502
+P 6700 5050
+F 0 "R28" V 6700 5050 50  0000 C CNN
+F 1 "R" V 6700 5000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5050 50  0001 C CNN
+F 3 "~" H 6700 5050 50  0001 C CNN
+	1    6700 5050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5050 7000 5050
+Wire Wire Line
+	6300 5050 6550 5050
+$Comp
+L Device:R R29
+U 1 1 5E63350A
+P 6700 5150
+F 0 "R29" V 6700 5150 50  0000 C CNN
+F 1 "R" V 6700 5100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5150 50  0001 C CNN
+F 3 "~" H 6700 5150 50  0001 C CNN
+	1    6700 5150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5150 7000 5150
+Wire Wire Line
+	6300 5150 6550 5150
+$Comp
+L Device:R R30
+U 1 1 5E633512
+P 6700 5250
+F 0 "R30" V 6700 5250 50  0000 C CNN
+F 1 "R" V 6700 5200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5250 50  0001 C CNN
+F 3 "~" H 6700 5250 50  0001 C CNN
+	1    6700 5250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5250 7000 5250
+Wire Wire Line
+	6300 5250 6550 5250
+$Comp
+L Device:R R31
+U 1 1 5E63351A
+P 6700 5350
+F 0 "R31" V 6700 5350 50  0000 C CNN
+F 1 "R" V 6700 5300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5350 50  0001 C CNN
+F 3 "~" H 6700 5350 50  0001 C CNN
+	1    6700 5350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5350 7000 5350
+Wire Wire Line
+	6300 5350 6550 5350
+$Comp
+L Device:R R32
+U 1 1 5E633522
+P 6700 5450
+F 0 "R32" V 6700 5450 50  0000 C CNN
+F 1 "R" V 6700 5400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5450 50  0001 C CNN
+F 3 "~" H 6700 5450 50  0001 C CNN
+	1    6700 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5450 7000 5450
+Wire Wire Line
+	6300 5450 6550 5450
+$Comp
+L Device:R R33
+U 1 1 5E640763
+P 6700 5550
+F 0 "R33" V 6700 5550 50  0000 C CNN
+F 1 "R" V 6700 5500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5550 50  0001 C CNN
+F 3 "~" H 6700 5550 50  0001 C CNN
+	1    6700 5550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5550 7000 5550
+Wire Wire Line
+	6300 5550 6550 5550
+$Comp
+L Device:R R34
+U 1 1 5E64076B
+P 6700 5650
+F 0 "R34" V 6700 5650 50  0000 C CNN
+F 1 "R" V 6700 5600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5650 50  0001 C CNN
+F 3 "~" H 6700 5650 50  0001 C CNN
+	1    6700 5650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5650 7000 5650
+Wire Wire Line
+	6300 5650 6550 5650
+$Comp
+L Device:R R35
+U 1 1 5E640773
+P 6700 5750
+F 0 "R35" V 6700 5750 50  0000 C CNN
+F 1 "R" V 6700 5700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5750 50  0001 C CNN
+F 3 "~" H 6700 5750 50  0001 C CNN
+	1    6700 5750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5750 7000 5750
+Wire Wire Line
+	6300 5750 6550 5750
+$Comp
+L Device:R R36
+U 1 1 5E64077B
+P 6700 5850
+F 0 "R36" V 6700 5850 50  0000 C CNN
+F 1 "R" V 6700 5800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5850 50  0001 C CNN
+F 3 "~" H 6700 5850 50  0001 C CNN
+	1    6700 5850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5850 7000 5850
+Wire Wire Line
+	6300 5850 6550 5850
+$Comp
+L Device:R R37
+U 1 1 5E640783
+P 6700 5950
+F 0 "R37" V 6700 5950 50  0000 C CNN
+F 1 "R" V 6700 5900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 5950 50  0001 C CNN
+F 3 "~" H 6700 5950 50  0001 C CNN
+	1    6700 5950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 5950 7000 5950
+Wire Wire Line
+	6300 5950 6550 5950
+$Comp
+L Device:R R38
+U 1 1 5E64078B
+P 6700 6050
+F 0 "R38" V 6700 6050 50  0000 C CNN
+F 1 "R" V 6700 6000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6050 50  0001 C CNN
+F 3 "~" H 6700 6050 50  0001 C CNN
+	1    6700 6050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6050 7000 6050
+Wire Wire Line
+	6300 6050 6550 6050
+$Comp
+L Device:R R39
+U 1 1 5E640793
+P 6700 6150
+F 0 "R39" V 6700 6150 50  0000 C CNN
+F 1 "R" V 6700 6100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6150 50  0001 C CNN
+F 3 "~" H 6700 6150 50  0001 C CNN
+	1    6700 6150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6150 7000 6150
+Wire Wire Line
+	6300 6150 6550 6150
+$Comp
+L Device:R R40
+U 1 1 5E64079B
+P 6700 6250
+F 0 "R40" V 6700 6250 50  0000 C CNN
+F 1 "R" V 6700 6200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6250 50  0001 C CNN
+F 3 "~" H 6700 6250 50  0001 C CNN
+	1    6700 6250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6250 7000 6250
+Wire Wire Line
+	6300 6250 6550 6250
+$Comp
+L Device:R R41
+U 1 1 5E652A6A
+P 6700 6350
+F 0 "R41" V 6700 6350 50  0000 C CNN
+F 1 "R" V 6700 6300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6350 50  0001 C CNN
+F 3 "~" H 6700 6350 50  0001 C CNN
+	1    6700 6350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6350 7000 6350
+Wire Wire Line
+	6300 6350 6550 6350
+$Comp
+L Device:R R42
+U 1 1 5E652A72
+P 6700 6450
+F 0 "R42" V 6700 6450 50  0000 C CNN
+F 1 "R" V 6700 6400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6450 50  0001 C CNN
+F 3 "~" H 6700 6450 50  0001 C CNN
+	1    6700 6450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6450 7000 6450
+Wire Wire Line
+	6300 6450 6550 6450
+$Comp
+L Device:R R43
+U 1 1 5E652A7A
+P 6700 6550
+F 0 "R43" V 6700 6550 50  0000 C CNN
+F 1 "R" V 6700 6500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6550 50  0001 C CNN
+F 3 "~" H 6700 6550 50  0001 C CNN
+	1    6700 6550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6550 7000 6550
+Wire Wire Line
+	6300 6550 6550 6550
+$Comp
+L Device:R R44
+U 1 1 5E652A82
+P 6700 6650
+F 0 "R44" V 6700 6650 50  0000 C CNN
+F 1 "R" V 6700 6600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6650 50  0001 C CNN
+F 3 "~" H 6700 6650 50  0001 C CNN
+	1    6700 6650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6650 7000 6650
+Wire Wire Line
+	6300 6650 6550 6650
+$Comp
+L Device:R R45
+U 1 1 5E652A8A
+P 6700 6750
+F 0 "R45" V 6700 6750 50  0000 C CNN
+F 1 "R" V 6700 6700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6750 50  0001 C CNN
+F 3 "~" H 6700 6750 50  0001 C CNN
+	1    6700 6750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6750 7000 6750
+Wire Wire Line
+	6300 6750 6550 6750
+$Comp
+L Device:R R46
+U 1 1 5E652A92
+P 6700 6850
+F 0 "R46" V 6700 6850 50  0000 C CNN
+F 1 "R" V 6700 6800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6850 50  0001 C CNN
+F 3 "~" H 6700 6850 50  0001 C CNN
+	1    6700 6850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6850 7000 6850
+Wire Wire Line
+	6300 6850 6550 6850
+$Comp
+L Device:R R47
+U 1 1 5E652A9A
+P 6700 6950
+F 0 "R47" V 6700 6950 50  0000 C CNN
+F 1 "R" V 6700 6900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 6950 50  0001 C CNN
+F 3 "~" H 6700 6950 50  0001 C CNN
+	1    6700 6950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 6950 7000 6950
+Wire Wire Line
+	6300 6950 6550 6950
+$Comp
+L Device:R R48
+U 1 1 5E652AA2
+P 6700 7050
+F 0 "R48" V 6700 7050 50  0000 C CNN
+F 1 "R" V 6700 7000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7050 50  0001 C CNN
+F 3 "~" H 6700 7050 50  0001 C CNN
+	1    6700 7050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7050 7000 7050
+Wire Wire Line
+	6300 7050 6550 7050
+$Comp
+L Device:R R49
+U 1 1 5E665013
+P 6700 7150
+F 0 "R49" V 6700 7150 50  0000 C CNN
+F 1 "R" V 6700 7100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7150 50  0001 C CNN
+F 3 "~" H 6700 7150 50  0001 C CNN
+	1    6700 7150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7150 7000 7150
+Wire Wire Line
+	6300 7150 6550 7150
+$Comp
+L Device:R R50
+U 1 1 5E66501B
+P 6700 7250
+F 0 "R50" V 6700 7250 50  0000 C CNN
+F 1 "R" V 6700 7200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7250 50  0001 C CNN
+F 3 "~" H 6700 7250 50  0001 C CNN
+	1    6700 7250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7250 7000 7250
+Wire Wire Line
+	6300 7250 6550 7250
+$Comp
+L Device:R R51
+U 1 1 5E665023
+P 6700 7350
+F 0 "R51" V 6700 7350 50  0000 C CNN
+F 1 "R" V 6700 7300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7350 50  0001 C CNN
+F 3 "~" H 6700 7350 50  0001 C CNN
+	1    6700 7350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7350 7000 7350
+Wire Wire Line
+	6300 7350 6550 7350
+$Comp
+L Device:R R52
+U 1 1 5E66502B
+P 6700 7450
+F 0 "R52" V 6700 7450 50  0000 C CNN
+F 1 "R" V 6700 7400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7450 50  0001 C CNN
+F 3 "~" H 6700 7450 50  0001 C CNN
+	1    6700 7450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7450 7000 7450
+Wire Wire Line
+	6300 7450 6550 7450
+$Comp
+L Device:R R53
+U 1 1 5E665033
+P 6700 7550
+F 0 "R53" V 6700 7550 50  0000 C CNN
+F 1 "R" V 6700 7500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7550 50  0001 C CNN
+F 3 "~" H 6700 7550 50  0001 C CNN
+	1    6700 7550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7550 7000 7550
+Wire Wire Line
+	6300 7550 6550 7550
+$Comp
+L Device:R R54
+U 1 1 5E66503B
+P 6700 7650
+F 0 "R54" V 6700 7650 50  0000 C CNN
+F 1 "R" V 6700 7600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7650 50  0001 C CNN
+F 3 "~" H 6700 7650 50  0001 C CNN
+	1    6700 7650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7650 7000 7650
+Wire Wire Line
+	6300 7650 6550 7650
+$Comp
+L Device:R R55
+U 1 1 5E665043
+P 6700 7750
+F 0 "R55" V 6700 7750 50  0000 C CNN
+F 1 "R" V 6700 7700 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7750 50  0001 C CNN
+F 3 "~" H 6700 7750 50  0001 C CNN
+	1    6700 7750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7750 7000 7750
+Wire Wire Line
+	6300 7750 6550 7750
+$Comp
+L Device:R R56
+U 1 1 5E66504B
+P 6700 7850
+F 0 "R56" V 6700 7850 50  0000 C CNN
+F 1 "R" V 6700 7800 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7850 50  0001 C CNN
+F 3 "~" H 6700 7850 50  0001 C CNN
+	1    6700 7850
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7850 7000 7850
+Wire Wire Line
+	6300 7850 6550 7850
+$Comp
+L Device:R R57
+U 1 1 5E678F52
+P 6700 7950
+F 0 "R57" V 6700 7950 50  0000 C CNN
+F 1 "R" V 6700 7900 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 7950 50  0001 C CNN
+F 3 "~" H 6700 7950 50  0001 C CNN
+	1    6700 7950
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 7950 7000 7950
+Wire Wire Line
+	6300 7950 6550 7950
+$Comp
+L Device:R R58
+U 1 1 5E678F5A
+P 6700 8050
+F 0 "R58" V 6700 8050 50  0000 C CNN
+F 1 "R" V 6700 8000 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 8050 50  0001 C CNN
+F 3 "~" H 6700 8050 50  0001 C CNN
+	1    6700 8050
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 8050 7000 8050
+Wire Wire Line
+	6300 8050 6550 8050
+$Comp
+L Device:R R59
+U 1 1 5E678F62
+P 6700 8150
+F 0 "R59" V 6700 8150 50  0000 C CNN
+F 1 "R" V 6700 8100 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 8150 50  0001 C CNN
+F 3 "~" H 6700 8150 50  0001 C CNN
+	1    6700 8150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 8150 7000 8150
+Wire Wire Line
+	6300 8150 6550 8150
+$Comp
+L Device:R R60
+U 1 1 5E678F6A
+P 6700 8250
+F 0 "R60" V 6700 8250 50  0000 C CNN
+F 1 "R" V 6700 8200 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 8250 50  0001 C CNN
+F 3 "~" H 6700 8250 50  0001 C CNN
+	1    6700 8250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 8250 7000 8250
+Wire Wire Line
+	6300 8250 6550 8250
+$Comp
+L Device:R R61
+U 1 1 5E678F72
+P 6700 8350
+F 0 "R61" V 6700 8350 50  0000 C CNN
+F 1 "R" V 6700 8300 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 8350 50  0001 C CNN
+F 3 "~" H 6700 8350 50  0001 C CNN
+	1    6700 8350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 8350 7000 8350
+Wire Wire Line
+	6300 8350 6550 8350
+$Comp
+L Device:R R62
+U 1 1 5E678F7A
+P 6700 8450
+F 0 "R62" V 6700 8450 50  0000 C CNN
+F 1 "R" V 6700 8400 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 8450 50  0001 C CNN
+F 3 "~" H 6700 8450 50  0001 C CNN
+	1    6700 8450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 8450 7000 8450
+Wire Wire Line
+	6300 8450 6550 8450
+$Comp
+L Device:R R63
+U 1 1 5E678F82
+P 6700 8550
+F 0 "R63" V 6700 8550 50  0000 C CNN
+F 1 "R" V 6700 8500 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 8550 50  0001 C CNN
+F 3 "~" H 6700 8550 50  0001 C CNN
+	1    6700 8550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 8550 7000 8550
+Wire Wire Line
+	6300 8550 6550 8550
+$Comp
+L Device:R R64
+U 1 1 5E678F8A
+P 6700 8650
+F 0 "R64" V 6700 8650 50  0000 C CNN
+F 1 "R" V 6700 8600 50  0001 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 6630 8650 50  0001 C CNN
+F 3 "~" H 6700 8650 50  0001 C CNN
+	1    6700 8650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6850 8650 7000 8650
+Wire Wire Line
+	6300 8650 6550 8650
+$EndSCHEMATC

@@ -1,0 +1,94 @@
+
+(rules PCB cubet_leds
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 2512)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.0)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    "@:no_net_0"
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    GND "ROW_0" "ROW_1" "ROW_2" "ROW_3" "ROW_4" "ROW_5" "ROW_6"
+    "ROW_7" "COLUMN_23" "COLUMN_22" "COLUMN_21" "COLUMN_20" "COLUMN_19" "COLUMN_18" "COLUMN_17"
+    "COLUMN_16" "COLUMN_15" "COLUMN_14" "COLUMN_13" "COLUMN_12" "COLUMN_11" "COLUMN_10" "COLUMN_9"
+    "COLUMN_8" "COLUMN_7" "COLUMN_6" "COLUMN_5" "COLUMN_4" "COLUMN_3" "COLUMN_2" "COLUMN_1"
+    "COLUMN_0" "COLUMN_47" "COLUMN_46" "COLUMN_45" "COLUMN_44" "COLUMN_43" "COLUMN_42" "COLUMN_41"
+    "COLUMN_40" "COLUMN_39" "COLUMN_38" "COLUMN_37" "COLUMN_36" "COLUMN_35" "COLUMN_34" "COLUMN_33"
+    "COLUMN_32" "COLUMN_31" "COLUMN_30" "COLUMN_29" "COLUMN_28" "COLUMN_27" "COLUMN_26" "COLUMN_25"
+    "COLUMN_24" "COLUMN_63" "COLUMN_62" "COLUMN_61" "COLUMN_60" "COLUMN_59" "COLUMN_58" "COLUMN_57"
+    "COLUMN_56" "COLUMN_55" "COLUMN_54" "COLUMN_53" "COLUMN_52" "COLUMN_51" "COLUMN_50" "COLUMN_49"
+    "COLUMN_48" "Net-(D1-Pad2)" "Net-(D2-Pad2)" "Net-(D3-Pad2)" "Net-(D4-Pad2)" "Net-(D5-Pad2)" "Net-(D6-Pad2)" "Net-(D7-Pad2)"
+    "Net-(D8-Pad2)" "Net-(D9-Pad2)" "Net-(D10-Pad2)" "Net-(D11-Pad2)" "Net-(D12-Pad2)" "Net-(D13-Pad2)" "Net-(D14-Pad2)" "Net-(D15-Pad2)"
+    "Net-(D16-Pad2)" "Net-(D17-Pad2)" "Net-(D18-Pad2)" "Net-(D19-Pad2)" "Net-(D20-Pad2)" "Net-(D21-Pad2)" "Net-(D22-Pad2)" "Net-(D23-Pad2)"
+    "Net-(D24-Pad2)" "Net-(D25-Pad2)" "Net-(D26-Pad2)" "Net-(D27-Pad2)" "Net-(D28-Pad2)" "Net-(D29-Pad2)" "Net-(D30-Pad2)" "Net-(D31-Pad2)"
+    "Net-(D32-Pad2)" "Net-(D33-Pad2)" "Net-(D34-Pad2)" "Net-(D35-Pad2)" "Net-(D36-Pad2)" "Net-(D37-Pad2)" "Net-(D38-Pad2)" "Net-(D39-Pad2)"
+    "Net-(D40-Pad2)" "Net-(D41-Pad2)" "Net-(D42-Pad2)" "Net-(D43-Pad2)" "Net-(D44-Pad2)" "Net-(D45-Pad2)" "Net-(D46-Pad2)" "Net-(D47-Pad2)"
+    "Net-(D48-Pad2)" "Net-(D49-Pad2)" "Net-(D50-Pad2)" "Net-(D51-Pad2)" "Net-(D52-Pad2)" "Net-(D53-Pad2)" "Net-(D54-Pad2)" "Net-(D55-Pad2)"
+    "Net-(D56-Pad2)" "Net-(D57-Pad2)" "Net-(D58-Pad2)" "Net-(D59-Pad2)" "Net-(D60-Pad2)" "Net-(D61-Pad2)" "Net-(D62-Pad2)" "Net-(D63-Pad2)"
+    "Net-(D64-Pad2)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)

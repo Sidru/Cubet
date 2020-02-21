@@ -15,13 +15,18 @@ Shifty shift;
 
 void shift_init(void);
 static void toggle_led_debug(void);
-static void shifty_test(void);
+static void shift_test(void);
 
 void shift_init(void)
 {
-    shift.setBitCount(SHIFTY_NR_BITS); // 8x8 Columns and 8 Layers
-    shift.setPins(SHIFT_CLK_PIN, SHIFT_DATA_PIN, SHIFT_LATCH_PIN, SHIFT_READ_PIN);
+    //shift.setBitCount(SHIFTY_NR_BITS); // 8x8 Columns and 8 Layers
+    //shift.setPins(SHIFT_CLK_PIN, SHIFT_DATA_PIN, SHIFT_LATCH_PIN, SHIFT_READ_PIN);
+
+    pinMode(SHIFT_DATA_PIN, OUTPUT);
+    pinMode(SHIFT_CLK_PIN, OUTPUT);
+    pinMode(SHIFT_LATCH_PIN, OUTPUT);
 }
+
 
 void toggle_led_debug(void) {
     static bool last = 0;
@@ -45,27 +50,23 @@ void toggle_led_debug(void) {
     }
 }
 
-void shifty_test(void)
+void shift_test(void)
 {
     static unsigned long start_millis = millis();
-    static uint32_t cnt = 0; 
+    static uint32_t cnt = 1; 
     uint32_t i = 0;
 
     if ((millis() - start_millis) >= 100)
     {
         start_millis = millis();
-
-        if (cnt >= SHIFTY_NR_BITS)
+        
+        if (cnt >= 256)
         {
             cnt = 0;
         }
-        shift.batchWriteBegin();
-        for(i = 0; i <= SHIFTY_NR_BITS; i++)
-        {
-            shift.writeBit(i, 0);
-        }
-        shift.writeBit(cnt, 1);
-        shift.batchWriteEnd();
+        digitalWrite(SHIFT_LATCH_PIN, LOW);
+        shiftOut(SHIFT_DATA_PIN, SHIFT_CLK_PIN, MSBFIRST, cnt);
+        digitalWrite(SHIFT_LATCH_PIN, HIGH);
         cnt++;
     }
 }
@@ -82,5 +83,5 @@ void setup()
 void loop()
 {
     toggle_led_debug();
-    shifty_test();
+    shift_test();
 }
