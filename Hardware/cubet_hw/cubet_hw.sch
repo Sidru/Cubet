@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:cubet_hw-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
@@ -3170,12 +3169,6 @@ Text GLabel 5350 4500 2    50   Input ~ 0
 TXD
 Text GLabel 5350 4600 2    50   Input ~ 0
 RXD
-Text GLabel 5350 4300 2    50   Input ~ 0
-PB10_S4_SPI_MOSI
-Text GLabel 5350 4400 2    50   Input ~ 0
-PB11_S4_SPI_SCK
-Text GLabel 3350 5100 0    50   Input ~ 0
-PB12_S4_SPI_MISO
 Text GLabel 8400 3800 0    50   Input ~ 0
 BUTTON_0
 Wire Wire Line
@@ -3254,4 +3247,6 @@ Wire Wire Line
 	8950 9250 9150 9250
 Wire Wire Line
 	8950 10550 9150 10550
+Text Notes 2300 8350 0    50   ~ 0
+I2C hasn't been connected. Maybe in V2
 $EndSCHEMATC

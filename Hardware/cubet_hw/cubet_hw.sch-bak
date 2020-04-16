@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:cubet_hw-cache
 EELAYER 30 0
 EELAYER END
 $Descr A3 16535 11693
@@ -2452,22 +2451,6 @@ Wire Wire Line
 	13650 6400 13800 6400
 Wire Wire Line
 	13650 6500 13800 6500
-Text GLabel 3150 4300 0    50   Input ~ 0
-CTRL_ROW_0_UC
-Text GLabel 3150 4400 0    50   Input ~ 0
-CTRL_ROW_1_UC
-Text GLabel 3150 4500 0    50   Input ~ 0
-CTRL_ROW_2_UC
-Text GLabel 3150 4600 0    50   Input ~ 0
-CTRL_ROW_3_UC
-Text GLabel 3150 4700 0    50   Input ~ 0
-CTRL_ROW_4_UC
-Text GLabel 3150 4800 0    50   Input ~ 0
-CTRL_ROW_5_UC
-Text GLabel 3150 4900 0    50   Input ~ 0
-CTRL_ROW_6_UC
-Text GLabel 3150 5000 0    50   Input ~ 0
-CTRL_ROW_7_UC
 Wire Wire Line
 	13650 7950 13800 7950
 Wire Wire Line
@@ -3096,22 +3079,6 @@ F 3 "http://www2.st.com/resource/en/datasheet/CD00050750.pdf" H 3200 1800 50  00
 	1    3000 1450
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3150 4300 3350 4300
-Wire Wire Line
-	3150 4400 3350 4400
-Wire Wire Line
-	3150 4500 3350 4500
-Wire Wire Line
-	3150 4600 3350 4600
-Wire Wire Line
-	3150 4700 3350 4700
-Wire Wire Line
-	3150 4800 3350 4800
-Wire Wire Line
-	3150 4900 3350 4900
-Wire Wire Line
-	3150 5000 3350 5000
 Text GLabel 2700 10550 0    50   Input ~ 0
 CTRL_ROW_1_SHIFT
 Wire Wire Line
@@ -3202,12 +3169,6 @@ Text GLabel 5350 4500 2    50   Input ~ 0
 TXD
 Text GLabel 5350 4600 2    50   Input ~ 0
 RXD
-Text GLabel 5350 4300 2    50   Input ~ 0
-PB10_S4_SPI_MOSI
-Text GLabel 5350 4400 2    50   Input ~ 0
-PB11_S4_SPI_SCK
-Text GLabel 3350 5100 0    50   Input ~ 0
-PB12_S4_SPI_MISO
 Text GLabel 8400 3800 0    50   Input ~ 0
 BUTTON_0
 Wire Wire Line
