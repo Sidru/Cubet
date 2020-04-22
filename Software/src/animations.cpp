@@ -1,3 +1,42 @@
+#include <Arduino.h>
+#include <draw.h>
+//#include <cube.h>
+#include <animations.h>
+
+cAnim::cAnim()
+{
+}
+
+cAnim::~cAnim()
+{
+
+}
+
+void cAnim::begin(cCube* Cube)
+{
+    
+}
+
+void cAnim::refresh(void)
+{
+
+}
+
+void cAnim::start(uANIMATION anim, uint32_t iterations, uint32_t speed)
+{
+
+}
+
+void cAnim::stop(void)
+{
+
+}
+
+uANIMATION cAnim::get_anim(void)
+{
+    return active_anim;
+}
+
 //volatile const unsigned char font[910] [5] = {
 //	0x00,0x00,0x00,0x00,0x00,0x00,0x5f,0x5f,0x00,0x00,	//  !
 //	0x00,0x03,0x00,0x03,0x00,0x14,0x7f,0x14,0x7f,0x14,	// "#
@@ -69,52 +108,61 @@
 //0x04,0x03,0x12,0x21,0x30,0x40,0x51,0x62,0x73,0x74,0x65,0x56,0x47,0x37,0x26,0x15}; // circle, len 16, offset 28
 //
 //
-//void effect_wormsqueeze (int size, int axis, int direction, int iterations, int delay)
-//{
-//	int x, y, i,j,k, dx, dy;
-//	int cube_size;
-//	int origin = 0;
-//	
-//	if (direction == -1)
-//		origin = 7;
-//	
-//	cube_size = 8-(size-1);
-//	
-//	x = rand()%cube_size;
-//	y = rand()%cube_size;
-//	
-//	for (i=0; i<iterations; i++)
-//	{
-//		dx = ((rand()%3)-1);
-//		dy = ((rand()%3)-1);
-//	
-//		if ((x+dx) > 0 && (x+dx) < cube_size)
-//			x += dx;
-//			
-//		if ((y+dy) > 0 && (y+dy) < cube_size)
-//			y += dy;
-//	
-//		shift(axis, direction);
-//		
-//
-//		for (j=0; j<size;j++)
-//		{
-//			for (k=0; k<size;k++)
-//			{
-//				if (axis == AXIS_Z)
-//					setvoxel(x+j,y+k,origin);
-//					
-//				if (axis == AXIS_Y)
-//					setvoxel(x+j,origin,y+k);
-//					
-//				if (axis == AXIS_X)
-//					setvoxel(origin,y+j,x+k);
-//			}
-//		}
-//		
-//		delay_ms(delay);
-//	}
-//}
+void effect_wormsqueeze (cDraw* Draw, int size, int axis, int direction, int iterations, int wait)
+{
+    static int x, y;
+	//int x, y, i,j,k, dx, dy;
+	int i,j,k, dx, dy;
+	int cube_size;
+	int origin = 0;
+    //TEMP
+    static uint8_t init = 0;
+    //END TEMP
+	if (direction == -1)
+		origin = 7;
+	
+	cube_size = 8-(size-1);
+	
+    if(init == 0)
+    {
+	    x = rand()%cube_size;
+	    y = rand()%cube_size;
+        init = 1;
+    }
+	
+	//for (i=0; i<iterations; i++)
+	//{
+		dx = ((rand()%3)-1);
+		dy = ((rand()%3)-1);
+	
+		if ((x+dx) > 0 && (x+dx) < cube_size)
+			x += dx;
+			
+		if ((y+dy) > 0 && (y+dy) < cube_size)
+			y += dy;
+	
+		Draw->shift((uDRAW_AXIS)axis, direction);
+		
+
+		for (j=0; j<size;j++)
+		{
+			for (k=0; k<size;k++)
+			{
+				if (axis == AXIS_Z)
+					Draw->setvoxel(x+j,y+k,origin);
+					
+				if (axis == AXIS_Y)
+					Draw->setvoxel(x+j,origin,y+k);
+					
+				if (axis == AXIS_X)
+					Draw->setvoxel(origin,y+j,x+k);
+			}
+		}
+		
+		//delay(wait);
+	//}
+}
+
 //
 //  void font_getpath (unsigned char path, unsigned char *destination, int length)
 //{
@@ -167,7 +215,7 @@
 //		
 //		effect_pathmove(path, 28);
 //		setvoxel(0,7,z);
-//		delay_ms(delay);
+//		delay(delay);
 //	}
 //}
 //
@@ -179,11 +227,11 @@
 //   
 //  for(cnt=0;cnt<=7;cnt++){
 //   box_wireframe(0, 0, 0, 7, 7, cnt);   
-//   delay_ms(2000);
+//   delay(2000);
 //  }
 //  for(cnt=0;cnt<7;cnt++){
 //  clrplane_z(cnt);
-//  delay_ms(2000);  
+//  delay(2000);  
 //  }
 //  
 //  //Shift Things Right
@@ -192,7 +240,7 @@
 //  for(cnt=0;cnt<=7;cnt++){
 //  setvoxel(cnt,0,6);  
 //  }
-//  delay_ms(2000);  
+//  delay(2000);  
 //    //2
 //  shift(AXIS_Y,-1);
 //  for(cnt=0;cnt<=7;cnt++){
@@ -200,7 +248,7 @@
 //  }
 //  setvoxel(0,0,6);
 //  setvoxel(7,0,6);
-//  delay_ms(2000);  
+//  delay(2000);  
 //    //3
 //  shift(AXIS_Y,-1);
 //  for(cnt=0;cnt<=7;cnt++){
@@ -210,7 +258,7 @@
 //  setvoxel(7,0,5);
 //  setvoxel(0,0,6);
 //  setvoxel(7,0,6);
-//  delay_ms(2000);
+//  delay(2000);
 //
 //    //4
 //  shift(AXIS_Y,-1);
@@ -223,7 +271,7 @@
 //  setvoxel(7,0,5);
 //  setvoxel(0,0,6);
 //  setvoxel(7,0,6);
-//  delay_ms(2000);
+//  delay(2000);
 //   
 //    //5
 //  shift(AXIS_Y,-1);
@@ -238,7 +286,7 @@
 //  setvoxel(7,0,5);
 //  setvoxel(0,0,6);
 //  setvoxel(7,0,6);
-//    delay_ms(2000);
+//    delay(2000);
 //  
 //    //6
 //  shift(AXIS_Y,-1);
@@ -253,7 +301,7 @@
 //  setvoxel(7,0,4);
 //  setvoxel(0,0,5);
 //  setvoxel(7,0,5);
-//  delay_ms(2000);
+//  delay(2000);
 //  
 //  
 //    //7
@@ -271,16 +319,16 @@
 //  setvoxel(7,0,4);  
 //  setvoxel(0,0,5);
 //  setvoxel(7,0,5);
-//  delay_ms(2000);
+//  delay(2000);
 //
 //    //Right To Left   
 //  for(cnt=0;cnt<=7;cnt++){
 //   box_wireframe(0, 0, 0, 7, cnt, 7);   
-//   delay_ms(2000);
+//   delay(2000);
 //  }
 //  for(cnt=0;cnt<7;cnt++){
 //  clrplane_y(cnt);
-//  delay_ms(2000);  
+//  delay(2000);  
 //  }
 //
 //  //Shift to the bottom
@@ -294,7 +342,7 @@
 //        setvoxel(7,cnt,0);      
 //      }
 //    
-//      delay_ms(2000);  
+//      delay(2000);  
 //  }   
 //
 //  //Make All Wall Box
@@ -302,7 +350,7 @@
 //  for(cnt=0;cnt<=6;cnt++){
 //    fill(0x00);    
 //    box_walls(0,0,0,7,7,cnt); 
-//    delay_ms(2000);  
+//    delay(2000);  
 //  }  
 //  
 //  time = 2000;
@@ -312,14 +360,14 @@
 //    for(cnt=0;cnt<=3;cnt++){
 //      fill(0x00);
 //      box_walls(cnt,cnt,cnt,7-cnt,7-cnt,7-cnt);   
-//      delay_ms(time);
+//      delay(time);
 //    }  
 //    
 //    //Make Box Bigger
 //    for(cnt=0;cnt<=3;cnt++){
 //      fill(0x00);
 //      box_walls(3-cnt,3-cnt,3-cnt,4+cnt,4+cnt,4+cnt);   
-//      delay_ms(time);
+//      delay(time);
 //    }  
 //  }
 //  for(cnt_2=0;cnt_2<5;cnt_2++){
@@ -328,17 +376,17 @@
 //  for(cnt=0;cnt<=3;cnt++){
 //    fill(0x00);
 //    box_walls(cnt,cnt,cnt,7-cnt,7-cnt,7-cnt);   
-//    delay_ms(time);
+//    delay(time);
 //  }  
 //  
 //  //Make Box Bigger
 //  for(cnt=0;cnt<=3;cnt++){
 //    fill(0x00);
 //    box_walls(3-cnt,3-cnt,3-cnt,4+cnt,4+cnt,4+cnt);   
-//    delay_ms(time);
+//    delay(time);
 //  }  
 //  }  
-//    delay_ms(2000);
+//    delay(2000);
 //  
 //}
 //void sinelines (int iterations, int delay)
@@ -366,7 +414,7 @@
 //			//line_3d((int) right, 7, x);
 //		}
 //	
-//	// delay_ms(delay);
+//	// delay(delay);
 //	fill(0x00);
 //	}
 //}
@@ -379,7 +427,7 @@
 //		for (v=0;v<=voxels;v++)
 //			setvoxel(rand()%8,rand()%8,rand()%8);
 //			
-//		delay_ms(delay);
+//		delay(delay);
 //		fill(0x00);
 //	}
 //}
@@ -465,7 +513,7 @@
 //				setvoxel(7-x,7-height,7-y);
 //
 //			}
-//		delay_ms(delay);
+//		delay(delay);
 //	}
 //}
 //
@@ -501,7 +549,7 @@
 //				setvoxel(7-x,7-y,7-height);
 //
 //			}
-//		delay_ms(delay);
+//		delay(delay);
 //	}
 //}
 //
@@ -546,7 +594,7 @@
 //
 //
 //			}
-//		delay_ms(delay);
+//		delay(delay);
 //	}
 //}
 //
@@ -589,7 +637,7 @@
 //		}
 //        // Draw the positions and take a nap
 //		draw_positions_axis (axis, positions,invert);
-//		delay_ms(delay);
+//		delay(delay);
 //	}
 //	
 //    // Set all destinations to 7 (opposite from the side they started out)
@@ -599,7 +647,7 @@
 //	}
 //	
 //    // Suspend the positions in mid-air for a while
-//	delay_ms(sleep);
+//	delay(sleep);
 //	
 //    // Then do the same thing one more time
 //	for (i=0; i<8; i++)
@@ -616,7 +664,7 @@
 //			}
 //		}
 //		draw_positions_axis (axis, positions,invert);
-//		delay_ms(delay);
+//		delay(delay);
 //	}
 //}
 //
@@ -659,7 +707,7 @@
 //		line_3d((int) top_z, (int) top_x, (int) top_y, (int) bot_z, (int) bot_x, (int) bot_y);
 //		}
 //
-//		// delay_ms(delay);
+//		// delay(delay);
 //		fill(0x00);
 //	}
 //
@@ -802,7 +850,7 @@
 //		for (e=0;e<origin_z;e++)
 //		{
 //			setvoxel(origin_x,origin_y,e);
-//			delay_ms(600+500*e);
+//			delay(600+500*e);
 //			fill(0x00);
 //		}
 //
@@ -843,7 +891,7 @@
 //
 //			}
 //
-//			delay_ms(delay);
+//			delay(delay);
 //			fill(0x00);
 //		}
 //
@@ -858,12 +906,12 @@
 //       for(int i = 0; i < 4; i++){
 //         fill(0x00);
 //        box_filled(3 - i, 3 - i, 3 - i, 4 + i, 4 + i, 4 + i);
-//        delay_ms(delayt);
+//        delay(delayt);
 //       }
 //       for(int i = 3; i >= 0; i--){
 //         fill(0x00);
 //        box_filled(3 - i, 3 - i, 3 - i, 4 + i, 4 + i, 4 + i);
-//        delay_ms(delayt);
+//        delay(delayt);
 //       }
 //      }
 //     
@@ -871,12 +919,12 @@
 //       for(int i = 0; i < 4; i++){
 //         fill(0x00);
 //        box_walls(3 - i, 3 - i, 3 - i, 4 + i, 4 + i, 4 + i);
-//        delay_ms(delayt);
+//        delay(delayt);
 //       }
 //       for(int i = 3; i >= 0; i--){
 //         fill(0x00);
 //        box_walls(3 - i, 3 - i, 3 - i, 4 + i, 4 + i, 4 + i);
-//        delay_ms(delayt);
+//        delay(delayt);
 //       }
 //      }
 //     
@@ -884,12 +932,12 @@
 //       for(int i = 0; i < 4; i++){
 //         fill(0x00);
 //        box_wireframe(3 - i, 3 - i, 3 - i, 4 + i, 4 + i, 4 + i);
-//        delay_ms(delayt);
+//        delay(delayt);
 //       }
 //       for(int i = 3; i >= 0; i--){
 //         fill(0x00);
 //        box_wireframe(3 - i, 3 - i, 3 - i, 4 + i, 4 + i, 4 + i);
-//        delay_ms(delayt);
+//        delay(delayt);
 //       }
 //      }
 //    }
@@ -961,7 +1009,7 @@
 //                    }
 //                   
 //                   
-//                    delay_ms(delayt);
+//                    delay(delayt);
 //                    draw_positions_axis(axis,cubepos,0);
 //     
 //            }
@@ -969,28 +1017,31 @@
 //    }
 //     
 //     
-//    void effect_rain (int iterations)
-//    {
-//            int i, ii;
-//            int rnd_x;
-//            int rnd_y;
-//            int rnd_num;
-//           
-//            for (ii=0;ii<iterations;ii++)
-//            {
-//                    rnd_num = rand()%4;
-//                   
-//                    for (i=0; i < rnd_num;i++)
-//                    {
-//                            rnd_x = rand()%8;
-//                            rnd_y = rand()%8;
-//                            setvoxel(rnd_x,rnd_y,7);
-//                    }
-//                   
-//                    delay_ms(1000);
-//                    shift(AXIS_Z,-1);
-//            }
-//    }
+void effect_rain(cDraw* Draw, int iterations)
+{
+    int i, ii;
+    int rnd_x;
+    int rnd_y;
+    int rnd_num;
+   
+    //for (ii=0;ii<iterations;ii++)
+    //{
+    //
+            Draw->shift(AXIS_Z, -1);
+
+            rnd_num = rand()%4;
+           
+            for (i=0; i < rnd_num;i++)
+            {
+                    rnd_x = rand()%8;
+                    rnd_y = rand()%8;
+                    Draw->setvoxel(rnd_x,rnd_y,7);
+            }
+           
+            //delay(1000);
+            //Draw->shift(AXIS_Z, -1);
+    //}
+}
 //     
 //    // Set or clear exactly 512 voxels in a random order.
 //    void effect_random_filler (int delayt, int state)
@@ -1016,7 +1067,7 @@
 //                    if ((state == 0 && getvoxel(x,y,z) == 0x01) || (state == 1 && getvoxel(x,y,z) == 0x00))
 //                    {
 //                            altervoxel(x,y,z,state);
-//                            delay_ms(delayt);
+//                            delay(delayt);
 //                            loop++;
 //                    }      
 //            }
@@ -1034,24 +1085,24 @@
 //                    while (i>0)
 //                    {
 //                            fill(0x00);
-//                            delay_ms(i);
+//                            delay(i);
 //                           
 //                            fill(0xff);
-//                            delay_ms(100);
+//                            delay(100);
 //                           
 //                            i = i - (15+(1000/(i/10)));
 //                    }
 //                   
-//                    delay_ms(1000);
+//                    delay(1000);
 //                   
 //                    i = 750;
 //                    while (i>0)
 //                    {
 //                            fill(0x00);
-//                            delay_ms(751-i);
+//                            delay(751-i);
 //                           
 //                            fill(0xff);
-//                            delay_ms(100);
+//                            delay(100);
 //                           
 //                            i = i - (15+(1000/(i/10)));
 //                    }
@@ -1059,26 +1110,26 @@
 //     
 //    }
 //     
-//    // Draw a plane on one axis and send it back and forth once.
-//    void effect_planboing (int plane, int speedd)
-//    {
-//            int i;
-//            for (i=0;i<8;i++)
-//            {
-//                    fill(0x00);
-//            setplane(plane, i);
-//                    delay_ms(speedd);
-//            }
-//           
-//            for (i=7;i>=0;i--)
-//            {
-//                    fill(0x00);
-//            setplane(plane,i);
-//                    delay_ms(speedd);
-//            }
-//    }
-//     
-//     
-//     
-//     
-//
+// Draw a plane on one axis and send it back and forth once.
+void effect_planboing(cDraw* Draw, int plane, int speedd)
+{
+    int i;
+    for (i=0;i<8;i++)
+    {
+        Draw->fill(0x00);
+        Draw->setplane((uDRAW_AXIS)plane, i);
+        delay(speedd);
+    }
+   
+    for (i=7;i>=0;i--)
+    {
+        Draw->fill(0x00);
+        Draw->setplane((uDRAW_AXIS)plane, i);
+        delay(speedd);
+    }
+}
+ 
+     
+     
+     
+

@@ -6,16 +6,325 @@
 !_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
 !_TAG_PROGRAM_URL	https://ctags.io/	/official site/
 !_TAG_PROGRAM_VERSION	0.0.0	/a3c87ab5/
-DEBUG_PIN	src/main.cpp	/^#define DEBUG_PIN /;"	d	file:
-board	platformio.ini	/^board = adafruit_feather_m0 $/;"	k	section:env:mzeroUSB
+0	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "arduino"$/;"	s	array:frameworks
+0	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "atmelavr", $/;"	s	array:platforms
+0	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "logging", $/;"	s	array:keywords
+0	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        {$/;"	o	array:authors
+0	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"frameworks": ["arduino"],$/;"	s	array:frameworks
+0	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "extras", $/;"	s	array:export.exclude
+0	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "arduino"$/;"	s	array:frameworks
+0	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "atmelavr", $/;"	s	array:platforms
+0	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "device", $/;"	s	array:keywords
+0	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        {$/;"	o	array:authors
+0	cubet_board.json	/^        "0x239A",$/;"	s	array:build.hwids.0
+0	cubet_board.json	/^        "0x239A",$/;"	s	array:build.hwids.1
+0	cubet_board.json	/^        "0x239A",$/;"	s	array:build.hwids.2
+0	cubet_board.json	/^      "sam-ba",$/;"	s	array:upload.protocols
+0	cubet_board.json	/^      [$/;"	a	array:build.hwids
+0	cubet_board.json	/^    "arduino",$/;"	s	array:frameworks
+1	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "atmelsam", $/;"	s	array:platforms
+1	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "debug", $/;"	s	array:keywords
+1	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "docs", $/;"	s	array:export.exclude
+1	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "atmelsam", $/;"	s	array:platforms
+1	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "control"$/;"	s	array:keywords
+1	cubet_board.json	/^        "0x000B"$/;"	s	array:build.hwids.1
+1	cubet_board.json	/^        "0x0015"$/;"	s	array:build.hwids.2
+1	cubet_board.json	/^        "0x800B"$/;"	s	array:build.hwids.0
+1	cubet_board.json	/^      "blackmagic",$/;"	s	array:upload.protocols
+1	cubet_board.json	/^      [$/;"	a	array:build.hwids
+1	cubet_board.json	/^    "zephyr"$/;"	s	array:frameworks
+10	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "timsp430"$/;"	s	array:platforms
+10	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "timsp430"$/;"	s	array:platforms
+2	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "espressif32", $/;"	s	array:platforms
+2	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "log", $/;"	s	array:keywords
+2	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "tests", $/;"	s	array:export.exclude
+2	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "espressif32", $/;"	s	array:platforms
+2	cubet_board.json	/^      "jlink",$/;"	s	array:upload.protocols
+2	cubet_board.json	/^      [$/;"	a	array:build.hwids
+3	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "espressif8266", $/;"	s	array:platforms
+3	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "log levels", $/;"	s	array:keywords
+3	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "test", $/;"	s	array:export.exclude
+3	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "espressif8266", $/;"	s	array:platforms
+3	cubet_board.json	/^      "atmel-ice"$/;"	s	array:upload.protocols
+4	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "avr", $/;"	s	array:keywords
+4	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "intel_arc32", $/;"	s	array:platforms
+4	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "*.doxyfile", $/;"	s	array:export.exclude
+4	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "intel_arc32", $/;"	s	array:platforms
+5	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "esp8266"$/;"	s	array:keywords
+5	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "microchippic32", $/;"	s	array:platforms
+5	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "*.pdf"$/;"	s	array:export.exclude
+5	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "microchippic32", $/;"	s	array:platforms
+6	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "nordicnrf51", $/;"	s	array:platforms
+6	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "nordicnrf51", $/;"	s	array:platforms
+7	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "nordicnrf52", $/;"	s	array:platforms
+7	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "nordicnrf52", $/;"	s	array:platforms
+8	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "ststm32", $/;"	s	array:platforms
+8	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "ststm32", $/;"	s	array:platforms
+9	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "teensy", $/;"	s	array:platforms
+9	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "teensy", $/;"	s	array:platforms
+A Flexible 74HC595 Manager for Arduino	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^A Flexible 74HC595 Manager for Arduino$/;"	s
+ARRAY_LAYER_SIZE	src/cube.cpp	/^#define ARRAY_LAYER_SIZE /;"	d	file:
+ArduinoLog - C++ Log library for Arduino devices	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^ArduinoLog - C++ Log library for Arduino devices$/;"	c
+B	include/cube.h	/^    uint8_t B;$/;"	m	struct:__anon46933d2d0108	typeref:typename:uint8_t
+BUTTON_PIN	include/configuration.h	/^#define BUTTON_PIN /;"	d
+Basic Usage	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^### Basic Usage$/;"	S
+Batch Mode	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^### Batch Mode$/;"	S
+CONFIGURATION_H	include/configuration.h	/^#define CONFIGURATION_H$/;"	d
+CR	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define CR /;"	d
+CUBE_H	include/cube.h	/^#define CUBE_H /;"	d
+CUBE_REFRESH_MS	src/cube.cpp	/^#define CUBE_REFRESH_MS /;"	d	file:
+Copyright	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## Copyright$/;"	s
+Credit	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## Credit$/;"	s
+Cubet	src/cube.cpp	/^sCubet Cubet;$/;"	v	typeref:typename:sCubet
+DATA_LENGTH	src/shift_register_hal.cpp	/^#define DATA_LENGTH /;"	d	file:
+DEBUG_LED_PIN	include/configuration.h	/^#define DEBUG_LED_PIN /;"	d
+Daisy-chaining Shift Registers Together	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^### Daisy-chaining Shift Registers Together$/;"	S
+Disable library	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^### Disable library$/;"	S
+Downloading	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## Downloading$/;"	s
+FRAMES_PER_SECOND	include/configuration.h	/^#define FRAMES_PER_SECOND /;"	d
+Features	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## Features$/;"	s
+G	include/cube.h	/^    uint8_t G;$/;"	m	struct:__anon46933d2d0108	typeref:typename:uint8_t
+H	include/cube.h	/^    uint8_t H;$/;"	m	struct:__anon46933d2d0208	typeref:typename:uint8_t
+Initialisation	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^### Initialisation$/;"	S
+Input Pins	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^### Input Pins$/;"	S
+Inspiration	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^### Inspiration$/;"	S
+LOGGING_H	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOGGING_H$/;"	d
+LOGGING_VERSION	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOGGING_VERSION /;"	d
+LOG_LEVEL_ERROR	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOG_LEVEL_ERROR /;"	d
+LOG_LEVEL_FATAL	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOG_LEVEL_FATAL /;"	d
+LOG_LEVEL_NOTICE	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOG_LEVEL_NOTICE /;"	d
+LOG_LEVEL_SILENT	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOG_LEVEL_SILENT /;"	d
+LOG_LEVEL_TRACE	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOG_LEVEL_TRACE /;"	d
+LOG_LEVEL_VERBOSE	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOG_LEVEL_VERBOSE /;"	d
+LOG_LEVEL_WARNING	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^#define LOG_LEVEL_WARNING /;"	d
+Log	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.cpp	/^Logging Log = Logging();$/;"	v	typeref:typename:Logging
+Log events	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^### Log events$/;"	S
+Logging	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^    Logging()$/;"	f	class:Logging
+Logging	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^class Logging {$/;"	c
+On using and modifying libraries	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## On using and modifying libraries$/;"	s
+PINNING_H	include/pinning.h	/^#define PINNING_H$/;"	d
+PWM_RESOLUTION	include/configuration.h	/^#define PWM_RESOLUTION /;"	d
+Quick start	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## Quick start$/;"	s
+R	include/cube.h	/^    uint8_t R;$/;"	m	struct:__anon46933d2d0108	typeref:typename:uint8_t
+S	include/cube.h	/^    uint8_t S;$/;"	m	struct:__anon46933d2d0208	typeref:typename:uint8_t
+SHIFT_CLK_PIN	include/configuration.h	/^#define SHIFT_CLK_PIN /;"	d
+SHIFT_DATA_PIN	include/configuration.h	/^#define SHIFT_DATA_PIN /;"	d
+SHIFT_LATCH_PIN	include/configuration.h	/^#define SHIFT_LATCH_PIN /;"	d
+SHIFT_READ_PIN	include/configuration.h	/^#define SHIFT_READ_PIN /;"	d
+SHIFT_REGISTER_H	include/shift_register.h	/^#define SHIFT_REGISTER_H$/;"	d
+SHIFT_REGISTER_HAL_H	include/shift_register_hal.h	/^#define SHIFT_REGISTER_HAL_H$/;"	d
+SHIFT_SPI_DMA	include/configuration.h	/^#define SHIFT_SPI_DMA$/;"	d
+SIZE_OF_X	include/configuration.h	/^#define SIZE_OF_X /;"	d
+SIZE_OF_X	src/cube.cpp	/^#define SIZE_OF_X /;"	d	file:
+SIZE_OF_Y	include/configuration.h	/^#define SIZE_OF_Y /;"	d
+SIZE_OF_Y	src/cube.cpp	/^#define SIZE_OF_Y$/;"	d	file:
+SIZE_OF_Z	include/configuration.h	/^#define SIZE_OF_Z /;"	d
+SIZE_OF_Z	src/cube.cpp	/^#define SIZE_OF_Z /;"	d	file:
+Shifty	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^Shifty$/;"	c
+Shifty	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^Shifty::Shifty() {$/;"	f	class:Shifty
+Shifty	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^class Shifty {$/;"	c
+Shifty_h	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^#define Shifty_h$/;"	d
+Tested for	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## Tested for $/;"	s
+Usage	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/README.md	/^## Usage$/;"	s
+V	include/cube.h	/^    uint8_t V;$/;"	m	struct:__anon46933d2d0208	typeref:typename:uint8_t
+Wiring Your Project for Shift Register Inputs	.pio/libdeps/mzeroUSB/Shifty_ID801/README.md	/^### Wiring Your Project for Shift Register Inputs$/;"	S
+__anon46933d2d0108	include/cube.h	/^{$/;"	s
+__anon46933d2d0208	include/cube.h	/^{$/;"	s
+__anon46933d2d030a	include/cube.h	/^{$/;"	u
+__anon46933d2d0408	include/cube.h	/^{$/;"	s
+_level	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^    int _level;$/;"	m	class:Logging	typeref:typename:int
+_logOutput	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^    Print* _logOutput;$/;"	m	class:Logging	typeref:typename:Print *
+_prefix	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^    printfunction _prefix = NULL;$/;"	m	class:Logging	typeref:typename:printfunction
+_showLevel	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^	bool _showLevel;$/;"	m	class:Logging	typeref:typename:bool
+_suffix	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^    printfunction _suffix = NULL;$/;"	m	class:Logging	typeref:typename:printfunction
+architectures	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^architectures=*$/;"	k
+architectures	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^architectures=*$/;"	k
+author	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^author=Thijs Elenbaas$/;"	k
+author	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^author=Jonathan Bartlett <jonathan@bartlettpublishing.com>$/;"	k
+authors	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "authors": [$/;"	a
+authors	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"authors": {$/;"	o
+authors	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "authors": [$/;"	a
+batchReadBegin	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::batchReadBegin() {$/;"	f	class:Shifty	typeref:typename:void
+batchReadEnd	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::batchReadEnd() {$/;"	f	class:Shifty	typeref:typename:void
+batchReadMode	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  bool batchReadMode;$/;"	m	class:Shifty	typeref:typename:bool
+batchWriteBegin	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::batchWriteBegin() {$/;"	f	class:Shifty	typeref:typename:void
+batchWriteEnd	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::batchWriteEnd() {$/;"	f	class:Shifty	typeref:typename:void
+batchWriteMode	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  bool batchWriteMode;$/;"	m	class:Shifty	typeref:typename:bool
+begin	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.cpp	/^void Logging::begin(int level, Print* logOutput, bool showLevel){$/;"	f	class:Logging	typeref:typename:void
+bitCount	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  int bitCount;$/;"	m	class:Shifty	typeref:typename:int
+board	platformio.ini	/^board = cubet_board$/;"	k	section:env:mzeroUSB
+buffer_being_filled	src/shift_register_hal.cpp	/^uint8_t buffer_being_filled = 0;$/;"	v	typeref:typename:uint8_t
+buffer_value	src/shift_register_hal.cpp	/^uint8_t buffer_value = 0;$/;"	v	typeref:typename:uint8_t
+build	cubet_board.json	/^  "build": {$/;"	o
 build_type	platformio.ini	/^build_type = debug$/;"	k	section:env:mzeroUSB
-debug_tool	platformio.ini	/^debug_tool = jlink$/;"	k	section:env:mzeroUSB
+byteCount	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  int byteCount;$/;"	m	class:Shifty	typeref:typename:int
+bytes	include/cube.h	/^    uint8_t bytes[4];$/;"	m	union:__anon46933d2d030a	typeref:typename:uint8_t[4]
+category	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^category=Communication$/;"	k
+category	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^category=Device Control$/;"	k
+clockPin	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  int clockPin;$/;"	m	class:Shifty	typeref:typename:int
+column_pos	src/pinning.cpp	/^const uint8_t column_pos[8][8] = {$/;"	v	typeref:typename:const uint8_t[8][8]
+core	cubet_board.json	/^    "core": "adafruit",$/;"	s	object:build
+cpu	cubet_board.json	/^    "cpu": "cortex-m0plus",$/;"	s	object:build
+cube	src/cube.cpp	/^uCUBE cube[SIZE_OF_X][SIZE_OF_Y][SIZE_OF_Z];$/;"	v	typeref:typename:uCUBE[][][]
+cube_array	src/cube.cpp	/^uint8_t cube_array[SIZE_OF_X * SIZE_OF_Y + SIZE_OF_Z] = {0};$/;"	v	typeref:typename:uint8_t[]
+cube_clear_shift_led	src/cube.cpp	/^void cube_clear_shift_led(uint32_t x, uint32_t y, uint32_t z)$/;"	f	typeref:typename:void
+cube_init	src/cube.cpp	/^void cube_init(void)$/;"	f	typeref:typename:void
+cube_refresh	src/cube.cpp	/^void cube_refresh(void)$/;"	f	typeref:typename:void
+cube_set_shift_led	src/cube.cpp	/^void cube_set_shift_led(uint32_t x, uint32_t y, uint32_t z)$/;"	f	typeref:typename:void
+cube_test_layer	src/cube.cpp	/^void cube_test_layer(void)$/;"	f	typeref:typename:void
+cube_test_singl_single	src/cube.cpp	/^void cube_test_singl_single(void)$/;"	f	typeref:typename:void
+cube_to_shift_array	src/cube.cpp	/^void cube_to_shift_array(uCUBE* pCube, uint32_t cube_size, uint8_t* pArray, uint32_t array_size)$/;"	f	typeref:typename:void
+dataModes	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  byte dataModes[16];$/;"	m	class:Shifty	typeref:typename:byte[16]
+dataPin	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  int dataPin;$/;"	m	class:Shifty	typeref:typename:int
+debug	cubet_board.json	/^  "debug": {$/;"	o
+desc	src/shift_register_hal.cpp	/^DmacDescritpor *desc; $/;"	v	typeref:typename:DmacDescritpor *
+description	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "description": "ArduinoLog is a minimalistic logging framework to help the programmer output/;"	s
+description	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"description": "ArduinoLog is a minimalistic logging framework to help the programmer output lo/;"	s
+description	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "description": "Extremely flexible and easy-to-use shift register driver for 74HC595 shift r/;"	s
+disable_flushing	cubet_board.json	/^    "disable_flushing": true,$/;"	b	object:upload
+dma_callback	src/shift_register_hal.cpp	/^void dma_callback(Adafruit_ZeroDMA *dma)$/;"	f	typeref:typename:void
+email	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^            "email": null, $/;"	z	object:authors.0
+email	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "email": "jonathan@bartlettpublishing.com", $/;"	s	object:authors.0
 env:mzeroUSB	platformio.ini	/^[env:mzeroUSB]$/;"	s
+error	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^  template <class T, typename... Args> void error(T msg, Args... args){$/;"	f	class:Logging	typeref:typename:void
+examples	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "examples": "examples\/*\/*.ino", $/;"	s
+examples	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"examples": "examples\/*\/*.ino"$/;"	s
+exclude	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "exclude": [$/;"	a	object:export
+export	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "export": {$/;"	o
+extra_flags	cubet_board.json	/^    "extra_flags": "-DARDUINO_ARCH_SAMD -DARDUINO_SAMD_ZERO -DARDUINO_SAMD_FEATHER_M0 -DARM_MATH/;"	s	object:build
+f_cpu	cubet_board.json	/^    "f_cpu": "48000000L",$/;"	s	object:build
+fatal	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^  template <class T, typename... Args> void fatal(T msg, Args... args){$/;"	f	class:Logging	typeref:typename:void
+font_data	src/fonts.c	/^char font_data[128][8] = {$/;"	v	typeref:typename:char[128][8]
 framework	platformio.ini	/^framework = arduino$/;"	k	section:env:mzeroUSB
+frameworks	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "frameworks": [$/;"	a
+frameworks	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"frameworks": ["arduino"],$/;"	a
+frameworks	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "frameworks": [$/;"	a
+frameworks	cubet_board.json	/^  "frameworks": [$/;"	a
+getBitMode	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^bool Shifty::getBitMode(int bitnum){ \/\/true == input$/;"	f	class:Shifty	typeref:typename:bool
+homepage	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "homepage": "https:\/\/github.com\/thijse\/Arduino-Log\/", $/;"	s
+homepage	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"homepage": "https:\/\/github.com\/thijse\/Arduino-Log\/",$/;"	s
+homepage	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "homepage": "http:\/\/www.github.com\/johnnyb\/Shifty", $/;"	s
+hsv	include/cube.h	/^    sHSV hsv;$/;"	m	union:__anon46933d2d030a	typeref:typename:sHSV
+hwids	cubet_board.json	/^    "hwids": [$/;"	a	object:build
+id	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "id": 1532$/;"	n
+id	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "id": 801$/;"	n
+include	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "include": null, $/;"	z	object:export
+includes	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^includes=ArduinoLog.h$/;"	k
+includes	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^includes=Shifty.h$/;"	k
+init_led_debug	src/main.cpp	/^void init_led_debug(void)$/;"	f	typeref:typename:void
+jlink_device	cubet_board.json	/^    "jlink_device": "ATSAMD21G18",$/;"	s	object:debug
+keywords	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "keywords": [$/;"	a
+keywords	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"keywords": "logging, debug, log, log levels, AVR, ESP8266",$/;"	s
+keywords	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "keywords": [$/;"	a
+latchPin	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  int latchPin;$/;"	m	class:Shifty	typeref:typename:int
+ldscript	cubet_board.json	/^    "ldscript": "flash_with_bootloader.ld",$/;"	s	object:build
 loop	src/main.cpp	/^void loop()$/;"	f	typeref:typename:void
-monitor_speed	platformio.ini	/^monitor_speed = 115200$/;"	k	section:env:mzeroUSB
+maintainer	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^            "maintainer": true, $/;"	b	object:authors.0
+maintainer	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^		"maintainer": true$/;"	b	object:authors
+maintainer	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^maintainer=Thijs Elenbaas <thijs@contemplated.nl>$/;"	k
+maintainer	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "maintainer": true, $/;"	b	object:authors.0
+maintainer	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^maintainer=Jonathan Bartlett <jonathan@bartlettpublishing.com>$/;"	k
+maximum_ram_size	cubet_board.json	/^    "maximum_ram_size": 32768,$/;"	n	object:upload
+maximum_size	cubet_board.json	/^    "maximum_size": 262144,$/;"	n	object:upload
+mcu	cubet_board.json	/^    "mcu": "samd21g18a",$/;"	s	object:build
+myDMA	src/shift_register_hal.cpp	/^Adafruit_ZeroDMA myDMA;$/;"	v	typeref:typename:Adafruit_ZeroDMA
+mySPI	src/shift_register_hal.cpp	/^SPIClass mySPI ($/;"	v	typeref:typename:SPIClass
+name	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^            "name": "Thijs Elenbaas"$/;"	s	object:authors.0
+name	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "name": "ArduinoLog", $/;"	s
+name	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^		"name": "Thijs Elenbaas",$/;"	s	object:authors
+name	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"name": "ArduinoLog",$/;"	s
+name	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^name=ArduinoLog$/;"	k
+name	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "name": "Jonathan Bartlett"$/;"	s	object:authors.0
+name	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "name": "Shifty", $/;"	s
+name	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^name=Shifty$/;"	k
+name	cubet_board.json	/^  "name": "Adafruit Feather M0",$/;"	s
+native_usb	cubet_board.json	/^    "native_usb": true,$/;"	b	object:upload
+notice	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^  template <class T, typename... Args> void notice(T msg, Args...args){$/;"	f	class:Logging	typeref:typename:void
+offset_address	cubet_board.json	/^    "offset_address": "0x2000",$/;"	s	object:upload
+openocd_chipname	cubet_board.json	/^    "openocd_chipname": "at91samd21g18",$/;"	s	object:debug
+openocd_target	cubet_board.json	/^    "openocd_target": "at91samdXX",$/;"	s	object:debug
+paragraph	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^paragraph=ArduinoLog is a minimalistic logging framework to help the programmer output log state/;"	k
+paragraph	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^paragraph=This library is a very flexible way to manage 74HC595 shift registers on Arduino.  It /;"	k
 platform	platformio.ini	/^platform = atmelsam$/;"	k	section:env:mzeroUSB
+platforms	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "platforms": [$/;"	a
+platforms	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"platforms": "*",$/;"	s
+platforms	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "platforms": [$/;"	a
+print	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.cpp	/^void Logging::print(const __FlashStringHelper *format, va_list args) {$/;"	f	class:Logging	typeref:typename:void
+print	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.cpp	/^void Logging::print(const char *format, va_list args) {$/;"	f	class:Logging	typeref:typename:void
+printFormat	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.cpp	/^void Logging::printFormat(const char format, va_list *args) {$/;"	f	class:Logging	typeref:typename:void
+printLevel	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^    template <class T> void printLevel(int level, T msg, ...){$/;"	f	class:Logging	typeref:typename:void
+printfunction	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^typedef void (*printfunction)(Print*);$/;"	t	typeref:typename:void (*)(Print *)
+protocol	cubet_board.json	/^    "protocol": "sam-ba",$/;"	s	object:upload
+protocols	cubet_board.json	/^    "protocols": [$/;"	a	object:upload
+readAllBits	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::readAllBits() {$/;"	f	class:Shifty	typeref:typename:void
+readBit	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^bool Shifty::readBit(int bitnum) {$/;"	f	class:Shifty	typeref:typename:bool
+readBitHard	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^bool Shifty::readBitHard(int bitnum) {$/;"	f	class:Shifty	typeref:typename:bool
+readBitSoft	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^bool Shifty::readBitSoft(int bitnum) {$/;"	f	class:Shifty	typeref:typename:bool
+readBuffer	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  byte readBuffer[16];$/;"	m	class:Shifty	typeref:typename:byte[16]
+readPin	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  int readPin;$/;"	m	class:Shifty	typeref:typename:int
+refresh_us	include/cube.h	/^    uint32_t refresh_us;$/;"	m	struct:__anon46933d2d0408	typeref:typename:uint32_t
+repository	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "repository": {$/;"	o
+repository	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"repository": {$/;"	o
+repository	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "repository": {$/;"	o
+require_upload_port	cubet_board.json	/^    "require_upload_port": true,$/;"	b	object:upload
+rgb	include/cube.h	/^    sRGB rgb;$/;"	m	union:__anon46933d2d030a	typeref:typename:sRGB
+sCubet	include/cube.h	/^}sCubet;$/;"	t	typeref:struct:__anon46933d2d0408
+sHSV	include/cube.h	/^}sHSV;$/;"	t	typeref:struct:__anon46933d2d0208
+sRGB	include/cube.h	/^}sRGB;$/;"	t	typeref:struct:__anon46933d2d0108
+sentence	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^sentence=Small logging framework$/;"	k
+sentence	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^sentence=Extremely flexible and easy-to-use shift register driver for 74HC595 shift registers$/;"	k
+setBitCount	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::setBitCount(int bitCount) {$/;"	f	class:Shifty	typeref:typename:void
+setBitMode	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::setBitMode(int bitnum, bool mode) {$/;"	f	class:Shifty	typeref:typename:void
+setPins	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::setPins(int dataPin, int clockPin, int latchPin) {$/;"	f	class:Shifty	typeref:typename:void
+setPins	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::setPins(int dataPin, int clockPin, int latchPin, int readPin) {$/;"	f	class:Shifty	typeref:typename:void
+setPrefix	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.cpp	/^void Logging::setPrefix(printfunction f){$/;"	f	class:Logging	typeref:typename:void
+setSuffix	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.cpp	/^void Logging::setSuffix(printfunction f){$/;"	f	class:Logging	typeref:typename:void
+set_test_cube	src/cube.cpp	/^void set_test_cube(void)$/;"	f	typeref:typename:void
 setup	src/main.cpp	/^void setup()$/;"	f	typeref:typename:void
-upload_protocol	platformio.ini	/^upload_protocol = sam-ba$/;"	k	section:env:mzeroUSB
-upload_speed	platformio.ini	/^upload_speed = 115200$/;"	k	section:env:mzeroUSB
-wait_for_upload_port	platformio.ini	/^board_upload.wait_for_upload_port = $/;"	k	section:env:mzeroUSB
+shift_array	src/shift_register.cpp	/^void shift_array(uint8_t* data, uint32_t size)$/;"	f	typeref:typename:void
+shift_array_hal	src/shift_register_hal.cpp	/^void shift_array_hal(uint8_t* data, uint32_t size)$/;"	f	typeref:typename:void
+shift_hal_init	src/shift_register_hal.cpp	/^void shift_hal_init(void)$/;"	f	typeref:typename:void
+shift_init	src/shift_register.cpp	/^void shift_init(void)$/;"	f	typeref:typename:void
+shift_latch	src/shift_register.cpp	/^void shift_latch(uint8_t state)$/;"	f	typeref:typename:void
+shift_latch_hal	src/shift_register_hal.cpp	/^void shift_latch_hal(uint8_t state)$/;"	f	typeref:typename:void
+source_memory	src/shift_register_hal.cpp	/^uint8_t source_memory[2][DATA_LENGTH];$/;"	v	typeref:typename:uint8_t[2][]
+stat	src/shift_register_hal.cpp	/^ZeroDMAstatus stat;$/;"	v	typeref:typename:ZeroDMAstatus
+svd_path	cubet_board.json	/^    "svd_path": "ATSAMD21G18A.svd"$/;"	s	object:debug
+system	cubet_board.json	/^    "system": "samd",$/;"	s	object:build
+toggle_led_debug	src/main.cpp	/^void toggle_led_debug(void)$/;"	f	typeref:typename:void
+trace	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^  template <class T, typename... Args> void trace(T msg, Args... args){$/;"	f	class:Logging	typeref:typename:void
+transfer_done	src/shift_register_hal.cpp	/^volatile bool transfer_done = true;$/;"	v	typeref:typename:volatile bool
+type	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "type": "git", $/;"	s	object:repository
+type	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^		"type": "git",$/;"	s	object:repository
+type	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "type": "git", $/;"	s	object:repository
+uCUBE	include/cube.h	/^}uCUBE;$/;"	t	typeref:union:__anon46933d2d030a
+upload	cubet_board.json	/^  "upload": {$/;"	o
+url	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^            "url": "https:\/\/github.com\/thijse", $/;"	s	object:authors.0
+url	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^        "url": "https:\/\/github.com\/thijse\/Arduino-Log"$/;"	s	object:repository
+url	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^		"url": "https:\/\/github.com\/thijse",$/;"	s	object:authors
+url	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^		"url": "https:\/\/github.com\/thijse\/Arduino-Log"$/;"	s	object:repository
+url	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^url=https:\/\/github.com\/thijse\/Arduino-Log\/$/;"	k
+url	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^            "url": null, $/;"	z	object:authors.0
+url	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^        "url": "https:\/\/github.com\/johnnyb\/Shifty"$/;"	s	object:repository
+url	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^url=http:\/\/www.github.com\/johnnyb\/Shifty$/;"	k
+url	cubet_board.json	/^  "url": "https:\/\/www.adafruit.com\/product\/2772",$/;"	s
+usb_product	cubet_board.json	/^    "usb_product": "Adafruit Feather M0",$/;"	s	object:build
+use_1200bps_touch	cubet_board.json	/^    "use_1200bps_touch": true,$/;"	b	object:upload
+value	include/cube.h	/^    uint32_t value;$/;"	m	union:__anon46933d2d030a	typeref:typename:uint32_t
+variant	cubet_board.json	/^       "variant": "adafruit_feather_m0_basic_proto"$/;"	s	object:build.zephyr
+variant	cubet_board.json	/^    "variant": "feather_m0",$/;"	s	object:build
+vendor	cubet_board.json	/^  "vendor": "Adafruit"$/;"	s
+verbose	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^  template <class T, typename... Args> void verbose(T msg, Args... args){$/;"	f	class:Logging	typeref:typename:void
+version	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/.library.json	/^    "version": "1.0.3", $/;"	s
+version	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.json	/^	"version": "1.0.3",$/;"	s
+version	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/library.properties	/^version=1.0.3$/;"	k
+version	.pio/libdeps/mzeroUSB/Shifty_ID801/.library.json	/^    "version": "0.1.5", $/;"	s
+version	.pio/libdeps/mzeroUSB/Shifty_ID801/library.properties	/^version=0.1.5$/;"	k
+wait_for_upload_port	cubet_board.json	/^    "wait_for_upload_port": true$/;"	b	object:upload
+warning	.pio/libdeps/mzeroUSB/ArduinoLog_ID1532/ArduinoLog.h	/^  template <class T, typename... Args> void warning(T msg, Args...args){$/;"	f	class:Logging	typeref:typename:void
+writeAllBits	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::writeAllBits() {$/;"	f	class:Shifty	typeref:typename:void
+writeBit	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::writeBit(int bitnum, bool value) {$/;"	f	class:Shifty	typeref:typename:void
+writeBitHard	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::writeBitHard(int bitnum, bool value) {$/;"	f	class:Shifty	typeref:typename:void
+writeBitSoft	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.cpp	/^void Shifty::writeBitSoft(int bitnum, bool value) {$/;"	f	class:Shifty	typeref:typename:void
+writeBuffer	.pio/libdeps/mzeroUSB/Shifty_ID801/src/Shifty.h	/^  byte writeBuffer[16];$/;"	m	class:Shifty	typeref:typename:byte[16]
+zephyr	cubet_board.json	/^    "zephyr": {$/;"	o	object:build

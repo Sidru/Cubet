@@ -4,6 +4,7 @@ Datasheets/
 */gerber/
 .pio/
 
-tags
+*tags
 Berechnungen.ods
 LED_CUBE_source.ino
+cscope.out
