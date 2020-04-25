@@ -25,8 +25,6 @@
 #endif
 
 
-/* There are (SIZE_OF_X * SIZE_OF_Y)/8 + (SIZE_OF_Z/8) LED Driver */
-uint8_t cube_array[SIZE_OF_X * SIZE_OF_Y + SIZE_OF_Z] = {0};
 
 
 cCube::cCube(void)
@@ -39,6 +37,10 @@ cCube::cCube(void)
     {
         _voxel[i][i][i].rgbw = testColor;
     }
+
+    _sizeX = SIZE_OF_X;
+    _sizeY = SIZE_OF_Y;
+    _sizeZ = SIZE_OF_Z;
 }
 
 cCube::~cCube(void)
@@ -58,7 +60,7 @@ void cCube::begin(void)
     */
     for(i = 0; i < SIZE_OF_Z; i++)
     {
-        cube_array[pos] = shift_val;
+        _shift_data[pos] = shift_val;
         shift_val >>= 1;
         pos += 9; // Every X*Y + Z -> 64/8 + 8/8  = 9
     }
@@ -66,24 +68,24 @@ void cCube::begin(void)
     _refresh_us = ((1000000u / ((uint32_t)FRAMES_PER_SECOND * (uint32_t)PWM_RESOLUTION)) / (uint32_t)SIZE_OF_Z);
 }
 
-void cube_set_shift_led(uint32_t x, uint32_t y, uint32_t z)
+void cCube::set_shift_led(uint32_t x, uint32_t y, uint32_t z)
 {
     uint32_t offset = z*9 + 8;
     uint32_t shift_pos = column_pos[x][y]; 
     uint32_t byte_pos = offset - (shift_pos / 8); // LSB, must be inverted
     uint32_t bit_pos = shift_pos % 8;
 
-    cube_array[byte_pos] |= 1 << bit_pos;
+    _shift_data[byte_pos] |= 1 << bit_pos;
 }
 
-void cube_clear_shift_led(uint32_t x, uint32_t y, uint32_t z)
+void cCube::clear_shift_led(uint32_t x, uint32_t y, uint32_t z)
 {
     uint32_t offset = z*9 + 8;
     uint32_t shift_pos = column_pos[x][y]; 
     uint32_t byte_pos = offset - (shift_pos / 8); // LSB, must be inverted
     uint32_t bit_pos = shift_pos % 8;
 
-    cube_array[byte_pos] &= ~(1 << bit_pos);
+    _shift_data[byte_pos] &= ~(1 << bit_pos);
 }
 
 
@@ -91,7 +93,7 @@ void cCube::refresh(void)
 {
     static unsigned long start_micros = micros();
     static uint32_t z_layer = 0;
-    static uint8_t* pArray = (uint8_t*)cube_array;
+    static uint8_t* pArray = _shift_data;
 
     if((micros() - start_micros) >= (CUBE_REFRESH_MS*1000/SIZE_OF_Z))
     {
@@ -105,7 +107,8 @@ void cCube::refresh(void)
         if(z_layer >= SIZE_OF_Z)
         {
             z_layer = 0;
-            pArray = cube_array; 
+            pArray = _shift_data; 
+            cube_to_shift();
         }
         else
         {
@@ -123,29 +126,55 @@ void cCube::refresh(void)
     
 }
 
-void cCube::set_voxel(uint32_t x, uint32_t y, uint32_t z, uint8_t state)
+void cCube::set_voxel(uint32_t x, uint32_t y, uint32_t z, uint32_t state)
 {
-   //voxel[x][y][z].rgbw = *color
    _voxel[x][y][z].value = state;
 
-   if(state)
-   {
-       cube_set_shift_led(x, y, z);
-   }
-   else
-   {
-       cube_clear_shift_led(x, y, z);
-   }
+   //if(state)
+   //{
+   //    this->set_shift_led(x, y, z);
+   //}
+   //else
+   //{
+   //    this->clear_shift_led(x, y, z);
+   //}
 }
 
 uint32_t cCube::get_voxel(uint32_t x, uint32_t y, uint32_t z)
 {
+    //if(_voxel[x][y][z].value)
+    //{
+    //    return 1;
+    //}
+    //else
+    //{
+    //    return 0;
+    //}
     return _voxel[x][y][z].value;
 }
 
-void cCube::voxel_to_shift(void) 
+void cCube::cube_to_shift(void) 
 {
+    uint32_t x, y, z;
 
+    for(x = 0; x < _sizeX; x++)
+    {
+        for(y = 0; y < _sizeY; y++)
+        {
+            for(z = 0; z < _sizeZ; z++)
+            {
+                if(_voxel[x][y][z].value)
+                {
+                    this->set_shift_led(x, y, z);
+                }
+                else
+                {
+                    this->clear_shift_led(x, y, z);
+                }
+
+            }
+        }
+    }
 }
 
 void cCube::test_single(void)
@@ -159,7 +188,6 @@ void cCube::test_single(void)
     {
         start_millis = millis();
 
-        //cube_clear_shift_led(x,y,z); 
         this->set_voxel(x,y,z,0);
 
         y++;
@@ -179,7 +207,6 @@ void cCube::test_single(void)
                 }
             }
         }
-        //cube_set_shift_led(x, y, z);
         this->set_voxel(x,y,z,1);
     }
 }
@@ -197,7 +224,7 @@ void cCube::test_layer(void)
         {
             for(uint8_t y = 0; y < 8; y++)
             {
-                cube_clear_shift_led(x,y,z); 
+                this->clear_shift_led(x,y,z); 
             }
         }
 
@@ -212,43 +239,29 @@ void cCube::test_layer(void)
         {
             for(uint8_t y = 0; y < 8; y++)
             {
-                cube_set_shift_led(x, y, z);
+                this->set_shift_led(x, y, z);
             }
         }
     }
 }
-//void cube_refresh(void)
-//{
-//    static unsigned long start_micros = micros();
-//    static uint32_t z_layer = 0;
-//    static uint8_t* pArray = (uint8_t*)cube_array;
-//
-//    if((micros() - start_micros) >= (CUBE_REFRESH_MS*1000/SIZE_OF_Z))
-//    {
-//        start_micros = micros();
-//
-//        shift_latch(LOW);
-//        shift_array(pArray, ARRAY_LAYER_SIZE); 
-//        shift_latch(HIGH);
-//        
-//        z_layer ++;
-//        if(z_layer >= SIZE_OF_Z)
-//        {
-//            z_layer = 0;
-//            pArray = cube_array; 
-//        }
-//        else
-//        {
-//            pArray += ARRAY_LAYER_SIZE;
-//        }
-//    }
-//
-//    /* REFRESH JEDE X MS */
-//
-//    /* 
-//     * Z Layer * 8 = 1xFrame
-//     * 25xFrames = 1s
-//     * [Z_Layer_0][Byte für Layer_0][Z_Layer_N][Byte für Layer_N]
-//    */
-//    
-//}
+
+void cCube::fill_array(uint8_t value)
+{
+    int x, y, z;   
+
+    //memset(_voxel, value, sizeof(_voxel));
+    memset(_voxel, value, sizeof(_voxel)); 
+
+    //for(x = 0; x < 8; x++)
+    //{
+    //    for(y = 0; y < 8; y++)
+    //    {
+    //        for(z = 0; z < 8; z++)
+    //        {
+    //            this->set_voxel(x, y, z, value);
+    //        }
+    //    }
+    //    
+    //}
+}
+

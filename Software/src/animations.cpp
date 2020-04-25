@@ -3,6 +3,10 @@
 //#include <cube.h>
 #include <animations.h>
 
+
+void init_LUT(unsigned char LUT[65]);
+int totty_sin(unsigned char LUT[65],int sin_of);
+
 cAnim::cAnim()
 {
 }
@@ -24,7 +28,7 @@ void cAnim::refresh(void)
 
 void cAnim::start(uANIMATION anim, uint32_t iterations, uint32_t speed)
 {
-
+    
 }
 
 void cAnim::stop(void)
@@ -104,10 +108,11 @@ uANIMATION cAnim::get_anim(void)
 //
 //
 //
-//const unsigned char paths[44] PROGMEM = {0x07,0x06,0x05,0x04,0x03,0x02,0x01,0x00,0x10,0x20,0x30,0x40,0x50,0x60,0x70,0x71,0x72,0x73,0x74,0x75,0x76,0x77,0x67,0x57,0x47,0x37,0x27,0x17,
-//0x04,0x03,0x12,0x21,0x30,0x40,0x51,0x62,0x73,0x74,0x65,0x56,0x47,0x37,0x26,0x15}; // circle, len 16, offset 28
-//
-//
+const unsigned char paths[44] = {0x07,0x06,0x05,0x04,0x03,0x02,0x01,0x00,0x10,0x20,0x30,0x40,0x50,\
+    0x60,0x70,0x71,0x72,0x73,0x74,0x75,0x76,0x77,0x67,0x57,0x47,0x37,0x27,0x17,0x04,0x03,0x12,0x21,\
+        0x30,0x40,0x51,0x62,0x73,0x74,0x65,0x56,0x47,0x37,0x26,0x15}; // circle, len 16, offset 28
+
+
 void effect_wormsqueeze (cDraw* Draw, int size, int axis, int direction, int iterations, int wait)
 {
     static int x, y;
@@ -163,61 +168,69 @@ void effect_wormsqueeze (cDraw* Draw, int size, int axis, int direction, int ite
 	//}
 }
 
-//
-//  void font_getpath (unsigned char path, unsigned char *destination, int length)
-//{
-//	int i;
-//	int offset = 0;
-//	
-//	if (path == 1)
-//		offset=28;
-//	
-//	for (i = 0; i < length; i++)
-//		destination[i] = pgm_read_byte(&paths[i+offset]);
-//}
-//
-//   void effect_pathmove (unsigned char *path, int length)
-//{
-//	int i,z;
-//	unsigned char state;
-//	
-//	for (i=(length-1);i>=1;i--)
-//	{
-//		for (z=0;z<8;z++)
-//		{
-//		
-//			state = getvoxel(((path[(i-1)]>>4) & 0x0f), (path[(i-1)] & 0x0f), z);
-//			altervoxel(((path[i]>>4) & 0x0f), (path[i] & 0x0f), z, state);
-//		}
-//	}
-//	for (i=0;i<8;i++)
-//		clrvoxel(((path[0]>>4) & 0x0f), (path[0] & 0x0f),i);
-//}
-//
-//void effect_rand_patharound (int iterations, int delay)
-//{
-//	int z, dz, i;
-//	z = 4;
-//	unsigned char path[28];
-//	
-//	font_getpath(0,path,28);
-//	
-//	for (i = 0; i < iterations; i++)
-//	{
-//		dz = ((rand()%3)-1);
-//		z += dz;
-//		
-//		if (z>7)
-//			z = 7;
-//			
-//		if (z<0)
-//			z = 0;
-//		
-//		effect_pathmove(path, 28);
-//		setvoxel(0,7,z);
-//		delay(delay);
-//	}
-//}
+
+void font_getpath (unsigned char path, unsigned char *destination, int length)
+{
+	int i;
+	int offset = 0;
+	
+	if (path == 1)
+		offset=28;
+	
+	for (i = 0; i < length; i++)
+    {
+		//destination[i] = pgm_read_byte(&paths[i+offset]);
+		destination[i] = paths[i+offset];
+    }
+}
+
+void effect_pathmove (cDraw* pDraw, unsigned char *path, int length)
+{
+	int i,z;
+	unsigned char state;
+	
+	for (i=(length-1);i>=1;i--)
+	{
+		for (z=0;z<8;z++)
+		{
+		
+			state = pDraw->getvoxel(((path[(i-1)]>>4) & 0x0f), (path[(i-1)] & 0x0f), z);
+			pDraw->altervoxel(((path[i]>>4) & 0x0f), (path[i] & 0x0f), z, state);
+		}
+	}
+	for (i=0;i<8;i++)
+    {
+		pDraw->clrvoxel(((path[0]>>4) & 0x0f), (path[0] & 0x0f),i);
+    }
+}
+
+void effect_rand_patharound(cDraw* pDraw, int iterations, int delay)
+{
+	//int z, dz, i;
+    int dz;
+    static int z = 4;
+
+	//z = 4;
+	unsigned char path[28];
+	
+	font_getpath(0,path,28);
+	
+	//for (i = 0; i < iterations; i++)
+	//{
+		dz = ((rand()%3)-1);
+		z += dz;
+		
+		if (z>7)
+			z = 7;
+			
+		if (z<0)
+			z = 0;
+		
+		effect_pathmove(pDraw, path, 28);
+		pDraw->setvoxel(0,7,z);
+		//delay(delay);
+	//}
+}
 //
 //
 //   void effect_intro(){
@@ -389,169 +402,212 @@ void effect_wormsqueeze (cDraw* Draw, int size, int axis, int direction, int ite
 //    delay(2000);
 //  
 //}
-//void sinelines (int iterations, int delay)
-//{
-//	int i,x;
-//
-//	float left, right, sine_base, x_dividor,ripple_height;
-//
-//	for (i=0; i<iterations; i++)
-//	{
-//		for (x=0; x<8 ;x++)
-//		{
-//			x_dividor = 2 + sin((float)i/100)+1;
-//			ripple_height = 3 + (sin((float)i/200)+1)*6;
-//
-//			sine_base = (float) i/40 + (float) x/x_dividor;
-//
-//			left = 4 + sin(sine_base)*ripple_height;
-//			right = 4 + cos(sine_base)*ripple_height;
-//			right = 7-left;
-//
-//			//printf("%i %i \n", (int) left, (int) right);
-//
-//			line_3d(0-3, x, (int) left, 7+3, x, (int) right);
-//			//line_3d((int) right, 7, x);
-//		}
-//	
-//	// delay(delay);
-//	fill(0x00);
-//	}
-//}
-//  void effect_random_sparkle_flash (int iterations, int voxels, int delay)
-//{
-//	int i;
-//	int v;
-//	for (i = 0; i < iterations; i++)
-//	{
-//		for (v=0;v<=voxels;v++)
-//			setvoxel(rand()%8,rand()%8,rand()%8);
-//			
-//		delay(delay);
-//		fill(0x00);
-//	}
-//}
-//
-//  
-//
-//void draw_positions_axis (char axis, unsigned char positions[64], int invert)
-//{
-//	int x, y, p;
-//	
-//	fill(0x00);
-//	
-//	for (x=0; x<8; x++)
-//	{
-//		for (y=0; y<8; y++)
-//		{
-//			if (invert)
-//			{
-//				p = (7-positions[(x*8)+y]);
-//			} else
-//			{
-//				p = positions[(x*8)+y];
-//			}
-//		
-//			if (axis == AXIS_Z)
-//				setvoxel(x,y,p);
-//				
-//			if (axis == AXIS_Y)
-//				setvoxel(x,p,y);
-//				
-//			if (axis == AXIS_X)
-//				setvoxel(p,y,x);
-//		}
-//	}
-//	
-//}
-//
-//  void effect_random_sparkle (void)
-//{
-//	int i;
-//	
-//	for (i=1;i<20;i++)
-//	{
-//		effect_random_sparkle_flash(5,i,200);
-//	}
-//	
-//	for (i=20;i>=1;i--)
-//	{
-//		effect_random_sparkle_flash(5,i,200);
-//	}
-//	
-//}
-//
-//   void side_ripples(int iterations, int delay)
-//{
-//	// 16 values for square root of a^2+b^2.  index a*4+b = 10*sqrt
-//	// This gives the distance to 3.5,3.5 from the point
-//	unsigned char sqrt_LUT[]={49,43,38,35,43,35,29,26,38,29,21,16,35,25,16,7};
-//	//LUT_START // Macro from new tottymath.  Commented and replaced with full code
-//	unsigned char LUT[65];
-//	init_LUT(LUT);
-//	int i;
-//	unsigned char x,y,height,distance;
-//	for (i=0;i<iterations*4;i+=4)
-//	{
-//		fill(0x00);
-//		for (x=0;x<4;x++)
-//			for(y=0;y<4;y++)
-//			{
-//				// x+y*4 gives no. from 0-15 for sqrt_LUT
-//				distance=sqrt_LUT[x+y*4];// distance is 0-50 roughly
-//				// height is sin of distance + iteration*4
-//				//height=4+totty_sin(LUT,distance+i)/52;
-//				height=(196+totty_sin(LUT,distance+i))/49;
-//				// Use 4-way mirroring to save on calculations
-//				setvoxel(x,height,y);
-//				setvoxel(7-x,height,y);
-//				setvoxel(x,height,7-y);
-//				setvoxel(7-x,height,7-y);
-//				setvoxel(x,7-height,y);
-//				setvoxel(7-x,7-height,y);
-//				setvoxel(x,7-height,7-y);
-//				setvoxel(7-x,7-height,7-y);
-//
-//			}
-//		delay(delay);
-//	}
-//}
-//
-//   void mirror_ripples(int iterations, int delay)
-//{
-//	// 16 values for square root of a^2+b^2.  index a*4+b = 10*sqrt
-//	// This gives the distance to 3.5,3.5 from the point
-//	unsigned char sqrt_LUT[]={49,43,38,35,43,35,29,26,38,29,21,16,35,25,16,7};
-//	//LUT_START // Macro from new tottymath.  Commented and replaced with full code
-//	unsigned char LUT[65];
-//	init_LUT(LUT);
-//	int i;
-//	unsigned char x,y,height,distance;
-//	for (i=0;i<iterations*4;i+=4)
-//	{
-//		fill(0x00);
-//		for (x=0;x<4;x++)
-//			for(y=0;y<4;y++)
-//			{
-//				// x+y*4 gives no. from 0-15 for sqrt_LUT
-//				distance=sqrt_LUT[x+y*4];// distance is 0-50 roughly
-//				// height is sin of distance + iteration*4
-//				//height=4+totty_sin(LUT,distance+i)/52;
-//				height=(196+totty_sin(LUT,distance+i))/49;
-//				// Use 4-way mirroring to save on calculations
-//				setvoxel(x,y,height);
-//				setvoxel(7-x,y,height);
-//				setvoxel(x,7-y,height);
-//				setvoxel(7-x,7-y,height);
-//				setvoxel(x,y,7-height);
-//				setvoxel(7-x,y,7-height);
-//				setvoxel(x,7-y,7-height);
-//				setvoxel(7-x,7-y,7-height);
-//
-//			}
-//		delay(delay);
-//	}
-//}
+
+void sinelines(cDraw* Draw, int iterations, int delay)
+{
+	static int i = 0;
+    int x;
+    
+	float left, right, sine_base, x_dividor,ripple_height;
+
+	//for (i=0; i<iterations; i++)
+	//{
+    
+	Draw->fill(0); // TMP
+    
+		for (x=0; x<8 ;x++)
+		{
+			x_dividor = 2 + sin((float)i/100)+1;
+			ripple_height = 3 + (sin((float)i/200)+1)*6;
+
+			sine_base = (float) i/40 + (float) x/x_dividor;
+
+			left = 4 + sin(sine_base)*ripple_height;
+			right = 4 + cos(sine_base)*ripple_height;
+			right = 7-left;
+
+			Draw->line_3d(0-3, x, (int) left, 7+3, x, (int) right);
+			//Draw->line_3d(0, x, (int) left, 8, x, (int) right);
+           
+		}
+	
+	// delay(delay);
+	//Draw->fill(0x00);
+    
+    i++; //TMP
+    if(i >= iterations) i = 0;
+
+	//}
+}
+
+void effect_random_sparkle_flash(cDraw* pDraw, int iterations, int voxels, int delay)
+{
+	int i;
+	int v;
+
+    pDraw->fill(0); // TMP
+
+    //for (i = 0; i < iterations; i++)
+	//{
+		for (v=0;v<=voxels;v++)
+        {
+			pDraw->setvoxel(rand()%8,rand()%8,rand()%8);
+        }
+			
+		//delay(delay);
+		//fill(0x00);
+	//}
+}
+
+  
+
+void draw_positions_axis(cDraw* pDraw, char axis, unsigned char positions[64], int invert)
+{
+	int x, y, p;
+	
+	pDraw->fill(0x00);
+	
+	for (x=0; x<8; x++)
+	{
+		for (y=0; y<8; y++)
+		{
+			if (invert)
+			{
+				p = (7-positions[(x*8)+y]);
+			} else
+			{
+				p = positions[(x*8)+y];
+			}
+		
+			if (axis == AXIS_Z)
+				pDraw->setvoxel(x,y,p);
+				
+			if (axis == AXIS_Y)
+				pDraw->setvoxel(x,p,y);
+				
+			if (axis == AXIS_X)
+				pDraw->setvoxel(p,y,x);
+		}
+	}
+	
+}
+
+void effect_random_sparkle(cDraw* pDraw)
+{
+	int i;
+	
+	for (i=1;i<20;i++)
+	{
+		effect_random_sparkle_flash(pDraw, 5,i,200);
+	}
+	
+	for (i=20;i>=1;i--)
+	{
+		effect_random_sparkle_flash(pDraw, 5,i,200);
+	}
+	
+}
+
+void side_ripples(cDraw* pDraw, int iterations, int delay)
+{
+    static int i;
+    unsigned char x,y,height,distance;
+
+    static uint8_t init = 0;
+	// 16 values for square root of a^2+b^2.  index a*4+b = 10*sqrt
+	// This gives the distance to 3.5,3.5 from the point
+	unsigned char sqrt_LUT[]={49,43,38,35,43,35,29,26,38,29,21,16,35,25,16,7};
+	//LUT_START // Macro from new tottymath.  Commented and replaced with full code
+	static unsigned char LUT[65];
+
+    if(0 == init)
+    {
+	    init_LUT(LUT);
+        init = 1;
+    }
+
+	
+	//for (i=0;i<iterations*4;i+=4)
+	//{
+		pDraw->fill(0x00);
+		for (x=0;x<4;x++)
+			for(y=0;y<4;y++)
+			{
+				// x+y*4 gives no. from 0-15 for sqrt_LUT
+				distance=sqrt_LUT[x+y*4];// distance is 0-50 roughly
+				// height is sin of distance + iteration*4
+				//height=4+totty_sin(LUT,distance+i)/52;
+				height=(196+totty_sin(LUT,distance+i))/49;
+				// Use 4-way mirroring to save on calculations
+				pDraw->setvoxel(x,height,y);
+				pDraw->setvoxel(7-x,height,y);
+				pDraw->setvoxel(x,height,7-y);
+				pDraw->setvoxel(7-x,height,7-y);
+				pDraw->setvoxel(x,7-height,y);
+				pDraw->setvoxel(7-x,7-height,y);
+				pDraw->setvoxel(x,7-height,7-y);
+				pDraw->setvoxel(7-x,7-height,7-y);
+
+			}
+		//delay(delay);
+        i+=4;
+        if(i > iterations)
+        {
+            i = 0;
+        }
+	//}
+}
+
+void mirror_ripples(cDraw* pDraw, int iterations, int delay)
+{
+    static int i = 0;
+    static uint8_t init = 0;
+	// 16 values for square root of a^2+b^2.  index a*4+b = 10*sqrt
+	// This gives the distance to 3.5,3.5 from the point
+	unsigned char sqrt_LUT[]={49,43,38,35,43,35,29,26,38,29,21,16,35,25,16,7};
+	//LUT_START // Macro from new tottymath.  Commented and replaced with full code
+	static unsigned char LUT[65];
+    if(0 == init)
+    {
+	    init_LUT(LUT);
+        init = 1;
+    }
+	//(int i;
+	unsigned char x,y,height,distance;
+	//for (i=0;i<iterations*4;i+=4)
+	//{
+		//fill(0x00);
+		pDraw->fill(0x00);
+
+		for (x=0;x<4;x++)
+			for(y=0;y<4;y++)
+			{
+				// x+y*4 gives no. from 0-15 for sqrt_LUT
+				distance=sqrt_LUT[x+y*4];// distance is 0-50 roughly
+				// height is sin of distance + iteration*4
+				//height=4+totty_sin(LUT,distance+i)/52;
+				height=(196+totty_sin(LUT,distance+i))/49;
+				// Use 4-way mirroring to save on calculations
+				pDraw->setvoxel(x,y,height);
+				pDraw->setvoxel(7-x,y,height);
+				pDraw->setvoxel(x,7-y,height);
+				pDraw->setvoxel(7-x,7-y,height);
+				pDraw->setvoxel(x,y,7-height);
+				pDraw->setvoxel(7-x,y,7-height);
+				pDraw->setvoxel(x,7-y,7-height);
+				pDraw->setvoxel(7-x,7-y,7-height);
+
+			}
+		//delay(delay);
+        i+=4;
+        if(i > iterations)
+        {
+            i = 0;
+        }
+
+	//}
+}
+
 //
 //   void quad_ripples(int iterations, int delay)
 //{
@@ -598,18 +654,18 @@ void effect_wormsqueeze (cDraw* Draw, int size, int axis, int direction, int ite
 //	}
 //}
 //
-//void init_LUT(unsigned char LUT[65])
-//{
-//	unsigned char i;
-//	float sin_of,sine;
-//	for (i=0;i<65;i++)
-//	{
-//		sin_of=i*PI/64; // Just need half a sin wave
-//		sine=sin(sin_of);
-//		// Use 181.0 as this squared is <32767, so we can multiply two sin or cos without overflowing an int.
-//		LUT[i]=sine*181.0;
-//	}
-//}
+void init_LUT(unsigned char LUT[65])
+{
+	unsigned char i;
+	float sin_of,sine;
+	for (i=0;i<65;i++)
+	{
+		sin_of=i*PI/64; // Just need half a sin wave
+		sine=sin(sin_of);
+		// Use 181.0 as this squared is <32767, so we can multiply two sin or cos without overflowing an int.
+		LUT[i]=sine*181.0;
+	}
+}
 //     void effect_axis_updown_randsuspend (char axis, int delay, int sleep, int invert)
 //{
 //	unsigned char positions[64];
@@ -667,157 +723,82 @@ void effect_wormsqueeze (cDraw* Draw, int size, int axis, int direction, int ite
 //		delay(delay);
 //	}
 //}
-//
-//     void linespin (int iterations, int delay)
-//{
-//	float top_x, top_y, top_z, bot_x, bot_y, bot_z, sin_base;
-//	float center_x, center_y;
-//
-//	center_x = 4;
-//	center_y = 4;
-//
-//	int i, z;
-//	for (i=0;i<iterations;i++)
-//	{
-//
-//		//printf("Sin base %f \n",sin_base);
-//
-//		for (z = 0; z < 8; z++)
-//		{
-//
-//		sin_base = (float)i/50 + (float)z/(10+(7*sin((float)i/200)));
-//
-//		top_x = center_x + sin(sin_base)*5;
-//		top_y = center_x + cos(sin_base)*5;
-//		//top_z = center_x + cos(sin_base/100)*2.5;
-//
-//		bot_x = center_x + sin(sin_base+3.14)*10;
-//		bot_y = center_x + cos(sin_base+3.14)*10;
-//		//bot_z = 7-top_z;
-//		
-//		bot_z = z;
-//		top_z = z;
-//
-//		// setvoxel((int) top_x, (int) top_y, 7);
-//		// setvoxel((int) bot_x, (int) bot_y, 0);
-//
-//		//printf("P1: %i %i %i P2: %i %i %i \n", (int) top_x, (int) top_y, 7, (int) bot_x, (int) bot_y, 0);
-//
-//		//line_3d((int) top_x, (int) top_y, (int) top_z, (int) bot_x, (int) bot_y, (int) bot_z);
-//		line_3d((int) top_z, (int) top_x, (int) top_y, (int) bot_z, (int) bot_x, (int) bot_y);
-//		}
-//
-//		// delay(delay);
-//		fill(0x00);
-//	}
-//
-//}
-//void line_3d (int x1, int y1, int z1, int x2, int y2, int z2)
-//{
-//	int i, dx, dy, dz, l, m, n, x_inc, y_inc, z_inc,
-//	err_1, err_2, dx2, dy2, dz2;
-//	int pixel[3];
-//	pixel[0] = x1;
-//	pixel[1] = y1;
-//	pixel[2] = z1;
-//	dx = x2 - x1;
-//	dy = y2 - y1;
-//	dz = z2 - z1;
-//	x_inc = (dx < 0) ? -1 : 1;
-//	l = abs(dx);
-//	y_inc = (dy < 0) ? -1 : 1;
-//	m = abs(dy);
-//	z_inc = (dz < 0) ? -1 : 1;
-//	n = abs(dz);
-//	dx2 = l << 1;
-//	dy2 = m << 1;
-//	dz2 = n << 1;
-//	if ((l >= m) && (l >= n)) {
-//	err_1 = dy2 - l;
-//	err_2 = dz2 - l;
-//	for (i = 0; i < l; i++) {
-//	//PUT_PIXEL(pixel);
-//	setvoxel(pixel[0],pixel[1],pixel[2]);
-//	//printf("Setting %i %i %i \n", pixel[0],pixel[1],pixel[2]);
-//	if (err_1 > 0) {
-//	pixel[1] += y_inc;
-//	err_1 -= dx2;
-//	}
-//	if (err_2 > 0) {
-//	pixel[2] += z_inc;
-//	err_2 -= dx2;
-//	}
-//	err_1 += dy2;
-//	err_2 += dz2;
-//	pixel[0] += x_inc;
-//	}
-//	} else if ((m >= l) && (m >= n)) {
-//	err_1 = dx2 - m;
-//	err_2 = dz2 - m;
-//	for (i = 0; i < m; i++) {
-//	//PUT_PIXEL(pixel);
-//	setvoxel(pixel[0],pixel[1],pixel[2]);
-//	//printf("Setting %i %i %i \n", pixel[0],pixel[1],pixel[2]);
-//	if (err_1 > 0) {
-//	pixel[0] += x_inc;
-//	err_1 -= dy2;
-//	}
-//	if (err_2 > 0) {
-//	pixel[2] += z_inc;
-//	err_2 -= dy2;
-//	}
-//	err_1 += dx2;
-//	err_2 += dz2;
-//	pixel[1] += y_inc;
-//	}
-//	} else {
-//	err_1 = dy2 - n;
-//	err_2 = dx2 - n;
-//	for (i = 0; i < n; i++) {
-//	setvoxel(pixel[0],pixel[1],pixel[2]);
-//	//printf("Setting %i %i %i \n", pixel[0],pixel[1],pixel[2]);
-//	//PUT_PIXEL(pixel);
-//	if (err_1 > 0) {
-//	pixel[1] += y_inc;
-//	err_1 -= dz2;
-//	}
-//	if (err_2 > 0) {
-//	pixel[0] += x_inc;
-//	err_2 -= dz2;
-//	}
-//	err_1 += dy2;
-//	err_2 += dx2;
-//	pixel[2] += z_inc;
-//	}
-//	}
-//	setvoxel(pixel[0],pixel[1],pixel[2]);
-//	//printf("Setting %i %i %i \n", pixel[0],pixel[1],pixel[2]);
-//	//PUT_PIXEL(pixel);
-//}
+
+void linespin(cDraw* pDraw, int iterations, int delay)
+{
+	float top_x, top_y, top_z, bot_x, bot_y, bot_z, sin_base;
+	float center_x, center_y;
+
+	center_x = 4;
+	center_y = 4;
+
+    static int i;
+	int  z;
+	//for (i=0;i<iterations;i++)
+	//{
+
+		pDraw->fill(0x00);
+		//printf("Sin base %f \n",sin_base);
+
+		for (z = 0; z < 8; z++)
+		{
+
+		sin_base = (float)i/50 + (float)z/(10+(7*sin((float)i/200)));
+
+		top_x = center_x + sin(sin_base)*5;
+		top_y = center_x + cos(sin_base)*5;
+		//top_z = center_x + cos(sin_base/100)*2.5;
+
+		bot_x = center_x + sin(sin_base+3.14)*10;
+		bot_y = center_x + cos(sin_base+3.14)*10;
+		//bot_z = 7-top_z;
+		
+		bot_z = z;
+		top_z = z;
+
+		// setvoxel((int) top_x, (int) top_y, 7);
+		// setvoxel((int) bot_x, (int) bot_y, 0);
+
+		//printf("P1: %i %i %i P2: %i %i %i \n", (int) top_x, (int) top_y, 7, (int) bot_x, (int) bot_y, 0);
+
+		//line_3d((int) top_x, (int) top_y, (int) top_z, (int) bot_x, (int) bot_y, (int) bot_z);
+		pDraw->line_3d((int) top_z, (int) top_x, (int) top_y, (int) bot_z, (int) bot_x, (int) bot_y);
+		}
+
+		// delay(delay);
+		//pDraw->fill(0x00);
+        i++;
+        if(i >= iterations)
+        {
+            i = 0;
+        }
+	//}
+
+}
 //
 //
 //// ******************************************
 //
 //
-//int totty_sin(unsigned char LUT[65],int sin_of)
-//{
-//	unsigned char inv=0;
-//	if (sin_of<0)
-//	{
-//		sin_of=-sin_of;
-//		inv=1;
-//	}
-//	sin_of&=0x7f; //127
-//	if (sin_of>64)
-//	{
-//		sin_of-=64;
-//		inv=1-inv;
-//	}
-//	if (inv)
-//		return -LUT[sin_of];
-//	else
-//		return LUT[sin_of];
-//}
+int totty_sin(unsigned char LUT[65],int sin_of)
+{
+	unsigned char inv=0;
+	if (sin_of<0)
+	{
+		sin_of=-sin_of;
+		inv=1;
+	}
+	sin_of&=0x7f; //127
+	if (sin_of>64)
+	{
+		sin_of-=64;
+		inv=1-inv;
+	}
+	if (inv)
+		return -LUT[sin_of];
+	else
+		return LUT[sin_of];
+}
 //
 //     void fireworks (int iterations, int n, int delay)
 //{
@@ -1042,38 +1023,38 @@ void effect_rain(cDraw* Draw, int iterations)
             //Draw->shift(AXIS_Z, -1);
     //}
 }
-//     
-//    // Set or clear exactly 512 voxels in a random order.
-//    void effect_random_filler (int delayt, int state)
+     
+//// Set or clear exactly 512 voxels in a random order.
+//void effect_random_filler (int delayt, int state)
+//{
+//    int x,y,z;
+//    int loop = 0;
+//   
+//   
+//    if (state == 1)
 //    {
-//            int x,y,z;
-//            int loop = 0;
-//           
-//           
-//            if (state == 1)
-//            {
-//                    fill(0x00);
-//            } else
-//            {
-//                    fill(0xff);
-//            }
-//           
-//            while (loop<511)
-//            {
-//                    x = rand()%8;
-//                    y = rand()%8;
-//                    z = rand()%8;
-//     
-//                    if ((state == 0 && getvoxel(x,y,z) == 0x01) || (state == 1 && getvoxel(x,y,z) == 0x00))
-//                    {
-//                            altervoxel(x,y,z,state);
-//                            delay(delayt);
-//                            loop++;
-//                    }      
-//            }
+//        fill(0x00);
+//    } else
+//    {
+//        fill(0xff);
 //    }
-//     
-//     
+//   
+//    while (loop<511)
+//    {
+//        x = rand()%8;
+//        y = rand()%8;
+//        z = rand()%8;
+//
+//        if ((state == 0 && getvoxel(x,y,z) == 0x01) || (state == 1 && getvoxel(x,y,z) == 0x00))
+//        {
+//            altervoxel(x,y,z,state);
+//            delay(delayt);
+//            loop++;
+//        }      
+//    }
+//}
+ 
+ 
 //    void effect_blinky2()
 //    {
 //            int i,r;
@@ -1111,22 +1092,36 @@ void effect_rain(cDraw* Draw, int iterations)
 //    }
 //     
 // Draw a plane on one axis and send it back and forth once.
-void effect_planboing(cDraw* Draw, int plane, int speedd)
+void effect_planboing(cDraw* pDraw, uDRAW_AXIS plane, int speedd)
 {
-    int i;
-    for (i=0;i<8;i++)
+    static int direction = 1;
+    static uint32_t step = 0;
+
+
+    pDraw->fill(0);
+
+    step += direction;
+
+    if((step >= 7) || (0 >= step))
     {
-        Draw->fill(0x00);
-        Draw->setplane((uDRAW_AXIS)plane, i);
-        delay(speedd);
+        direction *= -1;
     }
+    pDraw->setplane(plane, step);
+
+    //int i;
+    //for (i=0;i<8;i++)
+    //{
+    //    Draw->fill(0x00);
+    //    Draw->setplane((uDRAW_AXIS)plane, i);
+    //    delay(speedd);
+    //}
    
-    for (i=7;i>=0;i--)
-    {
-        Draw->fill(0x00);
-        Draw->setplane((uDRAW_AXIS)plane, i);
-        delay(speedd);
-    }
+    //for (i=7;i>=0;i--)
+    //{
+    //    Draw->fill(0x00);
+    //    Draw->setplane((uDRAW_AXIS)plane, i);
+    //    delay(speedd);
+    //}
 }
  
      

@@ -31,11 +31,17 @@ typedef union
 
 class cCube {
 private:
+    uint32_t _sizeX;
+    uint32_t _sizeY;
+    uint32_t _sizeZ;
     uint32_t _refresh_us; 
+
     uVoxel _voxel[SIZE_OF_X][SIZE_OF_Y][SIZE_OF_Z];
     uint8_t _shift_data[SIZE_OF_X * SIZE_OF_Y + SIZE_OF_Z];
 
-    void voxel_to_shift(void);
+    void cube_to_shift(void);
+    void set_shift_led(uint32_t x, uint32_t y, uint32_t z);
+    void clear_shift_led(uint32_t x, uint32_t y, uint32_t z);
 
 public:
     cCube();
@@ -43,8 +49,10 @@ public:
 
     void begin(void);
     void refresh(void);
-    void set_voxel(uint32_t x, uint32_t y, uint32_t z, uint8_t state);
+    void set_voxel(uint32_t x, uint32_t y, uint32_t z, uint32_t state);
     uint32_t get_voxel(uint32_t x, uint32_t y, uint32_t z);
+
+    void fill_array(uint8_t value);
     void test_single(void);
     void test_layer(void);
 };

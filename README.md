@@ -1,5 +1,6 @@
 # Cubet (CUBID-19) 
 Cubet, a small single color led cube, build during the Covid-19 Quarantine
+![](Images/Animation_1.gif)
 
 I always wanted a LED Cube, a compact one with smd leds. I also wanted to give KiCad a try (I've been Eagle user for a couple of years). That's why I started this mini project.
 
