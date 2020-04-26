@@ -1,6 +1,11 @@
 # Cubet (CUBID-19) 
-Cubet, a small single color led cube, build during the Covid-19 Quarantine
+
 ![](Images/Animation_1.gif)
+
+Cubet, a small single color led cube, build during the Covid-19 Quarantine
+
+
+
 
 I always wanted a LED Cube, a compact one with smd leds. I also wanted to give KiCad a try (I've been Eagle user for a couple of years). That's why I started this mini project.
 
@@ -26,7 +31,10 @@ I used 0.3mm Wire for the columns, and 0.2mm Wire for the rest.
 
 :warning: The README is still in working process
 
-:warning: The Software works, but the animations must be still coded
+:warning: The Software works, but it must be improved. Also the animations must be still coded (I've copied some animations and functions from [fuchsales/LED-Cube](https://github.com/fuchsalex/LED-Cube)
+
+
+![](Images/Animation_2.gif)
 
 
 ## Getting Started
@@ -69,15 +77,25 @@ This project is licensed under the Apache License - see the [LICENSE.md](LICENSE
 ## Acknowledgments
 
 [LED-Cube](https://github.com/fuchsalex/LED-Cube)
+
 [Mini KiCad Tutorial] (https://github.com/MalphasWats/hawk)
+
 [KiCad Freerouting](https://github.com/miho/freerouting)
+
 [Gerber Export](https://jnduli.co.ke/prepare-kicad-pcb-elecrow.html)
+
 [PCB from Elecrow](https://www.elecrow.com/pcb-manufacturing.html)
+
 [SAMD21] (http://ww1.microchip.com/downloads/en/DeviceDoc/SAM_D21_DA1_Family_DataSheet_DS40001882F.pdf)
+
 [SAMD21 GDB] (https://learn.adafruit.com/debugging-the-samd21-with-gdb/setup)
+
 [SAMD21 Bootloader Protection] (https://roamingthings.de/posts/use-j-link-to-change-the-boot-loader-protection-of-a-sam-d21)
+
 [Programming a SAMD bootloader using JLink & Linux] (https://hackaday.io/page/5997-programming-a-samd-bootloader-using-jlink-linux)
+
 [SAMD21\_DMA] (https://aykevl.nl/2019/09/samd21-dma)
+
 [Adafruit\_ZeroDMA] (https://github.com/adafruit/Adafruit\_ZeroDMA)
 
 ## Future changes
