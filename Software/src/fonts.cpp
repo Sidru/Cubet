@@ -1,4 +1,7 @@
-char font_data[128][8] = {
+#include <Arduino.h>
+#include <fonts.h> 
+
+const char font_data[128][8] = {
   { 0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00,  0x00 },    // 0 :
                 //              |          |
                 //              |          |
@@ -1283,3 +1286,4 @@ char font_data[128][8] = {
  
  
 };
+

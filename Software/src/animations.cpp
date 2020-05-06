@@ -3,9 +3,19 @@
 //#include <cube.h>
 #include <animations.h>
 
+extern "C" {
+#include <fonts.h>
+}
+
 
 void init_LUT(unsigned char LUT[65]);
 int totty_sin(unsigned char LUT[65],int sin_of);
+
+unsigned long _start_millis;
+
+char text[] = "GEIL ODER?";
+
+cDraw Draw;
 
 cAnim::cAnim()
 {
@@ -18,12 +28,76 @@ cAnim::~cAnim()
 
 void cAnim::begin(cCube* Cube)
 {
-    
+   Draw.begin(Cube); 
 }
 
 void cAnim::refresh(void)
 {
+    static unsigned long start_millis = millis();
+    static unsigned long change_millis = millis();
+    static uint8_t animNr = 0; 
 
+    if((millis() - start_millis) >= 75)   
+    {
+        start_millis = millis();
+
+        switch(animNr)
+        {
+            case 0:
+                effect_rain(&Draw, 0); 
+                break;
+            case 1:
+                effect_wormsqueeze (&Draw, 2, AXIS_X, -1, 100, 1000);
+                break;
+            case 2:
+                //sinelines(&Draw, 4000, 100);
+                animNr++;
+                break;
+            case 3:
+                side_ripples(&Draw, 300, 75);
+                break;
+            case 4:
+                effect_random_sparkle(&Draw);
+                break;
+            case 5:
+                mirror_ripples(&Draw, 600, 75);
+                break;
+            case 6:
+                //linespin(&Draw, 1500, 50);
+                animNr++;
+                break;
+            case 7:
+                effect_planboing(&Draw, AXIS_X, 75);
+                break;
+            case 8:
+                //effect_planboing(&Draw, AXIS_Y, 75);
+                animNr++;
+                break;
+            case 9:
+                //effect_planboing(&Draw, AXIS_Z, 75);
+                animNr++;
+                break;
+            case 10:
+                effect_rand_patharound(&Draw, 200, 75);
+                break;
+            case 11:
+                quad_ripples(&Draw, 600, 300);
+                break;
+            case 12:
+                effect_text(&Draw, (char*)text, sizeof(text), 50);
+                break;
+
+            default:
+                animNr = 0;
+                break;
+        }
+    }
+
+    if((millis() - change_millis) > 10000)
+    {
+        change_millis = millis();
+        animNr++;
+    }
 }
 
 void cAnim::start(uANIMATION anim, uint32_t iterations, uint32_t speed)
@@ -209,11 +283,17 @@ void effect_rand_patharound(cDraw* pDraw, int iterations, int delay)
 	//int z, dz, i;
     int dz;
     static int z = 4;
+    static uint8_t init = 0;
+    static unsigned char path[28];
+    if(0 == init)
+    {
+        pDraw->fill(0x00);
+        z = 4;
+        init = 1;
+        font_getpath(0,path,28);
+    }
 
 	//z = 4;
-	unsigned char path[28];
-	
-	font_getpath(0,path,28);
 	
 	//for (i = 0; i < iterations; i++)
 	//{
@@ -231,178 +311,6 @@ void effect_rand_patharound(cDraw* pDraw, int iterations, int delay)
 		//delay(delay);
 	//}
 }
-//
-//
-//   void effect_intro(){
-//int cnt,cnt_2,time; 
-// 
-//  //Bottom To Top  
-//   
-//  for(cnt=0;cnt<=7;cnt++){
-//   box_wireframe(0, 0, 0, 7, 7, cnt);   
-//   delay(2000);
-//  }
-//  for(cnt=0;cnt<7;cnt++){
-//  clrplane_z(cnt);
-//  delay(2000);  
-//  }
-//  
-//  //Shift Things Right
-//    //1
-//  shift(AXIS_Y,-1);
-//  for(cnt=0;cnt<=7;cnt++){
-//  setvoxel(cnt,0,6);  
-//  }
-//  delay(2000);  
-//    //2
-//  shift(AXIS_Y,-1);
-//  for(cnt=0;cnt<=7;cnt++){
-//  setvoxel(cnt,0,5);  
-//  }
-//  setvoxel(0,0,6);
-//  setvoxel(7,0,6);
-//  delay(2000);  
-//    //3
-//  shift(AXIS_Y,-1);
-//  for(cnt=0;cnt<=7;cnt++){
-//  setvoxel(cnt,0,4);  
-//  }
-//  setvoxel(0,0,5);
-//  setvoxel(7,0,5);
-//  setvoxel(0,0,6);
-//  setvoxel(7,0,6);
-//  delay(2000);
-//
-//    //4
-//  shift(AXIS_Y,-1);
-//  for(cnt=0;cnt<=7;cnt++){
-//  setvoxel(cnt,0,3);  
-//  }
-//  setvoxel(0,0,4);
-//  setvoxel(7,0,4);
-//  setvoxel(0,0,5);
-//  setvoxel(7,0,5);
-//  setvoxel(0,0,6);
-//  setvoxel(7,0,6);
-//  delay(2000);
-//   
-//    //5
-//  shift(AXIS_Y,-1);
-//  for(cnt=0;cnt<=7;cnt++){
-//  setvoxel(cnt,0,2);  
-//  }
-//  setvoxel(0,0,3);
-//  setvoxel(7,0,3);
-//  setvoxel(0,0,4);
-//  setvoxel(7,0,4);
-//  setvoxel(0,0,5);
-//  setvoxel(7,0,5);
-//  setvoxel(0,0,6);
-//  setvoxel(7,0,6);
-//    delay(2000);
-//  
-//    //6
-//  shift(AXIS_Y,-1);
-//  for(cnt=0;cnt<=7;cnt++){
-//  setvoxel(cnt,0,1);  
-//  }
-//  setvoxel(0,0,2);
-//  setvoxel(7,0,2);
-//  setvoxel(0,0,3);
-//  setvoxel(7,0,3);
-//  setvoxel(0,0,4);
-//  setvoxel(7,0,4);
-//  setvoxel(0,0,5);
-//  setvoxel(7,0,5);
-//  delay(2000);
-//  
-//  
-//    //7
-//  shift(AXIS_Y,-1);
-//  for(cnt=0;cnt<=7;cnt++){
-//  setvoxel(cnt,0,0);  
-//  }
-//  setvoxel(0,0,1);
-//  setvoxel(7,0,1);
-//  setvoxel(0,0,2);
-//  setvoxel(7,0,2);
-//  setvoxel(0,0,3);
-//  setvoxel(7,0,3);
-//  setvoxel(0,0,4);
-//  setvoxel(7,0,4);  
-//  setvoxel(0,0,5);
-//  setvoxel(7,0,5);
-//  delay(2000);
-//
-//    //Right To Left   
-//  for(cnt=0;cnt<=7;cnt++){
-//   box_wireframe(0, 0, 0, 7, cnt, 7);   
-//   delay(2000);
-//  }
-//  for(cnt=0;cnt<7;cnt++){
-//  clrplane_y(cnt);
-//  delay(2000);  
-//  }
-//
-//  //Shift to the bottom
-//  for(cnt_2=6;cnt_2>=0;cnt_2--){
-//    shift(AXIS_Z,-1);
-//    for(cnt=0;cnt<=7;cnt++){
-//      setvoxel(cnt,cnt_2,0);  
-//    }
-//      for(cnt=6;cnt>cnt_2;cnt--){
-//        setvoxel(0,cnt,0);
-//        setvoxel(7,cnt,0);      
-//      }
-//    
-//      delay(2000);  
-//  }   
-//
-//  //Make All Wall Box
-//
-//  for(cnt=0;cnt<=6;cnt++){
-//    fill(0x00);    
-//    box_walls(0,0,0,7,7,cnt); 
-//    delay(2000);  
-//  }  
-//  
-//  time = 2000;
-//  for(cnt_2=0;cnt_2<5;cnt_2++){
-//  time = time - 300;
-//  //Make Box Smaller
-//    for(cnt=0;cnt<=3;cnt++){
-//      fill(0x00);
-//      box_walls(cnt,cnt,cnt,7-cnt,7-cnt,7-cnt);   
-//      delay(time);
-//    }  
-//    
-//    //Make Box Bigger
-//    for(cnt=0;cnt<=3;cnt++){
-//      fill(0x00);
-//      box_walls(3-cnt,3-cnt,3-cnt,4+cnt,4+cnt,4+cnt);   
-//      delay(time);
-//    }  
-//  }
-//  for(cnt_2=0;cnt_2<5;cnt_2++){
-//  time = time + 300;
-//  //Make Box Smaller
-//  for(cnt=0;cnt<=3;cnt++){
-//    fill(0x00);
-//    box_walls(cnt,cnt,cnt,7-cnt,7-cnt,7-cnt);   
-//    delay(time);
-//  }  
-//  
-//  //Make Box Bigger
-//  for(cnt=0;cnt<=3;cnt++){
-//    fill(0x00);
-//    box_walls(3-cnt,3-cnt,3-cnt,4+cnt,4+cnt,4+cnt);   
-//    delay(time);
-//  }  
-//  }  
-//    delay(2000);
-//  
-//}
-
 void sinelines(cDraw* Draw, int iterations, int delay)
 {
 	static int i = 0;
@@ -413,8 +321,8 @@ void sinelines(cDraw* Draw, int iterations, int delay)
 	//for (i=0; i<iterations; i++)
 	//{
     
-	Draw->fill(0); // TMP
-    
+    Draw->fill(0); // TMP
+
 		for (x=0; x<8 ;x++)
 		{
 			x_dividor = 2 + sin((float)i/100)+1;
@@ -435,7 +343,10 @@ void sinelines(cDraw* Draw, int iterations, int delay)
 	//Draw->fill(0x00);
     
     i++; //TMP
-    if(i >= iterations) i = 0;
+    if(i >= iterations) 
+    {
+        i = 0;
+    }
 
 	//}
 }
@@ -525,7 +436,6 @@ void side_ripples(cDraw* pDraw, int iterations, int delay)
 	    init_LUT(LUT);
         init = 1;
     }
-
 	
 	//for (i=0;i<iterations*4;i+=4)
 	//{
@@ -608,52 +518,66 @@ void mirror_ripples(cDraw* pDraw, int iterations, int delay)
 	//}
 }
 
-//
-//   void quad_ripples(int iterations, int delay)
-//{
-//	// 16 values for square root of a^2+b^2.  index a*4+b = 10*sqrt
-//	// This gives the distance to 3.5,3.5 from the point
-//	unsigned char sqrt_LUT[]={49,43,38,35,43,35,29,26,38,29,21,16,35,25,16,7};
-//	//LUT_START // Macro from new tottymath.  Commented and replaced with full code
-//	unsigned char LUT[65];
-//	init_LUT(LUT);
-//	int i;
-//	unsigned char x,y,height,distance;
-//	for (i=0;i<iterations*4;i+=4)
-//	{
-//		fill(0x00);
-//		for (x=0;x<4;x++)
-//			for(y=0;y<4;y++)
-//			{
-//				// x+y*4 gives no. from 0-15 for sqrt_LUT
-//				distance=sqrt_LUT[x+y*4];// distance is 0-50 roughly
-//				// height is sin of distance + iteration*4
-//				//height=4+totty_sin(LUT,distance+i)/52;
-//				height=(196+totty_sin(LUT,distance+i))/49;
-//				// Use 4-way mirroring to save on calculations
-//				setvoxel(x,y,height);
-//				setvoxel(7-x,y,height);
-//				setvoxel(x,7-y,height);
-//				setvoxel(7-x,7-y,height);
-//				setvoxel(x,y,7-height);
-//				setvoxel(7-x,y,7-height);
-//				setvoxel(x,7-y,7-height);
-//				setvoxel(7-x,7-y,7-height);
-//				setvoxel(x,height,y);
-//				setvoxel(7-x,height,y);
-//				setvoxel(x,height,7-y);
-//				setvoxel(7-x,height,7-y);
-//				setvoxel(x,7-height,y);
-//				setvoxel(7-x,7-height,y);
-//				setvoxel(x,7-height,7-y);
-//				setvoxel(7-x,7-height,7-y);
-//
-//
-//			}
-//		delay(delay);
-//	}
-//}
-//
+
+void quad_ripples(cDraw* pDraw, int iterations, int delay)
+{
+    static int i = 0;
+    static uint8_t init = 0;
+	// 16 values for square root of a^2+b^2.  index a*4+b = 10*sqrt
+	// This gives the distance to 3.5,3.5 from the point
+	unsigned char sqrt_LUT[]={49,43,38,35,43,35,29,26,38,29,21,16,35,25,16,7};
+	//LUT_START // Macro from new tottymath.  Commented and replaced with full code
+	//unsigned char LUT[65];
+	//init_LUT(LUT);
+	//int i;
+	static unsigned char LUT[65];
+    if(0 == init)
+    {
+	    init_LUT(LUT);
+        init = 1;
+    }
+
+	unsigned char x,y,height,distance;
+	//for (i=0;i<iterations*4;i+=4)
+	//{
+		pDraw->fill(0x00);
+		for (x=0;x<4;x++)
+			for(y=0;y<4;y++)
+			{
+				// x+y*4 gives no. from 0-15 for sqrt_LUT
+				distance=sqrt_LUT[x+y*4];// distance is 0-50 roughly
+				// height is sin of distance + iteration*4
+				//height=4+totty_sin(LUT,distance+i)/52;
+				height=(196+totty_sin(LUT,distance+i))/49;
+				// Use 4-way mirroring to save on calculations
+				pDraw->setvoxel(x,y,height);
+				pDraw->setvoxel(7-x,y,height);
+				pDraw->setvoxel(x,7-y,height);
+				pDraw->setvoxel(7-x,7-y,height);
+				pDraw->setvoxel(x,y,7-height);
+				pDraw->setvoxel(7-x,y,7-height);
+				pDraw->setvoxel(x,7-y,7-height);
+				pDraw->setvoxel(7-x,7-y,7-height);
+				pDraw->setvoxel(x,height,y);
+				pDraw->setvoxel(7-x,height,y);
+				pDraw->setvoxel(x,height,7-y);
+				pDraw->setvoxel(7-x,height,7-y);
+				pDraw->setvoxel(x,7-height,y);
+				pDraw->setvoxel(7-x,7-height,y);
+				pDraw->setvoxel(x,7-height,7-y);
+				pDraw->setvoxel(7-x,7-height,7-y);
+
+
+			}
+	//	delay(delay);
+        i+=4;
+        if(i > iterations)
+        {
+            i = 0;
+        }
+	//}
+}
+
 void init_LUT(unsigned char LUT[65])
 {
 	unsigned char i;
@@ -1092,7 +1016,7 @@ void effect_rain(cDraw* Draw, int iterations)
 //    }
 //     
 // Draw a plane on one axis and send it back and forth once.
-void effect_planboing(cDraw* pDraw, uDRAW_AXIS plane, int speedd)
+void effect_planboing(cDraw* pDraw, uDRAW_AXIS plane, int speed)
 {
     static int direction = 1;
     static uint32_t step = 0;
@@ -1108,23 +1032,92 @@ void effect_planboing(cDraw* pDraw, uDRAW_AXIS plane, int speedd)
     }
     pDraw->setplane(plane, step);
 
-    //int i;
-    //for (i=0;i<8;i++)
-    //{
-    //    Draw->fill(0x00);
-    //    Draw->setplane((uDRAW_AXIS)plane, i);
-    //    delay(speedd);
-    //}
-   
-    //for (i=7;i>=0;i--)
-    //{
-    //    Draw->fill(0x00);
-    //    Draw->setplane((uDRAW_AXIS)plane, i);
-    //    delay(speedd);
-    //}
 }
  
-     
-     
-     
 
+void set_font_to_plane(cDraw* pDraw, uDRAW_AXIS axis, uint32_t pos, char c)
+{
+    uint8_t x = 0;
+    uint8_t y = 0;
+    uint8_t z = 0;
+    int bit = 0;
+
+    for(z = 0; z < 8; z++)
+    {
+        for(x = 0; x < 8; x++)
+        {
+            bit = font_data[c][z] & (1 << x);
+            bit >>= x;
+            
+            if(AXIS_X == axis) 
+            {
+                pDraw->altervoxel(7 - x, pos, 7 - z, bit); 
+            }
+            else if(AXIS_Y == axis)
+            {
+                pDraw->altervoxel(pos, 7 - x, 7 - z, bit); 
+            }
+            else if(AXIS_Z == axis)
+            {
+                pDraw->altervoxel(7 - x, 7 - z, pos, bit); 
+            }
+
+        }
+    }
+
+}
+
+void effect_text(cDraw* pDraw, char* string, uint32_t size, uint32_t speed)
+{
+  //for (int ltr = 0; ltr < charNum; ltr++){// For each letter in string array
+  //  for(int dist = 0; dist < 8; dist++) { //bring letter forward
+  //    fill(0x00);//blank last row
+  //    int rev = 0;
+  //    for (int rw = 7; rw >= 0; rw--) {//copy rows
+  //       cube[rev][dist] = bitswap(font_data[string[ltr]][rw]);
+  //       rev++;
+  //    }
+  //    //delay_ms(delayt);
+  //  }
+  //}
+    static uint8_t done = 0;
+    static uint8_t letter = 0;
+    static uDRAW_AXIS axis = AXIS_Y;
+    static uint8_t cnt = 0;
+
+    if((millis() - _start_millis) > speed)
+    {
+        _start_millis = millis(); 
+
+        //pDraw->fill(0x00);
+
+        pDraw->fill(0x00);
+
+        set_font_to_plane(pDraw, axis, cnt, string[letter]);
+
+        cnt++;
+
+        if(cnt > 7)
+        {
+            cnt = 0;
+            letter++;
+
+            if(letter >= size)
+            {
+                letter = 0;
+                ////if(AXIS_X == axis)
+                ////{
+                ////    axis = AXIS_Y;
+                ////}
+                ////else if (AXIS_Y == axis)
+                ////{
+                ////    axis = AXIS_Z;
+                ////}
+                ////else if (AXIS_Z == axis)
+                ////{
+                ////    axis = AXIS_X;
+                ////}
+            }
+        }
+    }
+}

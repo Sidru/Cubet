@@ -161,7 +161,7 @@ static inline void local_shift_spi_dma(uint8_t* data, uint32_t size)
     // Wait for prior transfer to complete before starting new one...
     while(!transfer_done);
 
-    print_data(data, size);
+    //print_data(data, size);
     print_data(source_memory[buffer_being_filled], size);
     Serial.println(ARRAY_LAYER_SIZE);
 

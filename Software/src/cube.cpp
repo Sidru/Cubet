@@ -31,12 +31,12 @@ cCube::cCube(void)
 {
     memset(_voxel, 0, sizeof(_voxel));
     memset(_shift_data, 0, sizeof(_shift_data));
-    sRGBW testColor = {255, 0, 0, 0};
-
-    for(uint8_t i = 0; i < SIZE_OF_X; i++)
-    {
-        _voxel[i][i][i].rgbw = testColor;
-    }
+//    sRGBW testColor = {255, 0, 0, 0};
+//
+//    for(uint8_t i = 0; i < SIZE_OF_X; i++)
+//    {
+//        _voxel[i][i][i].rgbw = testColor;
+//    }
 
     _sizeX = SIZE_OF_X;
     _sizeY = SIZE_OF_Y;
